@@ -230,11 +230,11 @@ collections:
             name: '-53f09262'
             widget: text
           - hint: >-
-              Original text: — Explore Our Comprehensive Services: Asset
-              Management, Fund Platform, Institutional Services as well as
-              Private Investment Banking., key: -19952f6b
+              Original text: — Our team creates unique solutions for each of our
+              clients, recognizing that individual needs require tailored
+              management strategies., key: 64c7080f
             label: Text
-            name: '-19952f6b'
+            name: 64c7080f
             widget: text
           - hint: 'Original text: Asset Management, key: 588acfb3'
             label: Text
@@ -761,13 +761,6 @@ collections:
             label: Text
             name: '-ceb5298'
             widget: text
-          - hint: >-
-              Original text: — Our team creates unique solutions for each of our
-              clients, recognizing that individual needs require tailored
-              management strategies., key: 64c7080f
-            label: Text
-            name: 64c7080f
-            widget: text
           - hint: 'Original text: Geneva, key: 7eeae4a0'
             label: Text
             name: 7eeae4a0
@@ -830,6 +823,13 @@ collections:
             label: Text
             name: '-67104443'
             widget: string
+          - hint: >-
+              Original text: — Explore Our Comprehensive Services: Asset
+              Management, Fund Platform, Institutional Services as well as
+              Private Investment Banking., key: -19952f6b
+            label: Text
+            name: '-19952f6b'
+            widget: text
           - hint: 'Original text: Funds Management Advisory, key: -429708fc'
             label: Text
             name: '-429708fc'
