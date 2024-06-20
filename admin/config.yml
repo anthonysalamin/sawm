@@ -240,9 +240,9 @@ collections:
             label: Text
             name: 588acfb3
             widget: string
-          - hint: 'Original text: TLDR, key: 275506'
+          - hint: 'Original text: TL;DR, key: 4c32891'
             label: Text
-            name: '275506'
+            name: 4c32891
             widget: string
           - hint: >-
               Original text: SAWM's Wealth Management offers "Execution Only"
@@ -309,6 +309,10 @@ collections:
             label: Text
             name: '-7194668f'
             widget: text
+          - hint: 'Original text: get in touch , key: -2383c02e'
+            label: Text
+            name: '-2383c02e'
+            widget: string
           - hint: 'Original text: Strategic Planning, key: -27efd5a3'
             label: Text
             name: '-27efd5a3'
@@ -658,10 +662,6 @@ collections:
             label: Text
             name: '-5143929'
             widget: text
-          - hint: 'Original text: get in touch , key: -2383c02e'
-            label: Text
-            name: '-2383c02e'
-            widget: string
           - hint: 'Original text: Our Mission, key: 3dba0078'
             label: Text
             name: 3dba0078
@@ -850,6 +850,10 @@ collections:
             label: Text
             name: 5701a3f
             widget: string
+          - hint: 'Original text: TLDR, key: 275506'
+            label: Text
+            name: '275506'
+            widget: string
           - hint: >-
               Original text: SAWM's Wealth Management model include "Execution
               Only" for self-managed portfolio services, "Advisory" for
@@ -984,6 +988,92 @@ collections:
             name: title
             widget: hidden
             default: Links
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Wealth%20Management%20Models, key:
+              -3dc61c01
+            label: Link
+            name: '-3dc61c01'
+            widget: string
+          - hint: >-
+              Original link: mailto:info@sawm.ch?subject=Strategic%20Planning,
+              key: 6d0994eb
+            label: Link
+            name: 6d0994eb
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Digital%20Assets%20Advisory, key:
+              727c3bc3
+            label: Link
+            name: 727c3bc3
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Strategic%20Prime%20Funds, key:
+              -3e1b2e64
+            label: Link
+            name: '-3e1b2e64'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Fund%20Management%20Advisory, key:
+              -4e13991a
+            label: Link
+            name: '-4e13991a'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Fund%20Creation%20Services, key:
+              5c188daf
+            label: Link
+            name: 5c188daf
+            widget: string
+          - hint: >-
+              Original link: mailto:info@sawm.ch?subject=Treasury%20Management,
+              key: -7eb99368
+            label: Link
+            name: '-7eb99368'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=FX%20Hedging%20Advisory, key: da28ca0
+            label: Link
+            name: da28ca0
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Trade%20Finance%20Advisory%20%26%20Funding,
+              key: 28afe8ec
+            label: Link
+            name: 28afe8ec
+            widget: string
+          - hint: >-
+              Original link: mailto:info@sawm.ch?subject=Bonds%20Issuance, key:
+              -617d1347
+            label: Link
+            name: '-617d1347'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Single%20Stock%20Lending, key:
+              -615044aa
+            label: Link
+            name: '-615044aa'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Private%20Asset%20Funding, key:
+              -72beab61
+            label: Link
+            name: '-72beab61'
+            widget: string
+          - hint: >-
+              Original link: mailto:info@sawm.ch?subject=Structured%20Products,
+              key: 9aca6b
+            label: Link
+            name: 9aca6b
+            widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
             label: Link
             name: 17a761b5
