@@ -212,22 +212,13 @@ collections:
             widget: string
           - hint: >-
               Original text: Licensed by FINMA, Switzerland’s financial
-              regulatory authority, Silver Arrow Wealth Management — , key:
-              51564850
+              regulatory authority, Silver Arrow Wealth Management pholds the
+              highest standards of professionalism and integrity. Our extensive
+              ecosystem and partnership model allow us to leverage
+              industry-leading experts and resources to offer comprehensive
+              wealth management services., key: -3de65985
             label: Text
-            name: '51564850'
-            widget: text
-          - hint: 'Original text: SAWM, key: 26b9a4'
-            label: Text
-            name: 26b9a4
-            widget: string
-          - hint: >-
-              Original text: , upholds the highest standards of professionalism
-              and integrity. Our extensive ecosystem and partnership model allow
-              us to leverage industry-leading experts and resources to offer
-              comprehensive wealth management services., key: -53f09262
-            label: Text
-            name: '-53f09262'
+            name: '-3de65985'
             widget: text
           - hint: >-
               Original text: — Our team creates unique solutions for each of our
@@ -309,9 +300,9 @@ collections:
             label: Text
             name: '-7194668f'
             widget: text
-          - hint: 'Original text: get in touch , key: -2383c02e'
+          - hint: 'Original text: Get in touch, key: -5230a9d2'
             label: Text
-            name: '-2383c02e'
+            name: '-5230a9d2'
             widget: string
           - hint: 'Original text: Strategic Planning, key: -27efd5a3'
             label: Text
@@ -651,6 +642,10 @@ collections:
             label: Text
             name: 3ded4d83
             widget: text
+          - hint: 'Original text: skip history, key: -c26890d'
+            label: Text
+            name: '-c26890d'
+            widget: string
           - hint: 'Original text: 2024, key: 177500'
             label: Text
             name: '177500'
@@ -662,6 +657,10 @@ collections:
             label: Text
             name: '-5143929'
             widget: text
+          - hint: 'Original text: get in touch, key: -5bfbfdf2'
+            label: Text
+            name: '-5bfbfdf2'
+            widget: string
           - hint: 'Original text: Our Mission, key: 3dba0078'
             label: Text
             name: 3dba0078
@@ -761,6 +760,10 @@ collections:
             label: Text
             name: '-ceb5298'
             widget: text
+          - hint: 'Original text: get an edge, key: 3d095b06'
+            label: Text
+            name: 3d095b06
+            widget: string
           - hint: 'Original text: Geneva, key: 7eeae4a0'
             label: Text
             name: 7eeae4a0
@@ -799,9 +802,9 @@ collections:
             label: Text
             name: 645f0031
             widget: string
-          - hint: 'Original text: call us, key: 20b287a0'
+          - hint: 'Original text: Call us, key: -7c14e080'
             label: Text
-            name: 20b287a0
+            name: '-7c14e080'
             widget: string
           - hint: 'Original text: partner with us, key: 468208e0'
             label: Text
@@ -960,6 +963,10 @@ collections:
             label: Text
             name: '-361a1933'
             widget: string
+          - hint: 'Original text: call us, key: 20b287a0'
+            label: Text
+            name: 20b287a0
+            widget: string
           - hint: 'Original text: Trustability, key: -2115880e'
             label: Text
             name: '-2115880e'
@@ -1074,36 +1081,33 @@ collections:
             label: Link
             name: 9aca6b
             widget: string
+          - hint: 'Original link: #location, key: -49553328'
+            label: Link
+            name: '-49553328'
+            widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
             label: Link
             name: 17a761b5
-            widget: string
-          - hint: 'Original link: tel:+410223191919, key: -51f92d3c'
-            label: Link
-            name: '-51f92d3c'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Guaranteed%20reply%20within%2048%20hours,
-              key: 1c504693
-            label: Link
-            name: 1c504693
-            widget: string
-          - hint: 'Original link: mailto:info@sawm.ch?subject=Contact, key: 7adff995'
-            label: Link
-            name: 7adff995
             widget: string
           - hint: 'Original link: tel:+41223191919, key: 6851ce42'
             label: Link
             name: 6851ce42
             widget: string
+          - hint: 'Original link: mailto:info@sawm.ch?subject=Contact, key: 7adff995'
+            label: Link
+            name: 7adff995
+            widget: string
+          - hint: 'Original link: mailto:jt@sawm.ch?subject=contact, key: 52795851'
+            label: Link
+            name: '52795851'
+            widget: string
           - hint: 'Original link: #, key: 23'
             label: Link
             name: '23'
             widget: string
-          - hint: 'Original link: mailto:info@sawm.ch?subject=info, key: -6034e8c7'
+          - hint: 'Original link: /, key: 2f'
             label: Link
-            name: '-6034e8c7'
+            name: 2f
             widget: string
           - hint: >-
               Original link:
@@ -1116,9 +1120,20 @@ collections:
             label: Link
             name: '-d4fd732'
             widget: string
-          - hint: 'Original link: /, key: 2f'
+          - hint: 'Original link: tel:+410223191919, key: -51f92d3c'
             label: Link
-            name: 2f
+            name: '-51f92d3c'
+            widget: string
+          - hint: >-
+              Original link:
+              mailto:info@sawm.ch?subject=Guaranteed%20reply%20within%2048%20hours,
+              key: 1c504693
+            label: Link
+            name: 1c504693
+            widget: string
+          - hint: 'Original link: mailto:info@sawm.ch?subject=info, key: -6034e8c7'
+            label: Link
+            name: '-6034e8c7'
             widget: string
       - label: Images
         name: images
