@@ -197,6 +197,24 @@ collections:
             widget: hidden
             default: Texts
           - hint: >-
+              Original text: work in progress for mobile, please check desktop
+              breakpoint, key: 3b4f1def
+            label: Text
+            name: 3b4f1def
+            widget: string
+          - hint: 'Original text: Services, key: 560f747e'
+            label: Text
+            name: 560f747e
+            widget: string
+          - hint: 'Original text: Silver Arrow SA, key: -47b11288'
+            label: Text
+            name: '-47b11288'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: >-
               Original text: — Your trusted partner in navigating the
               complexities, key: -7eba2b1c
             label: Text
@@ -211,14 +229,20 @@ collections:
             name: 380dfe96
             widget: string
           - hint: >-
-              Original text: Licensed by FINMA, Switzerland’s financial
-              regulatory authority, Silver Arrow Wealth Management pholds the
-              highest standards of professionalism and integrity. Our extensive
-              ecosystem and partnership model allow us to leverage
+              Original text: Licensed by FINMA* — Silver Arrow Wealth Management
+              upholds the highest standards of professionalism and integrity.
+              Our extensive ecosystem and partnership model allow us to leverage
               industry-leading experts and resources to offer comprehensive
-              wealth management services., key: -3de65985
+              wealth management services., key: -e3b6f17
             label: Text
-            name: '-3de65985'
+            name: '-e3b6f17'
+            widget: text
+          - hint: >-
+              Original text: * FINMA — the Swiss Financial Market Supervisory
+              Authority, is the governmental body responsible for financial
+              regulation in Switzerland., key: 380f327f
+            label: Text
+            name: 380f327f
             widget: text
           - hint: >-
               Original text: — Our team creates unique solutions for each of our
@@ -798,13 +822,9 @@ collections:
             label: Text
             name: '-4297c007'
             widget: string
-          - hint: 'Original text: About us, key: 645f0031'
+          - hint: 'Original text: About Us, key: 645efc51'
             label: Text
-            name: 645f0031
-            widget: string
-          - hint: 'Original text: Call us, key: -7c14e080'
-            label: Text
-            name: '-7c14e080'
+            name: 645efc51
             widget: string
           - hint: 'Original text: partner with us, key: 468208e0'
             label: Text
@@ -814,9 +834,9 @@ collections:
             label: Text
             name: 2a270ec1
             widget: string
-          - hint: 'Original text: Best Execution Policy , key: 3788bcca'
+          - hint: 'Original text: Best Execution Policy, key: -4887f9ea'
             label: Text
-            name: 3788bcca
+            name: '-4887f9ea'
             widget: string
           - hint: 'Original text: Design, key: 79ceadde'
             label: Text
@@ -825,6 +845,42 @@ collections:
           - hint: 'Original text: anthonysalamin.ch, key: -67104443'
             label: Text
             name: '-67104443'
+            widget: string
+          - hint: 'Original text: Switch location, key: 3c9d5b01'
+            label: Text
+            name: 3c9d5b01
+            widget: string
+          - hint: 'Original text: scroll, key: -361a1933'
+            label: Text
+            name: '-361a1933'
+            widget: string
+          - hint: 'Original text: Guaranteed reply within 48 hours, key: 61ab4b2e'
+            label: Text
+            name: 61ab4b2e
+            widget: string
+          - hint: 'Original text: About us, key: 645f0031'
+            label: Text
+            name: 645f0031
+            widget: string
+          - hint: 'Original text: call us, key: 20b287a0'
+            label: Text
+            name: 20b287a0
+            widget: string
+          - hint: 'Original text: Best Execution Policy , key: 3788bcca'
+            label: Text
+            name: 3788bcca
+            widget: string
+          - hint: 'Original text: Trustability, key: -2115880e'
+            label: Text
+            name: '-2115880e'
+            widget: string
+          - hint: 'Original text: Transparency, key: -6bc56088'
+            label: Text
+            name: '-6bc56088'
+            widget: string
+          - hint: 'Original text: Flexibility, key: 55b4fcf9'
+            label: Text
+            name: 55b4fcf9
             widget: string
           - hint: >-
               Original text: — Explore Our Comprehensive Services: Asset
@@ -947,46 +1003,6 @@ collections:
             label: Text
             name: '-51b37bd1'
             widget: text
-          - hint: 'Original text: Contact, key: -64104400'
-            label: Text
-            name: '-64104400'
-            widget: string
-          - hint: 'Original text: Guaranteed reply within 48 hours, key: 61ab4b2e'
-            label: Text
-            name: 61ab4b2e
-            widget: string
-          - hint: 'Original text: Switch location, key: 3c9d5b01'
-            label: Text
-            name: 3c9d5b01
-            widget: string
-          - hint: 'Original text: scroll, key: -361a1933'
-            label: Text
-            name: '-361a1933'
-            widget: string
-          - hint: 'Original text: call us, key: 20b287a0'
-            label: Text
-            name: 20b287a0
-            widget: string
-          - hint: 'Original text: Trustability, key: -2115880e'
-            label: Text
-            name: '-2115880e'
-            widget: string
-          - hint: 'Original text: Transparency, key: -6bc56088'
-            label: Text
-            name: '-6bc56088'
-            widget: string
-          - hint: 'Original text: Flexibility, key: 55b4fcf9'
-            label: Text
-            name: 55b4fcf9
-            widget: string
-          - hint: 'Original text: SERVICES, key: -7f24ffa2'
-            label: Text
-            name: '-7f24ffa2'
-            widget: string
-          - hint: 'Original text: CONTACT, key: 6382b000'
-            label: Text
-            name: 6382b000
-            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -995,6 +1011,26 @@ collections:
             name: title
             widget: hidden
             default: Links
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
+          - hint: 'Original link: #services, key: -686fc27f'
+            label: Link
+            name: '-686fc27f'
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
+            widget: string
+          - hint: 'Original link: #location, key: -49553328'
+            label: Link
+            name: '-49553328'
+            widget: string
+          - hint: 'Original link: #intro, key: 41b50429'
+            label: Link
+            name: 41b50429
+            widget: string
           - hint: >-
               Original link:
               mailto:info@sawm.ch?subject=Wealth%20Management%20Models, key:
@@ -1081,10 +1117,6 @@ collections:
             label: Link
             name: 9aca6b
             widget: string
-          - hint: 'Original link: #location, key: -49553328'
-            label: Link
-            name: '-49553328'
-            widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
             label: Link
             name: 17a761b5
@@ -1100,21 +1132,6 @@ collections:
           - hint: 'Original link: mailto:jt@sawm.ch?subject=contact, key: 52795851'
             label: Link
             name: '52795851'
-            widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
-          - hint: 'Original link: /, key: 2f'
-            label: Link
-            name: 2f
-            widget: string
-          - hint: >-
-              Original link:
-              https://silver-arrow-wealth-management.ch/wp-content/uploads/2024/04/Best-Execution-Policy-for-Silver-Arrow-SA.pdf,
-              key: -3be66584
-            label: Link
-            name: '-3be66584'
             widget: string
           - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
             label: Link
@@ -1134,6 +1151,13 @@ collections:
           - hint: 'Original link: mailto:info@sawm.ch?subject=info, key: -6034e8c7'
             label: Link
             name: '-6034e8c7'
+            widget: string
+          - hint: >-
+              Original link:
+              https://silver-arrow-wealth-management.ch/wp-content/uploads/2024/04/Best-Execution-Policy-for-Silver-Arrow-SA.pdf,
+              key: -3be66584
+            label: Link
+            name: '-3be66584'
             widget: string
       - label: Images
         name: images
