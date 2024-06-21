@@ -86,7 +86,7 @@ a {
                   <div data-id="progress-hkg" class="overview__tab-progress hgk"></div>
                 </div>
               </div>
-              <p data-reveal="true" class="punchline">{{ texts.-4896f760 }}<br></p>
+              <p data-switch="theme" data-reveal="true" class="punchline is-location">{{ texts.-4896f760 }}<br></p>
               <div data-id="info-gva" class="overview__info-wrap active">
                 <div class="overview__info-texts">
                   <div class="overview__wrap-info-text">
@@ -229,7 +229,7 @@ document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-r
 document.addEventListener("DOMContentLoaded", () => {
   const options = {
     theme: "light",
-    disableDefaultUI : false,
+    disableDefaultUI: false,
     zoom: 14,
     gva: {
       lat: 46.2025609,
@@ -266,6 +266,23 @@ function initMap(options) {
     zoom: options.zoom,
     styles: customStyles
   });
+  // Function to toggle between light and dark themes
+  function toggleTheme() {
+    const currentStyles = map.get("styles");
+    if (
+      JSON.stringify(currentStyles) === JSON.stringify(JSON.parse(snazzyDark))
+    ) {
+      console.log("Switching to Light Theme");
+      snazzyStyles = JSON.parse(snazzyLight);
+    } else {
+      console.log("Switching to Dark Theme");
+      snazzyStyles = JSON.parse(snazzyDark);
+    }
+    map.setOptions({ styles: snazzyStyles });
+  }
+  // Add click event listener to the switch theme button
+  const switchThemeButton = document.querySelector('[data-switch="theme"]');
+  switchThemeButton.addEventListener("click", toggleTheme);
   const genevaMarker = createMarker(map, options.gva, "Geneva");
   const hongkongMarker = createMarker(map, options.hkg, "Hong Kong");
   genevaMarker.addListener("click", () =>
@@ -328,6 +345,7 @@ function toggleLocation(map, geneva, hongkong, zoom) {
   }
 }
 function initOverview(map, geneva, hongkong, zoom) {
+  gsap.registerPlugin(ScrollTrigger);
   const trigger = document.querySelector('[data-id="overview-trigger"]');
   const imgGVA = document.querySelector(`[data-id="img-gva"]`);
   const imgHKG = document.querySelector(`[data-id="img-hkg"]`);
