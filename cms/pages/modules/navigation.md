@@ -1,8 +1,8 @@
 ---
-title: Navigation v1
+title: Navigation
 permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/navigation-v1.html
-slug: navigation-v1
+layout: modules/navigation.html
+slug: navigation
 tags: pages
 seo:
   noindex: false

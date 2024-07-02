@@ -86,16 +86,6 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: pages-playground
-    label: Pages playground
-    identifier_field: title
-    extension: md
-    create: false
-    delete: false
-    slug: '{{slug}}'
-    editor: *ref_0
-    folder: cms/pages/playground
-    fields: *ref_1
   - name: pages-modules
     label: Pages modules
     identifier_field: title
@@ -105,6 +95,16 @@ collections:
     slug: '{{slug}}'
     editor: *ref_0
     folder: cms/pages/modules
+    fields: *ref_1
+  - name: pages-playground
+    label: Pages playground
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor: *ref_0
+    folder: cms/pages/playground
     fields: *ref_1
   - label: Theme Settings
     name: settings
@@ -196,19 +196,13 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: >-
-              Original text: work in progress for mobile, please check desktop
-              breakpoint, key: 3b4f1def
+          - hint: 'Original text: Wealth Management, key: -665be56a'
             label: Text
-            name: 3b4f1def
+            name: '-665be56a'
             widget: string
-          - hint: 'Original text: Services, key: 560f747e'
+          - hint: 'Original text: About, key: 3c2336d'
             label: Text
-            name: 560f747e
-            widget: string
-          - hint: 'Original text: Silver Arrow SA, key: -47b11288'
-            label: Text
-            name: '-47b11288'
+            name: 3c2336d
             widget: string
           - hint: 'Original text: Contact, key: -64104400'
             label: Text
@@ -224,32 +218,29 @@ collections:
             label: Text
             name: 1ad29
             widget: string
-          - hint: 'Original text: wealth management, key: 380dfe96'
+          - hint: 'Original text: wealth management _, key: 6c88b555'
             label: Text
-            name: 380dfe96
+            name: 6c88b555
             widget: string
           - hint: >-
-              Original text: Licensed by FINMA* — Silver Arrow Wealth Management
+              Original text: Licensed by FINMA — Silver Arrow Wealth Management
               upholds the highest standards of professionalism and integrity.
               Our extensive ecosystem and partnership model allow us to leverage
               industry-leading experts and resources to offer comprehensive
-              wealth management services., key: -e3b6f17
+              wealth management services., key: 53021705
             label: Text
-            name: '-e3b6f17'
+            name: '53021705'
             widget: text
           - hint: >-
-              Original text: * FINMA — the Swiss Financial Market Supervisory
+              Original text: FINMA — the Swiss Financial Market Supervisory
               Authority, is the governmental body responsible for financial
-              regulation in Switzerland., key: 380f327f
+              regulation in Switzerland., key: 525a0075
             label: Text
-            name: 380f327f
+            name: 525a0075
             widget: text
-          - hint: >-
-              Original text: — Our team creates unique solutions for each of our
-              clients, recognizing that individual needs require tailored
-              management strategies., key: 64c7080f
+          - hint: "Original text: — \_Our goal is to simplify the process by providing tailored solutions that enhance our clients' financial operations and success., key: -7d5f9bbd"
             label: Text
-            name: 64c7080f
+            name: '-7d5f9bbd'
             widget: text
           - hint: 'Original text: Asset Management, key: 588acfb3'
             label: Text
@@ -260,14 +251,12 @@ collections:
             name: 4c32891
             widget: string
           - hint: >-
-              Original text: SAWM's Wealth Management offers "Execution Only"
-              for self-managed portfolios, "Advisory" for investment guidance,
-              and "Discretionary" for expert-led management. Our three-pillar
-              approach meets your financial goals and needs. We also partner
-              with a top cryptocurrency platform for exclusive digital asset
-              banking., key: 172fa9eb
+              Original text: By leveraging our extensive network and industry
+              expertise, we facilitate seamless interactions between our clients
+              and banks, brokerage firms, and other financial entities., key:
+              -55f8ac4
             label: Text
-            name: 172fa9eb
+            name: '-55f8ac4'
             widget: text
           - hint: 'Original text: Wealth Management Models, key: -172d50ac'
             label: Text
@@ -285,11 +274,9 @@ collections:
               Original text: Our Execution Only model provides the fundamental
               services of SAWM. We refrain from offering advisory services under
               this mandate, placing the full responsibility for portfolio
-              management in the hands of investors. Our role primarily involves
-              connecting our clientele with suitable financial institutions that
-              meet their banking and trading requirements., key: -73a3c831
+              management in the hands of investors., key: d6c2012
             label: Text
-            name: '-73a3c831'
+            name: d6c2012
             widget: text
           - hint: 'Original text: Advisory, key: -268b0327'
             label: Text
@@ -384,9 +371,9 @@ collections:
             label: Text
             name: '-20c1e551'
             widget: text
-          - hint: 'Original text: Digital Assets Advisory, key: -18c24972'
+          - hint: 'Original text: Digital Assets, key: -3ea0e535'
             label: Text
-            name: '-18c24972'
+            name: '-3ea0e535'
             widget: string
           - hint: >-
               Original text: By utilizing their services our clients not only
@@ -404,9 +391,17 @@ collections:
             label: Text
             name: '-44cbc040'
             widget: text
-          - hint: 'Original text: Fund Platform, key: 1f1f076e'
+          - hint: >-
+              Original text: Through a comprehensive understanding of each
+              client’s unique financial situation and goals, we are able to
+              match them with institutions that offer the most favorable terms,
+              services, and support., key: -30bf461
             label: Text
-            name: 1f1f076e
+            name: '-30bf461'
+            widget: text
+          - hint: 'Original text: Fund, key: 2196e5'
+            label: Text
+            name: '2196e5'
             widget: string
           - hint: >-
               Original text: SAWM's Strategic Prime Funds offer stability and
@@ -455,25 +450,6 @@ collections:
             label: Text
             name: 1d3b11ff
             widget: text
-          - hint: 'Original text: Fund Management Advisory, key: -207739c5'
-            label: Text
-            name: '-207739c5'
-            widget: string
-          - hint: >-
-              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-              sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua., key:
-              -4d087318
-            label: Text
-            name: '-4d087318'
-            widget: text
-          - hint: 'Original text: Fund Creation Services, key: 33633c04'
-            label: Text
-            name: 33633c04
-            widget: string
           - hint: 'Original text: Institutional Services, key: -49fa73c5'
             label: Text
             name: '-49fa73c5'
@@ -503,26 +479,6 @@ collections:
             label: Text
             name: '-25cc027'
             widget: text
-          - hint: 'Original text: FX Hedging Advisory, key: -386514bb'
-            label: Text
-            name: '-386514bb'
-            widget: string
-          - hint: >-
-              Original text: Whether engaged in international trade, investment,
-              or operating in multiple currencies, our team provides customized
-              hedging strategies to mitigate currency volatility and minimize
-              potential losses., key: 5bce9df8
-            label: Text
-            name: 5bce9df8
-            widget: text
-          - hint: >-
-              Original text: From forward contracts and options to structured
-              hedging solutions, we help clients navigate currency markets with
-              confidence, ensuring they can focus on their core business
-              activities while safeguarding their bottom line., key: -45076765
-            label: Text
-            name: '-45076765'
-            widget: text
           - hint: 'Original text: Trade Finance Advisory & Funding, key: 2eca34de'
             label: Text
             name: 2eca34de
@@ -543,122 +499,6 @@ collections:
               -408974de
             label: Text
             name: '-408974de'
-            widget: text
-          - hint: 'Original text: Private Investement Banking, key: -55cf5409'
-            label: Text
-            name: '-55cf5409'
-            widget: string
-          - hint: >-
-              Original text: SAWM facilitates bond issuance for real estate,
-              liquidity management, and start-up financing. We offer single
-              stock lending for liquidity, acquisitions, and reinvestment. Our
-              Private Asset Funding finances illiquid assets, preserving
-              ownership. SAWM tailors investment solutions to hedge risk,
-              enhance returns, and meet specific objectives., key: 477c40c8
-            label: Text
-            name: 477c40c8
-            widget: text
-          - hint: 'Original text: Bonds Issuance, key: -6f4d6755'
-            label: Text
-            name: '-6f4d6755'
-            widget: string
-          - hint: >-
-              Original text: Bonds issuance serves as a pivotal avenue for
-              raising capital, whether through private or public placement,
-              enabling entrepreneurs to secure funding without diluting equity.
-              Bonds, whether issued by a company or a holding entity, can
-              feature fixed or variable interest rates. They can also be
-              structured via securitization vehicles like securitization
-              companies or funds, providing investors exposure to income streams
-              from receivables or other asset. , key: -580a788a
-            label: Text
-            name: '-580a788a'
-            widget: text
-          - hint: >-
-              Original text: Bond issuance has been severely instrumental to our
-              clientele for real estate projects, liquidity management among
-              group of companies, and start-up project financing. At SAWM, we
-              facilitate bond issuance in major currencies starting from CHF
-              three million. Our comprehensive support extends from the
-              conceptualization of bond issuance to the redemption phase,
-              ensuring sustained assistance through our strategic partnerships.,
-              key: -103105f7
-            label: Text
-            name: '-103105f7'
-            widget: text
-          - hint: 'Original text: Single Stock Lending, key: 6c704f91'
-            label: Text
-            name: 6c704f91
-            widget: string
-          - hint: >-
-              Original text: Single stock lending, akin to other forms of
-              securities-based borrowing, serves various purposes. It provides
-              liquidity, facilitates asset acquisition, and supports property
-              purchases. Additionally, it enables reinvestment for exploring new
-              investment opportunities with potential higher returns.
-              Increasingly, it serves as a means for individuals with
-              concentrated portfolios to diversify investments and income
-              sources, thereby reducing risk. Despite being a niche market,
-              mainstream lenders often do not provide this borrowing option,
-              particularly for substantial capital needs., key: -4dbf0d22
-            label: Text
-            name: '-4dbf0d22'
-            widget: text
-          - hint: >-
-              Original text: At SAWM, we have access to lenders in this segment
-              and can tailor solutions to your specific financial requirements,
-              ensuring comprehensive assistance regardless of your situation.,
-              key: -55b2a953
-            label: Text
-            name: '-55b2a953'
-            widget: text
-          - hint: 'Original text: Private Asset Funding, key: 39866990'
-            label: Text
-            name: '39866990'
-            widget: string
-          - hint: >-
-              Original text: Our Private Asset Funding service offers clients
-              the opportunity to capitalize on their illiquid assets by
-              unlocking their value through financing solutions. Whether holding
-              private equity, real estate, or other alternative investments,
-              clients can leverage our expertise to access liquidity without
-              selling their assets outright., key: -6ae5f8ce
-            label: Text
-            name: '-6ae5f8ce'
-            widget: text
-          - hint: >-
-              Original text: We work closely with clients to structure financing
-              arrangements that provide access to capital while preserving
-              ownership and control. With a focus on customized solutions and
-              discretion, we help clients optimize their asset composition and
-              capitalize on strategic opportunities., key: -3c8ab0b1
-            label: Text
-            name: '-3c8ab0b1'
-            widget: text
-          - hint: 'Original text: Structured Products, key: -3982b8ad'
-            label: Text
-            name: '-3982b8ad'
-            widget: string
-          - hint: >-
-              Original text: Our Structured Product Engineering service combines
-              financial engineering expertise with innovative structuring to
-              create tailored investment solutions for our clients., key:
-              -324bf08f
-            label: Text
-            name: '-324bf08f'
-            widget: text
-          - hint: >-
-              Original text: Whether seeking to hedge risk, enhance returns, or
-              achieve specific investment objectives, our team designs
-              structured products that address our clients’ unique needs and
-              preferences. From capital protection strategies to yield
-              enhancement solutions, we leverage sophisticated techniques to
-              construct products that optimize risk-adjusted returns.With a
-              focus on transparency and efficiency, we empower clients to
-              navigate complex markets and achieve their financial goals
-              effectively., key: 19f1230c
-            label: Text
-            name: 19f1230c
             widget: text
           - hint: >-
               Original text: — The history of the growth and advancement of a
@@ -784,17 +624,20 @@ collections:
             label: Text
             name: '-ceb5298'
             widget: text
+          - hint: >-
+              Original text: — Our team creates unique solutions for each of our
+              clients, recognizing that individual needs require tailored
+              management strategies., key: 64c7080f
+            label: Text
+            name: 64c7080f
+            widget: text
           - hint: 'Original text: get an edge, key: 3d095b06'
             label: Text
             name: 3d095b06
             widget: string
-          - hint: 'Original text: Geneva, key: 7eeae4a0'
+          - hint: 'Original text: SilverArrow SA, key: e034c12'
             label: Text
-            name: 7eeae4a0
-            widget: string
-          - hint: 'Original text: Hong Kong, key: 2a79013d'
-            label: Text
-            name: 2a79013d
+            name: e034c12
             widget: string
           - hint: >-
               Original text: — We value developing a close working relationship
@@ -818,13 +661,9 @@ collections:
             label: Text
             name: '-2c41e54e'
             widget: string
-          - hint: 'Original text: jt@sawm.ch, key: -4297c007'
+          - hint: 'Original text: call Us, key: 20b283c0'
             label: Text
-            name: '-4297c007'
-            widget: string
-          - hint: 'Original text: About Us, key: 645efc51'
-            label: Text
-            name: 645efc51
+            name: 20b283c0
             widget: string
           - hint: 'Original text: partner with us, key: 468208e0'
             label: Text
@@ -846,13 +685,29 @@ collections:
             label: Text
             name: '-67104443'
             widget: string
-          - hint: 'Original text: Switch location, key: 3c9d5b01'
+          - hint: 'Original text: — Your trusted partner in, key: 275f7b27'
             label: Text
-            name: 3c9d5b01
+            name: 275f7b27
+            widget: string
+          - hint: 'Original text: navigating the complexities, key: 46501e5d'
+            label: Text
+            name: 46501e5d
             widget: string
           - hint: 'Original text: scroll, key: -361a1933'
             label: Text
             name: '-361a1933'
+            widget: string
+          - hint: 'Original text: Geneva, key: 7eeae4a0'
+            label: Text
+            name: 7eeae4a0
+            widget: string
+          - hint: 'Original text: Hong Kong, key: 2a79013d'
+            label: Text
+            name: 2a79013d
+            widget: string
+          - hint: 'Original text: jt@sawm.ch, key: -4297c007'
+            label: Text
+            name: '-4297c007'
             widget: string
           - hint: 'Original text: Guaranteed reply within 48 hours, key: 61ab4b2e'
             label: Text
@@ -882,127 +737,10 @@ collections:
             label: Text
             name: 55b4fcf9
             widget: string
-          - hint: >-
-              Original text: — Explore Our Comprehensive Services: Asset
-              Management, Fund Platform, Institutional Services as well as
-              Private Investment Banking., key: -19952f6b
+          - hint: 'Original text: Wealth management, key: 22d23e76'
             label: Text
-            name: '-19952f6b'
-            widget: text
-          - hint: 'Original text: Funds Management Advisory, key: -429708fc'
-            label: Text
-            name: '-429708fc'
+            name: 22d23e76
             widget: string
-          - hint: 'Original text: Treasurey Management, key: 143e9eb9'
-            label: Text
-            name: 143e9eb9
-            widget: string
-          - hint: 'Original text: Trade Finance & Funding, key: -36467df'
-            label: Text
-            name: '-36467df'
-            widget: string
-          - hint: 'Original text: Single Stocks Lending, key: 1fc91648'
-            label: Text
-            name: 1fc91648
-            widget: string
-          - hint: 'Original text: — Asset Management, key: 5701a3f'
-            label: Text
-            name: 5701a3f
-            widget: string
-          - hint: 'Original text: TLDR, key: 275506'
-            label: Text
-            name: '275506'
-            widget: string
-          - hint: >-
-              Original text: SAWM's Wealth Management model include "Execution
-              Only" for self-managed portfolio services, "Advisory" for
-              investment strategy guidance, and "Discretionary" for expert-led,
-              transparent portfolio management., key: -bb5f4b1
-            label: Text
-            name: '-bb5f4b1'
-            widget: text
-          - hint: >-
-              Original text: SAWM's approach is built on a three-pillar
-              perspective, guiding our efforts to meet your personal and family
-              needs and achieve your goals., key: 633e5c41
-            label: Text
-            name: 633e5c41
-            widget: text
-          - hint: >-
-              Original text: SAWM is in a strategic partnership with one of the
-              world's most trusted crypto currency platforms, which offers
-              digital asset private banking services., key: -2630c185
-            label: Text
-            name: '-2630c185'
-            widget: text
-          - hint: 'Original text: — Strategic Prime Funds, key: -15e944bf'
-            label: Text
-            name: '-15e944bf'
-            widget: string
-          - hint: >-
-              Original text: Lorem ipsum dolor sit amet, consectetur adipiscing
-              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
-              aliqua., key: 4b9725b8
-            label: Text
-            name: 4b9725b8
-            widget: text
-          - hint: 'Original text: — Institutional Services, key: -21cc4239'
-            label: Text
-            name: '-21cc4239'
-            widget: string
-          - hint: >-
-              Original text: SAWM enhances client treasury operations with
-              advanced tech and best practices, optimizing efficiency and
-              maximizing cash returns., key: 3102174d
-            label: Text
-            name: 3102174d
-            widget: text
-          - hint: >-
-              Original text: SAWM's FX Hedging services offer clients the
-              ability to manage currency risk effectively and protect against
-              adverse foreign exchange movements., key: -280d6437
-            label: Text
-            name: '-280d6437'
-            widget: text
-          - hint: >-
-              Original text: SAWM’s Trade Finance & Funding services optimize
-              trade finance and secure capital for business growth., key:
-              -594997ae
-            label: Text
-            name: '-594997ae'
-            widget: text
-          - hint: 'Original text: — Private Investement Banking, key: -4e06e15'
-            label: Text
-            name: '-4e06e15'
-            widget: string
-          - hint: >-
-              Original text: SAWM facilitates bond issuance for real estate,
-              liquidity management, and start-up financing, preserving equity.,
-              key: -7abf0131
-            label: Text
-            name: '-7abf0131'
-            widget: text
-          - hint: >-
-              Original text: SAWM offers single stock lending for liquidity,
-              acquisitions, and reinvestment, leveraging niche market lenders.,
-              key: 7ecc38fc
-            label: Text
-            name: 7ecc38fc
-            widget: text
-          - hint: >-
-              Original text: SAWM's Private Asset Funding provides financing for
-              illiquid assets, preserving ownership and optimizing value., key:
-              215c3bbc
-            label: Text
-            name: 215c3bbc
-            widget: text
-          - hint: >-
-              Original text: SAWM tailors investment solutions to hedge risk,
-              enhance returns, and meet specific objectives efficiently., key:
-              -51b37bd1
-            label: Text
-            name: '-51b37bd1'
-            widget: text
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1019,17 +757,13 @@ collections:
             label: Link
             name: '-686fc27f'
             widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
-          - hint: 'Original link: #location, key: -49553328'
-            label: Link
-            name: '-49553328'
-            widget: string
           - hint: 'Original link: #intro, key: 41b50429'
             label: Link
             name: 41b50429
+            widget: string
+          - hint: 'Original link: #map, key: 118e59'
+            label: Link
+            name: '118e59'
             widget: string
           - hint: >-
               Original link:
@@ -1059,20 +793,6 @@ collections:
             name: '-3e1b2e64'
             widget: string
           - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Fund%20Management%20Advisory, key:
-              -4e13991a
-            label: Link
-            name: '-4e13991a'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Fund%20Creation%20Services, key:
-              5c188daf
-            label: Link
-            name: 5c188daf
-            widget: string
-          - hint: >-
               Original link: mailto:info@sawm.ch?subject=Treasury%20Management,
               key: -7eb99368
             label: Link
@@ -1080,42 +800,10 @@ collections:
             widget: string
           - hint: >-
               Original link:
-              mailto:info@sawm.ch?subject=FX%20Hedging%20Advisory, key: da28ca0
-            label: Link
-            name: da28ca0
-            widget: string
-          - hint: >-
-              Original link:
               mailto:info@sawm.ch?subject=Trade%20Finance%20Advisory%20%26%20Funding,
               key: 28afe8ec
             label: Link
             name: 28afe8ec
-            widget: string
-          - hint: >-
-              Original link: mailto:info@sawm.ch?subject=Bonds%20Issuance, key:
-              -617d1347
-            label: Link
-            name: '-617d1347'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Single%20Stock%20Lending, key:
-              -615044aa
-            label: Link
-            name: '-615044aa'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Private%20Asset%20Funding, key:
-              -72beab61
-            label: Link
-            name: '-72beab61'
-            widget: string
-          - hint: >-
-              Original link: mailto:info@sawm.ch?subject=Structured%20Products,
-              key: 9aca6b
-            label: Link
-            name: 9aca6b
             widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
             label: Link
@@ -1129,9 +817,16 @@ collections:
             label: Link
             name: 7adff995
             widget: string
-          - hint: 'Original link: mailto:jt@sawm.ch?subject=contact, key: 52795851'
+          - hint: 'Original link: #, key: 23'
             label: Link
-            name: '52795851'
+            name: '23'
+            widget: string
+          - hint: >-
+              Original link:
+              /assets/documents/best-execution-policy-for-silver-arrow-sa.pdf,
+              key: -2ff9dedf
+            label: Link
+            name: '-2ff9dedf'
             widget: string
           - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
             label: Link
@@ -1147,6 +842,10 @@ collections:
               key: 1c504693
             label: Link
             name: 1c504693
+            widget: string
+          - hint: 'Original link: mailto:jt@sawm.ch?subject=contact, key: 52795851'
+            label: Link
+            name: '52795851'
             widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=info, key: -6034e8c7'
             label: Link

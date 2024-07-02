@@ -1,8 +1,8 @@
 ---
-title: Services v2
+title: Services
 permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/services-v2.html
-slug: services-v2
+layout: modules/services.html
+slug: services
 tags: pages
 seo:
   noindex: false

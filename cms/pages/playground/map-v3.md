@@ -1,7 +1,7 @@
 ---
 title: Map v3
-permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/map-v3.html
+permalink: playground/{{ page.fileSlug }}/index.html
+layout: playground/map-v3.html
 slug: map-v3
 tags: pages
 seo:
