@@ -16,7 +16,7 @@
   <link href="{{ settings.site.favicon | default: "/assets/images/favicon.png" }}" rel="shortcut icon" type="image/x-icon">
   <link href="{{ settings.site.apple_touch_icon | default: "/assets/images/webclip.png" }}" rel="apple-touch-icon"><!--  fathom  -->
   <script src="https://cdn.usefathom.com/script.js" data-site="DKIAXTJN" defer=""></script>
-  <!--  meta  -->
+  <!--  mobile theme  -->
   <meta name="theme-color" content="#3ea3ff">
   <style>
 /* lenis overrides */
@@ -31,14 +31,24 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
 ::-webkit-scrollbar{width:12px;height:12px}::-webkit-scrollbar-track{background:#f5f5f5;border-radius:10px}::-webkit-scrollbar-thumb{border-radius:10px;background:#ccc}::-webkit-scrollbar-thumb:hover{background:#999}scrollbar-width:thin;scrollbar-color:#ccc #f5f5f5;-ms-overflow-style:none;scrollbar-width:thin;scrollbar-color:#ccc #f5f5f5;
 </style>
   <style>
-/* initial states overrides */
-.nav,[data-id="punchline"]{opacity:0}
-#keyvisual-horizontal-arrows path,#vivus-keyvisual-silver-arrow path{stroke-dasharray:1000;stroke-dashoffset:1000}
-#silver-a,#silver-b,#silver-c,#silver-d,#silver-e,#silver-f,#silver-g,#silver-h,#silver-i,#silver-j,#silver-k{opacity:0}
+/* initial states header navigation */
+.nav{opacity:0}
+/* initial states header keyvisual */
+#keyvisual-horizontal-arrows path,
+#vivus-keyvisual-silver-arrow path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+}
+#keyvisual-silver-arrow {
+    fill: none;
+}
+.fill-none {
+    fill: none;
+}
 </style>
   <style>
 /* text highlight overrides */
-::selection{background-color:#f0effd}
+::selection{background-color:#F28520}
 </style>
 {{ settings.site.header_additional_content }}{%- include "partials/_site-css-variables" -%}<style>.w-video.w-embed {
             aspect-ratio: 16 / 9;
@@ -61,12 +71,26 @@ a {
 }
 </style>
       <style>
-/* moving background */
-#gradient-canvas {
-  --gradient-color-1: var(--black); /* dark */
-  --gradient-color-2: var(--black); /* dark*/
-  --gradient-color-3: var(--white); /* light */
-  --gradient-color-4: var(--black); /* dark */
+/* colors */
+[data-color="asset-management"] {
+ background-color: var(--asset-management) !important;
+ color: var(--silver) !important;
+}
+[data-color="institutional-services"] {
+ background-color: var(--institutional-services) !important;
+ color: var(--silver) !important;
+}
+[data-color="fund"] {
+ background-color: var(--fund) !important;
+ color: var(--silver) !important;
+}
+[data-color="digital-assets"] {
+ background-color: var(--digital-assets) !important;
+ color: var(--silver) !important;
+}
+[data-color="silver"] {
+ background-color: var(--silver) !important;
+ color: var(--dark) !important;
 }
 </style>
     </div>
@@ -76,7 +100,7 @@ a {
       </section>
       <section id="services" data-id="is-services" class="section is-services">
         <div class="container">
-          <p data-w-id="d821fa57-1e62-f457-1bb4-48fe20a426a9" class="punchline is-services">{{ texts.-7d5f9bbd }}</p>
+          <p data-w-id="d821fa57-1e62-f457-1bb4-48fe20a426a9" class="punchline is-services"><span class="punchline-italic">{{ texts.76ed2f9f }}</span>{{ texts.-4041bdfb }}</p>
           <div class="faq">
             <div id="category-asset" class="faq__category">
               <div id="w-node-d821fa57-1e62-f457-1bb4-48fe20a426ac-20a426a6" class="faq__grid-item sticky">
@@ -340,16 +364,6 @@ a {
   <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   <!--  split-type 0.3.4  -->
   <script src="https://cdn.jsdelivr.net/npm/split-type@0.3.4/umd/index.min.js"></script>
-  <!--  Goole Maps  -->
-  <!-- 
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDd9E1QYin3oYCZiyezi6aKJTEmuJvpCN0"></script>
- -->
-  <!--  NEW Google Maps Clusterer  -->
-  <script src="https://unpkg.com/@googlemaps/markerclusterer/dist/index.min.js"></script>
-  <!--  NEW Google Maps API  -->
-  <script>
-(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await(a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g){e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k])}e.set("callback",c+".maps."+q);e.set("language","en");a.src=`https://maps.${ c }apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})({key:"AIzaSyDd9E1QYin3oYCZiyezi6aKJTEmuJvpCN0",v:"beta"});
-</script>
   <script>
 /*
  * UTILITY |  lenis strop scroll
@@ -373,11 +387,95 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
+ * SAWM | stagger reveal elements v1
+ * build 22.07.24 @19:00
+ */
+document.addEventListener("DOMContentLoaded",()=>{const options={trigger:`.faq__cta-container`,targets:`.faq__cta`};if(!document.querySelector(`${options.trigger }`)){return}setInitialState(options);staggerRevealTargets(options)});function setInitialState(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);gsap.set(items,{y:"50%",opacity:0})}function staggerRevealTargets(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);ScrollTrigger.create({trigger:container,start:"top 80%",onEnter:()=>{gsap.to(items,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:0.15})}})}
+</script>
+  <script>
+/*
+ * SAWM | card small hover v2
+ * build 22.07.24 @17:25
+ */
+document.addEventListener("DOMContentLoaded", function () {
+  const FAQ__CTAs = document.querySelectorAll(".faq__cta");
+  if (FAQ__CTAs.length === 0) {
+    console.log("no .faq__cta, skipped");
+    return;
+  };
+  Array.from(FAQ__CTAs).forEach((FAQ__CTA) => {
+    const overlay = FAQ__CTA.querySelector(".footer__card-overlay");
+    console.log(overlay);
+    const currentBackgroundImage = getComputedStyle(overlay).backgroundImage;
+    function extractColors(gradientString) {
+      const regex = /rgb(?:a)?\(\d{1,3}, \d{1,3}, \d{1,3}(?:, [\d.]+)?\)/g;
+      const matches = gradientString.match(regex);
+      return matches || [];
+    }
+    const colors = extractColors(currentBackgroundImage);
+    function extractRGB(rgbaString) {
+      const regex = /rgba?\((\d+), (\d+), (\d+),? [\d.]*\)/;
+      const matches = rgbaString.match(regex);
+      if (matches) {
+        const r = parseInt(matches[1], 10);
+        const g = parseInt(matches[2], 10);
+        const b = parseInt(matches[3], 10);
+        return { r, g, b };
+      } else {
+        return null;
+      }
+    }
+    const rgbValues = extractRGB(colors[1]);
+    overlay.addEventListener("mouseenter", () => {
+      gsap.to(overlay, {
+        duration: 0.35,
+        ease: "expo.out",
+        onUpdate: function () {
+          const progress = this.progress();
+          overlay.style.backgroundImage = `linear-gradient(90deg, ${colors[0]}, rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, ${progress}))`;
+        }
+      });
+    });
+    overlay.addEventListener("mouseleave", () => {
+      gsap.to(overlay, {
+        duration: 0.5,
+        ease: "expo.out",
+        onUpdate: function () {
+          const progress = this.progress();
+          overlay.style.backgroundImage = `linear-gradient(90deg, ${
+            colors[0]
+          }, rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, ${
+            1 - progress
+          }))`;
+        }
+      });
+    });
+  });
+});
+</script>
+  <script>
+/*
+ * SA | keyvisual animation v5.1
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 21.06.24 @22:48
+ */
+const options = {
+  fillColor: `#eeeff1`,
+  keyvisualSilverArrow: `#keyvisual-silver-arrow`,
+  keyvisualHorizontalArrow: `#keyvisual-horizontal-arrows`,
+  delay: 1 + .25,
+  duration: 1 + .25,
+  ease: "power4.out"
+};
+document.addEventListener("DOMContentLoaded",()=>{if(!document.querySelector(options.keyvisualSilverArrow)){return}setInitialGSAPstates(options)});function setInitialGSAPstates(options){gsap.set(document.querySelector(options.keyvisualSilverArrow),{opacity:1,fill:"transparent",rotation:45,transformOrigin:"center center"})}function initKevisualReveal(options){const keyvisualSilverArrow=document.querySelector(options.keyvisualSilverArrow);const timeline=gsap.timeline();timeline.to(keyvisualSilverArrow,{opacity:1,fill:options.fillColor,delay:options.delay,duration:options.duration,ease:options.ease}).to(keyvisualSilverArrow,{rotation:0,delay: -options.duration,transformOrigin:"center center",duration:options.duration,ease:"elastic.out(1, 0.45)"})}function initializeVivus(id,options){const instance=new Vivus(id,options);instance.play();return instance}const silverArrowOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};const arrowsOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};setTimeout(()=>{const vivusSilverArrow=initializeVivus("vivus-keyvisual-silver-arrow",silverArrowOptions);const vivusArrows=initializeVivus("keyvisual-horizontal-arrows",arrowsOptions);initKevisualReveal(options)},0);
+</script>
+  <script>
+/*
  * SA | navigation display v2
  * dependencies: gsap.js scrolltrigger.js
  * build: 29.06.24 @00:46
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={navigation:document.querySelector(".nav"),duration:0.65,ease:"power4.out"};if(!options.navigation){return}nav__setInitialState(options);nav__revealOnLoad(options)});function nav__setInitialState(options){gsap.set(options.navigation,{opacity:0,y:"-150%"})}function showNav(options){gsap.to(options.navigation,{y:"0%",opacity:1,duration:options.duration})}function hideNav(options){gsap.to(options.navigation,{y:"-150%",opacity:0,duration:options.duration})}function nav__revealOnLoad(options){const timeline=gsap.timeline();timeline.to(options.navigation,{delay:1.5,opacity:1,y:"0%",duration:1.25,ease:options.ease,onComplete:()=>{nav__displayOnScroll(options)}})}function nav__displayOnScroll(options){ScrollTrigger.create({trigger:options.navigation,start:"top top",end:"bottom top",scrub:false,onUpdate:(self)=>{const scrollDirection=self.direction;if(scrollDirection===1){hideNav(options)}else if(scrollDirection===-1){showNav(options)}}})}
+document.addEventListener("DOMContentLoaded",()=>{const options={navigation:document.querySelector(".nav"),duration:0.65,ease:"power4.out"};if(!options.navigation){return}nav__setInitialState(options);nav__revealOnLoad(options)});function nav__setInitialState(options){gsap.set(options.navigation,{opacity:0,y:"-150%"})}function showNav(options){gsap.to(options.navigation,{y:"0%",opacity:1,duration:options.duration})}function hideNav(options){gsap.to(options.navigation,{y:"-150%",opacity:0,duration:options.duration})}function nav__revealOnLoad(options){const timeline=gsap.timeline();timeline.to(options.navigation,{delay:.25,opacity:1,y:"0%",duration:1.25,ease:options.ease,onComplete:()=>{nav__displayOnScroll(options)}})}function nav__displayOnScroll(options){ScrollTrigger.create({trigger:options.navigation,start:"top top",end:"bottom top",scrub:false,onUpdate:(self)=>{const scrollDirection=self.direction;if(scrollDirection===1){hideNav(options)}else if(scrollDirection===-1){showNav(options)}}})}
 </script>
   <script>
 /*
@@ -409,44 +507,6 @@ document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-i
  * build: 20.06.24 @14:24
  */
 document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-reveal="true"]`,type:"words, chars"};initCharsAnimation(options)});function setAlphaToPointThree(color,opacity){let rgba=color.match(/rgba?\((\d+), (\d+), (\d+),? ?([\d\.]*)?\)/);if(rgba){let red=rgba[1];let green=rgba[2];let blue=rgba[3];let alpha=opacity;return `rgba(${ red }, ${ green }, ${ blue }, ${ alpha })`}return color}function initCharsAnimation(options){const splitTypes=document.querySelectorAll(options.target);splitTypes.forEach((char,i)=>{const fg=window.getComputedStyle(char).color;const bg=setAlphaToPointThree(fg,0.1);const text=new SplitType(char,{types:options.type});gsap.fromTo(text.chars,{color:bg},{color:fg,duration:0.3,stagger:0.02,scrollTrigger:{trigger:char,start:"top 80%",end:"top 20%",scrub:true,markers:false,toggleActions:"play play reverse reverse"}})})}
-</script>
-  <!-- 
-<script>
-/*
- * SA | map simple v1
- * build 29.06.24 @11:11
- */
-document.addEventListener("DOMContentLoaded",()=>{const options={disableDefaultUI:false,zoom:14,gva:{lat:46.2025609,lng:6.1410614,address:`Boulevard du Théâtre 2, 1204 Geneva, Switzerland`},snazzyLight:`[{"featureType":"water","elementType":"geometry","stylers":[{"color":"#e9e9e9"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#ffffff"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#ffffff"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#ffffff"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#f5f5f5"},{"lightness":21}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#dedede"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#ffffff"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#333333"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#f2f2f2"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#fefefe"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#fefefe"},{"lightness":17},{"weight":1.2}]}]`,infoView:`.gm-ui-hover-effect{position:absolute !important;top:0 !important;right:0 !important}#map{border:none}`};map__infoViewStyle(options.infoView);map__init(options)});function map__infoViewStyle(css){const style=document.createElement("style");style.appendChild(document.createTextNode(css));document.head.appendChild(style)}function map__getMapStyle(options){return JSON.parse(options.snazzyLight)}function map__createMarker(map,position,title){return new google.maps.Marker({position:{lat:position.lat,lng:position.lng},map:map,title:title})}function map__handleMarkerClick(map,marker,locationName,locationAddress){const infoWindow=new google.maps.InfoWindow({content:`<div class="custom-info-window"><strong>${ locationName }</strong><br><br>${ locationAddress }</div>`});infoWindow.open(map,marker);map.setCenter(marker.getPosition());map.setZoom(17)}function map__init(options){if(!document.querySelector("#map")){return}const map=new google.maps.Map(document.querySelector("#map"),{disableDefaultUI:options.disableDefaultUI,center:{lat:options.gva.lat,lng:options.gva.lng},zoom:options.zoom,styles:map__getMapStyle(options)});const genevaMarker=map__createMarker(map,options.gva,"Geneva");genevaMarker.addListener("click",()=>map__handleMarkerClick(map,genevaMarker,"Geneva","Boulevard du Théâtre 2<br>1204 Geneva<br>Switzerland"))}
-</script>
- -->
-  <script>
-/*
- * SA | google maps NEW v1
- * build 23.03.24 @02:07
-*/
-document.addEventListener("DOMContentLoaded",()=>{initMap()});async function geocodeAddresses(addresses){const geocoder=new google.maps.Geocoder();const coordinatesArray=[];const promises=[];for(const address of addresses){const promise=new Promise(async(resolve,reject)=>{try{const{results,status}=await geocodeAddress(geocoder,address);if(status===google.maps.GeocoderStatus.OK){const coordinates={lat:results[0].geometry.location.lat(),lng:results[0].geometry.location.lng()};coordinatesArray.push(coordinates);console.log(`Geocoding: ${ status } | ${ address }`);resolve();}else{console.error(`Geocode error for ${ address }: ${ status }`);reject(`Geocode error for ${ address }: ${ status }`)}}catch(error){console.error(`Geocode error for ${ address }`,error);reject(`Geocode error for ${ address }: ${ error }`)}});promises.push(promise)}await Promise.all(promises);return coordinatesArray}function geocodeAddress(geocoder,address){return new Promise((resolve,reject)=>{geocoder.geocode({address:address},function(results,status){if(status===google.maps.GeocoderStatus.OK){resolve({results,status})}else{reject(status)}})})}function millisecondsToSeconds(milliseconds){return(milliseconds/1000).toFixed(2)}async function initMap(){const{Map,InfoWindow}=await google.maps.importLibrary("maps");const{AdvancedMarkerElement,PinElement}=await google.maps.importLibrary("marker");const addresses=["Boulevard du Théâtre 2, 1204 Geneva, SWITZERLAND"];const bounds=new google.maps.LatLngBounds();const map=new google.maps.Map(document.getElementById("map"),{mapId:"1a67fe8c0b7d0ec3",mapTypeControl:true,mapTypeId:"roadmap",gestureHandling:"cooperative",fullscreenControl:true});const infoWindow=new google.maps.InfoWindow({content:"",disableAutoPan:true});let locations=[];const start=performance.now();try{const coordinatesArray=await geocodeAddresses(addresses);coordinatesArray.forEach((coordinates)=>{const position={lat:coordinates.lat,lng:coordinates.lng};locations.push(position)})}catch(error){console.error("Failed to geocode addresses",error)}const end=performance.now();const message=`Géocodage exécuté en ${millisecondsToSeconds(end-start)} secondes`;console.log(message);const pinColor=`#293535`;const pinSvgString=`<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="64px" height="64px" x="0" y="0" viewBox="0 0 64 64">
-  <def>
-    <style>
-      #blinky-outer{stroke:"transparent";stroke-width:5px;fill:"transparent";opacity:0;animation:expanding 2s cubic-bezier(0.29, 0, 0, 1) infinite;animation-delay:1s;transform-origin:center}#blinky-inner{fill:"#293535"}@keyframes expanding{0%{transform:scale(0);opacity:1}100%{transform:scale(1.6);opacity:0;stroke:"#293535";stroke-width:8px}}
-    </style>
-  </def>
-  <g id="pin">
-    <circle id="blinky-outer" class="cls-1" cx="32.3" cy="32" r="17.8" />
-    <circle id="blinky-inner" class="cls-1" cx="32.3" cy="32" r="17.8" />
-    <g fill="#e5e7e7" id="pin-logomark">
-      <path class="cls-2" d="M33,38.1c.3.3.6.4.9.4s.7,0,.9-.4c.5-.5.5-1.4,0-1.9l-6.3-6.3c-.6-.6-.9-1.4-.9-2.2s.3-1.6.9-2.2,1.4-.9,2.2-.9,1.6.3,2.2.9l3.2,3.2c.5.5,1.4.5,1.9,0s.5-1.4,0-1.9l-3.2-3.2c-1.1-1.1-2.6-1.7-4.1-1.7s-3,.6-4.1,1.7-1.7,2.6-1.7,4.1.6,3,1.7,4.1l6.3,6.3h0Z" />
-      <path class="cls-2" d="M38,33l-6.3-6.3c-.5-.5-1.4-.5-1.9,0s-.5,1.4,0,1.9l6.3,6.3c1.2,1.2,1.2,3.2,0,4.5-1.2,1.2-3.2,1.2-4.5,0l-3.2-3.2c-.5-.5-1.4-.5-1.9,0s-.5,1.4,0,1.9l3.2,3.2c1.1,1.1,2.6,1.7,4.1,1.7s3-.6,4.1-1.7c2.3-2.3,2.3-5.9,0-8.2h0Z" />
-    </g>
-  </g>
-</svg>`;const parser=new DOMParser();const pinSvg=parser.parseFromString(pinSvgString,"image/svg+xml").documentElement;const markers=locations.map((position)=>{const marker=new google.maps.marker.AdvancedMarkerElement({position:position,title:"title",content:pinSvg.cloneNode(true)});marker.addListener("gmp-click",()=>{infoWindow.setContent("Boulevard du Théâtre 2");infoWindow.open(map,marker)});bounds.extend(position);return marker});map.fitBounds(bounds);google.maps.event.addListenerOnce(map,"tilesloaded",()=>{setTimeout(()=>{map.panBy(0,-32);map.setZoom(map.getZoom()-6);},150)});const MarkerClusterer=new markerClusterer.MarkerClusterer({markers,map})}
-</script>
-  <script>
-/*
- * SA | cache on scroll v4.2
- * dependency: gsap, scrolltrigger, drawsvg
- * build: 27.06.24 @14:04
-*/
-document.addEventListener("DOMContentLoaded",()=>{const select=(element)=>document.querySelector(element);const options={DEBUG:false,EASING:"expo.inOut",HEADER_TRIGGER:select('[data-id="cache-trigger"]'),HEADER_PUNCHLINE:select('[data-id="punchline"]'),HEADER_CACHES:{CACHE_A:select('[data-id="a"]'),CACHE_B:select('[data-id="b"]'),CACHE_C:select('[data-id="c"]'),CACHE_C_SPECIAL:select('[data-id="cache-special"]')}};if(!options.HEADER_TRIGGER){console.warn("SKIPPED: cache on scroll v4.2");return};init__breakpointCheck(options)});function init__breakpointCheck(options){const choose__headerAnimation=window.innerWidth>=479?init__headerDesktop:init__headerMobile;choose__headerAnimation(options)}function logo__getPaths(element){const svg=document.querySelector(element);const paths=svg.querySelectorAll("path[id]");const ids=Array.from(paths).map((path)=>`#${path.id }`);return ids}function logo__setInitialState(parts){gsap.set(parts,{fillOpacity:0});gsap.set(parts,{y:"25%",opacity:0})}function logo__headerAnimation(element){const timeline=gsap.timeline();const logoParts=logo__getPaths(element);logo__setInitialState(logoParts);gsap.to(logoParts,{delay:0.1,duration:0.85,y:"0%",opacity:1,ease:"expo.inOut",stagger:0.125});logoParts.forEach((part,index)=>{timeline.fromTo(part,{drawSVG:"0%"},{drawSVG:"100%",duration:0.65,ease:"none"},index*0.125).to(part,{fillOpacity:1,duration:0.85,ease:"none"},`>-${0.085}`)})}function init__headerMobile(options){if(options.DEBUG){console.log("mobile")}gsap.set(options.HEADER_PUNCHLINE,{y:"25%",opacity:0});gsap.to(options.HEADER_PUNCHLINE,{y:"0%",opacity:1,duration:0.85,ease:options.EASING,onStart:()=>{logo__headerAnimation(`#logotype-header`)}})}function init__headerDesktop(options){if(options.DEBUG){console.log("desktop")}gsap.set(options.HEADER_PUNCHLINE,{y:"25%",opacity:0});gsap.to(options.HEADER_PUNCHLINE,{y:"0%",opacity:1,duration:0.85,ease:options.EASING,onStart:()=>{logo__headerAnimation(`#logotype-header`);cache__revealOnLoad(options)}})}function cache__revealOnLoad(options){if(options.DEBUG){console.log("cache revealed on load")}const config={duration:1,ease:options.EASING};const delay=0.125;gsap.to(options.HEADER_CACHES.CACHE_A,{...config,x:"50%",delay:0});gsap.to(options.HEADER_CACHES.CACHE_B,{...config,x:"40%",delay:delay});gsap.to(options.HEADER_CACHES.CACHE_C_SPECIAL,{...config,x:"30%",delay:delay+delay/2,onComplete:()=>{cache__hideOnScroll(options)}})}function cache__hideOnScroll(options){if(options.DEBUG){console.log("cache hidden on scroll")}const viewportWidth=window.innerWidth;const config={start:"top bottom",end:"top center",scrub:true,markers:false};gsap.to(options.HEADER_CACHES.CACHE_B,{x:`+=${viewportWidth*0.1}`,scrollTrigger:{trigger:options.HEADER_TRIGGER,...config}});gsap.to(options.HEADER_CACHES.CACHE_C,{x:`+=${viewportWidth*0.2}`,scrollTrigger:{trigger:options.HEADER_TRIGGER,...config}})}
 </script>
   <script>
 /*
