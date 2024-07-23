@@ -251,12 +251,12 @@ collections:
             name: '-5f8cfd1a'
             widget: string
           - hint: >-
-              Original text: We uphold the highest standards of integrity,
-              supported by a robust ecosystem and partnerships granting access
-              to experts, enabling us to deliver extensive wealth management
-              services., key: 59c7c43f
+              Original text: SilverArrow SA upholds the highest standards of
+              integrity, supported by a robust ecosystem and partnerships
+              granting access to experts, enabling us to deliver extensive
+              wealth management services., key: -482a1182
             label: Text
-            name: 59c7c43f
+            name: '-482a1182'
             widget: text
           - hint: >-
               Original text: SilverArrow facilitates seamless client
@@ -300,6 +300,10 @@ collections:
           - hint: 'Original text:  proven by numbers, key: -7c24e591'
             label: Text
             name: '-7c24e591'
+            widget: string
+          - hint: 'Original text: Our services, key: fcf0ad2'
+            label: Text
+            name: fcf0ad2
             widget: string
           - hint: 'Original text: — Recognizing, key: 76ed2f9f'
             label: Text
@@ -397,9 +401,13 @@ collections:
             label: Text
             name: '-4887f9ea'
             widget: string
-          - hint: 'Original text: design anthonysalamin.ch, key: b7c0ddb'
+          - hint: 'Original text: Design, key: 79ceadde'
             label: Text
-            name: b7c0ddb
+            name: 79ceadde
+            widget: string
+          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
+            label: Text
+            name: '-67104443'
             widget: string
           - hint: 'Original text: Asset , key: 75755f50'
             label: Text
@@ -448,14 +456,6 @@ collections:
           - hint: 'Original text: partner with us, key: 468208e0'
             label: Text
             name: '468208e0'
-            widget: string
-          - hint: 'Original text: Design, key: 79ceadde'
-            label: Text
-            name: 79ceadde
-            widget: string
-          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
-            label: Text
-            name: '-67104443'
             widget: string
           - hint: 'Original text: — Your trusted partner in, key: 275f7b27'
             label: Text
@@ -515,6 +515,14 @@ collections:
             label: Text
             name: '-4896f760'
             widget: string
+          - hint: >-
+              Original text: We uphold the highest standards of integrity,
+              supported by a robust ecosystem and partnerships granting access
+              to experts, enabling us to deliver extensive wealth management
+              services., key: 59c7c43f
+            label: Text
+            name: 59c7c43f
+            widget: text
           - hint: >-
               Original text: — The history of the growth and advancement of a
               prosperous financial consultancy in Switzerland, key: 3ded4d83
@@ -1151,9 +1159,9 @@ collections:
             label: Link
             name: 2f
             widget: string
-          - hint: 'Original link: #services, key: -686fc27f'
+          - hint: 'Original link: #, key: 23'
             label: Link
-            name: '-686fc27f'
+            name: '23'
             widget: string
           - hint: 'Original link: /about/, key: 61642f31'
             label: Link
@@ -1173,6 +1181,10 @@ collections:
               key: 70df12fd
             label: Link
             name: 70df12fd
+            widget: string
+          - hint: 'Original link: #services, key: -686fc27f'
+            label: Link
+            name: '-686fc27f'
             widget: string
           - hint: 'Original link: /services/asset-management/, key: -5b0dcf13'
             label: Link
@@ -1204,10 +1216,6 @@ collections:
           - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
             label: Link
             name: '-d4fd732'
-            widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
             widget: string
           - hint: 'Original link: tel:+410223191919, key: -51f92d3c'
             label: Link
@@ -1274,6 +1282,10 @@ collections:
               key: 28afe8ec
             label: Link
             name: 28afe8ec
+            widget: string
+          - hint: 'Original link: /#services, key: 710c0232'
+            label: Link
+            name: 710c0232
             widget: string
       - label: Images
         name: images

@@ -118,6 +118,10 @@ body {
   right: 0%;
 }
 
+.section.is-stat {
+  padding-bottom: 0;
+}
+
 .container {
   flex-flow: column;
   justify-content: flex-start;
@@ -1406,6 +1410,15 @@ body {
   right: 0%;
 }
 
+.quote-img__midjourney.test {
+  display: none;
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
 .quote-img__arrow-outline {
   justify-content: center;
   align-items: center;
@@ -1487,6 +1500,7 @@ body {
 }
 
 .footer__cards-wrapper {
+  z-index: 1;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
   color: var(--silver);
@@ -1498,6 +1512,7 @@ body {
   align-items: stretch;
   width: 100%;
   display: grid;
+  position: relative;
 }
 
 .footer__card {
@@ -2275,7 +2290,7 @@ body {
 
   .nav__menu {
     grid-template-columns: 40% 60%;
-    width: 80vw;
+    width: 100vw;
   }
 
   .nav__logo-link.w--current {
@@ -2328,6 +2343,7 @@ body {
   .hero__grid {
     grid-template-rows: auto auto;
     grid-template-columns: 1fr;
+    padding-top: 4rem;
   }
 
   .hero__headline-wrap {

@@ -189,6 +189,14 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
+ * SAWM | quote drawing v1
+ * dependencies: gsap, drawsvg, ScrollTrigger
+ * build 23.07.24 @21:00
+ */
+function quote__getPaths(e){let t=document.querySelector(e);if(!t)return console.error("No SVG found"),[];let r=Array.from(t.querySelectorAll("path[id]"));return r.reverse(),r.map(e=>`#${e.id}`)}function quote__setInitialState(e){gsap.set(e,{fillOpacity:0}),gsap.set(e,{y:"25%",opacity:0})}function quote__drawing(e){let t=gsap.timeline(),r=quote__getPaths(e.SVG_TARGET);gsap.to(r,{delay:0,duration:e.DURATION,y:"0%",opacity:1,ease:"expo.inOut",stagger:e.STAGGER}),r.forEach((r,o)=>{t.fromTo(r,{drawSVG:"0%"},{drawSVG:"100%",delay:0,duration:e.DURATION,ease:e.EASE},o*e.STAGGER).to(r,{fillOpacity:1,duration:e.DURATION/4,ease:"none"})})}document.addEventListener("DOMContentLoaded",()=>{let e={SVG_TARGET:"#quote-logotype",START:"top center",DURATION:2,EASE:"power4.inOut",STAGGER:.125},t=quote__getPaths(e.SVG_TARGET);quote__setInitialState(t),ScrollTrigger.create({trigger:'[data-id="quote"]',start:e.START,markers:!1,onEnter(){ScrollTrigger.isTriggered||(quote__drawing(e),ScrollTrigger.isTriggered=!0)}}),ScrollTrigger.isTriggered=!1});
+</script>
+  <script>
+/*
  * SAWM | numbers animation v1
  * build 23.07.24 @17:08
  */
@@ -210,11 +218,11 @@ document.addEventListener("DOMContentLoaded",function(){let e=document.querySele
 </script>
   <script>
 /*
- * SA | keyvisual animation v5.1
+ * SAWM | arrows vivus + rotate v3
  * dependencies: gsap.js scrolltrigger.js
  * build: 21.06.24 @22:48
  */
-function setInitialGSAPstates(i){gsap.set(document.querySelector(i.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initKevisualReveal(i){let e=document.querySelector(i.keyvisualSilverArrow),r=gsap.timeline();r.to(e,{opacity:1,fill:i.fillColor,delay:i.delay,duration:i.duration,ease:i.ease}).to(e,{rotation:0,delay:-i.duration,transformOrigin:"center center",duration:i.duration,ease:"elastic.out(1, 0.45)"})}function initializeVivus(i,e){let r=new Vivus(i,e);return r.play(),r}document.addEventListener("DOMContentLoaded",()=>{let i={fillColor:"#dadbdd",keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(i.keyvisualSilverArrow)&&setInitialGSAPstates(i)});const silverArrowOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"},arrowsOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow",silverArrowOptions),initializeVivus("keyvisual-horizontal-arrows",arrowsOptions);let i={fillColor:"#dadbdd",keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",delay:1.25,duration:1.25,ease:"power4.out"};initKevisualReveal(i)},0);
+function setInitialGSAPstates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setRotateArrow(e){gsap.to(e.keyvisualSilverArrow,{rotation:90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-=100",scrub:!0,markers:!1}})}function initializeAnimations(e){let t=document.querySelector(e.keyvisualSilverArrow),i=gsap.timeline();i.to(t,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(t,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)",onComplete(){setRotateArrow(e)}}),setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow",{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"}),initializeVivus("keyvisual-horizontal-arrows",{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"})},0)}function initializeVivus(e,t){let i=new Vivus(e,t);return i.play(),i}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};e.triggerElement&&document.querySelector(e.keyvisualSilverArrow)&&(setInitialGSAPstates(e),initializeAnimations(e))});
 </script>
   <script>
 /*
@@ -261,6 +269,22 @@ document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-r
  * build 29.06.24 @17:42
 */ 
 document.addEventListener("DOMContentLoaded",()=>{const position="left";if(progress__isMobileDevice()){return}progress__injectCSS(position);progress__injectHTML();progress__showOnScroll()});function progress__isMobileDevice(){if(window.innerWidth<768){return true}}function progress__injectCSS(position){const css=`.progress-wrap{--indicator-progress-color:rgba(255, 255, 255, 1);--indicator-slide-color:rgba(255, 255, 255, .1);--indicator-font:"Unicons";--indicator-content:"\\e84b";--indicator-hover:white --indicator-position:1.25rem}@font-face{font-family:"Unicons";src:url("https://uploads-ssl.webflow.com/61a0f086f2b1f289503a4957/6329d8e0a1790e3283ae2504_unicons.woff") format("woff");font-weight:400;font-style:normal;font-display:swap}.progress-wrap{position:fixed;mix-blend-mode:difference;${ position }:1.5rem;bottom:1.5rem;height:46px;width:46px;cursor:pointer;display:none;border-radius:50px;box-shadow:inset 0 0 0 2px var(--indicator-slide-color);z-index:10000;opacity:0;visibility:hidden;transform:translateY(15px);transition:all 200ms linear}.progress-wrap.active-progress{display:block;opacity:1;visibility:visible;transform:translateY(0)}.progress-wrap::after,.progress-wrap::before{position:absolute;font-family:var(--indicator-font);content:var(--indicator-content);text-align:center;line-height:46px;font-size:24px;left:0;top:0;height:46px;width:46px;cursor:pointer;display:block;transition:all 200ms linear}.progress-wrap::after{color:var(--indicator-progress-color);z-index:1}.progress-wrap:hover::before{color:var(--indicator-hover);transform:scale(1.0);transform-origin:center}.progress-wrap:hover::after{transform:scale(1.15);transform-origin:center}.progress-wrap svg path{fill:none}.progress-wrap svg.progress-circle path{stroke:var(--indicator-progress-color);stroke-width:4;box-sizing:border-box;transition:all 200ms linear}`;const style=document.createElement("style");style.innerHTML=css;document.head.appendChild(style)}function progress__injectHTML(){const scrollProgressHTML=`<div class="progress-wrap"><svg class="progress-circle svg-content"height="100%"viewBox="-1 -1 102 102"width="100%"><path d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"/></svg></div>`;const div=document.createElement("div");div.innerHTML=scrollProgressHTML;document.body.prepend(div)}function progress__showOnScroll(){if(!document.querySelector(".progress-wrap")){return}const progressPath=document.querySelector(".progress-wrap path");const pathLength=progressPath.getTotalLength();progressPath.style.transition="none";progressPath.style.strokeDasharray=`${ pathLength } ${ pathLength }`;progressPath.style.strokeDashoffset=pathLength;progressPath.getBoundingClientRect();progressPath.style.transition="stroke-dashoffset 10ms linear";const updateProgress=()=>{const scroll=window.pageYOffset||document.documentElement.scrollTop;const height=document.documentElement.scrollHeight-document.documentElement.clientHeight;const progress=pathLength-(scroll*pathLength)/height;progressPath.style.strokeDashoffset=progress};updateProgress();window.addEventListener("scroll",updateProgress,{passive:true});const offset=50;const duration=550;window.addEventListener("scroll",()=>{if(window.pageYOffset>offset){document.querySelector(".progress-wrap").classList.add("active-progress")}else{document.querySelector(".progress-wrap").classList.remove("active-progress")}},{passive:true});document.querySelector(".progress-wrap").addEventListener("click",(event)=>{event.preventDefault();scrollToTop(duration);return false});function scrollToTop(duration){const start=window.pageYOffset||document.documentElement.scrollTop;const startTime=performance.now();function scrollStep(timestamp){const currentTime=timestamp||performance.now();const elapsedTime=currentTime-startTime;const scrollTo=Math.max(start-(start*elapsedTime)/duration,0);window.scrollTo(0,scrollTo);if(elapsedTime<duration){window.requestAnimationFrame(scrollStep)}}window.requestAnimationFrame(scrollStep)}}
+</script>
+  <script>
+/*
+ * SAWM | stagger reveal elements v1 (footer)
+ * build 22.07.24 @19:00
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const options = {
+    trigger: `.footer__logo-wrap`,
+    targets: `.footer__card`
+  };
+  if(!document.querySelector(`${options.trigger}`)) return;
+  setInitialState(options);
+  staggerRevealTargets(options);
+});
+function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);gsap.set(r,{y:"50%",opacity:0})}function staggerRevealTargets(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);ScrollTrigger.create({trigger:t,start:"top 80%",onEnter(){gsap.to(r,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:.15})}})}
 </script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>
