@@ -33,17 +33,14 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
   <style>
 /* initial states header navigation */
 .nav{opacity:0}
-/* initial states header keyvisual */
-#keyvisual-horizontal-arrows path,
-#vivus-keyvisual-silver-arrow path {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
+/* initial states keyvisual */
+#vivus-keyvisual-silver-arrow path,
+#keyvisual-horizontal-arrows path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
 }
 #keyvisual-silver-arrow {
-    fill: none;
-}
-.fill-none {
-    fill: none;
+  opacity: 0;
 }
 </style>
   <style>
@@ -104,6 +101,13 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
+ * SAWM | numbers animation v1
+ * build 23.07.24 @17:08
+ */
+document.addEventListener("DOMContentLoaded",()=>{let t={targets:document.querySelectorAll(".incremental"),numbers:"data-target-number",duration:1.5,easing:"slow(0.7,0.7,false)"};0!==t.targets.length&&Array.from(t.targets).forEach(e=>{initNumberOnce(t,e)})});function initNumberOnce(t,e){let r=t.easing,n=+e.getAttribute(t.numbers),a=t.duration;gsap.registerPlugin(ScrollTrigger),ScrollTrigger.create({trigger:e,start:"top bottom",onEnter(){gsap.to({current:0},{duration:a,current:n,ease:r,onUpdate:function(){e.innerText=Math.round(this.targets()[0].current)}})},once:!0})}
+</script>
+  <script>
+/*
  * SAWM | stagger reveal elements v1
  * build 22.07.24 @19:00
  */
@@ -114,61 +118,7 @@ document.addEventListener("DOMContentLoaded",()=>{const options={trigger:`.faq__
  * SAWM | card small hover v2
  * build 22.07.24 @17:25
  */
-document.addEventListener("DOMContentLoaded", function () {
-  const FAQ__CTAs = document.querySelectorAll(".faq__cta");
-  if (FAQ__CTAs.length === 0) {
-    console.log("no .faq__cta, skipped");
-    return;
-  };
-  Array.from(FAQ__CTAs).forEach((FAQ__CTA) => {
-    const overlay = FAQ__CTA.querySelector(".footer__card-overlay");
-    console.log(overlay);
-    const currentBackgroundImage = getComputedStyle(overlay).backgroundImage;
-    function extractColors(gradientString) {
-      const regex = /rgb(?:a)?\(\d{1,3}, \d{1,3}, \d{1,3}(?:, [\d.]+)?\)/g;
-      const matches = gradientString.match(regex);
-      return matches || [];
-    }
-    const colors = extractColors(currentBackgroundImage);
-    function extractRGB(rgbaString) {
-      const regex = /rgba?\((\d+), (\d+), (\d+),? [\d.]*\)/;
-      const matches = rgbaString.match(regex);
-      if (matches) {
-        const r = parseInt(matches[1], 10);
-        const g = parseInt(matches[2], 10);
-        const b = parseInt(matches[3], 10);
-        return { r, g, b };
-      } else {
-        return null;
-      }
-    }
-    const rgbValues = extractRGB(colors[1]);
-    overlay.addEventListener("mouseenter", () => {
-      gsap.to(overlay, {
-        duration: 0.35,
-        ease: "expo.out",
-        onUpdate: function () {
-          const progress = this.progress();
-          overlay.style.backgroundImage = `linear-gradient(90deg, ${colors[0]}, rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, ${progress}))`;
-        }
-      });
-    });
-    overlay.addEventListener("mouseleave", () => {
-      gsap.to(overlay, {
-        duration: 0.5,
-        ease: "expo.out",
-        onUpdate: function () {
-          const progress = this.progress();
-          overlay.style.backgroundImage = `linear-gradient(90deg, ${
-            colors[0]
-          }, rgba(${rgbValues.r}, ${rgbValues.g}, ${rgbValues.b}, ${
-            1 - progress
-          }))`;
-        }
-      });
-    });
-  });
-});
+document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".faq__cta");0!==e.length&&Array.from(e).forEach(e=>{let t=e.querySelector(".footer__card-overlay"),r=getComputedStyle(t).backgroundImage,n=function e(t){let r=t.match(/rgb(?:a)?\(\d{1,3}, \d{1,3}, \d{1,3}(?:, [\d.]+)?\)/g);return r||[]}(r),a=function e(t){let r=t.match(/rgba?\((\d+), (\d+), (\d+),? [\d.]*\)/);if(!r)return null;{let n=parseInt(r[1],10),a=parseInt(r[2],10),o=parseInt(r[3],10);return{r:n,g:a,b:o}}}(n[1]);t.addEventListener("mouseenter",()=>{gsap.to(t,{duration:.35,ease:"expo.out",onUpdate:function(){let e=this.progress();t.style.backgroundImage=`linear-gradient(90deg, ${n[0]}, rgba(${a.r}, ${a.g}, ${a.b}, ${e}))`}})}),t.addEventListener("mouseleave",()=>{gsap.to(t,{duration:.5,ease:"expo.out",onUpdate:function(){let e=this.progress();t.style.backgroundImage=`linear-gradient(90deg, ${n[0]}, rgba(${a.r}, ${a.g}, ${a.b}, ${1-e}))`}})})})});
 </script>
   <script>
 /*
@@ -176,15 +126,7 @@ document.addEventListener("DOMContentLoaded", function () {
  * dependencies: gsap.js scrolltrigger.js
  * build: 21.06.24 @22:48
  */
-const options = {
-  fillColor: `#eeeff1`,
-  keyvisualSilverArrow: `#keyvisual-silver-arrow`,
-  keyvisualHorizontalArrow: `#keyvisual-horizontal-arrows`,
-  delay: 1 + .25,
-  duration: 1 + .25,
-  ease: "power4.out"
-};
-document.addEventListener("DOMContentLoaded",()=>{if(!document.querySelector(options.keyvisualSilverArrow)){return}setInitialGSAPstates(options)});function setInitialGSAPstates(options){gsap.set(document.querySelector(options.keyvisualSilverArrow),{opacity:1,fill:"transparent",rotation:45,transformOrigin:"center center"})}function initKevisualReveal(options){const keyvisualSilverArrow=document.querySelector(options.keyvisualSilverArrow);const timeline=gsap.timeline();timeline.to(keyvisualSilverArrow,{opacity:1,fill:options.fillColor,delay:options.delay,duration:options.duration,ease:options.ease}).to(keyvisualSilverArrow,{rotation:0,delay: -options.duration,transformOrigin:"center center",duration:options.duration,ease:"elastic.out(1, 0.45)"})}function initializeVivus(id,options){const instance=new Vivus(id,options);instance.play();return instance}const silverArrowOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};const arrowsOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};setTimeout(()=>{const vivusSilverArrow=initializeVivus("vivus-keyvisual-silver-arrow",silverArrowOptions);const vivusArrows=initializeVivus("keyvisual-horizontal-arrows",arrowsOptions);initKevisualReveal(options)},0);
+function setInitialGSAPstates(i){gsap.set(document.querySelector(i.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initKevisualReveal(i){let e=document.querySelector(i.keyvisualSilverArrow),r=gsap.timeline();r.to(e,{opacity:1,fill:i.fillColor,delay:i.delay,duration:i.duration,ease:i.ease}).to(e,{rotation:0,delay:-i.duration,transformOrigin:"center center",duration:i.duration,ease:"elastic.out(1, 0.45)"})}function initializeVivus(i,e){let r=new Vivus(i,e);return r.play(),r}document.addEventListener("DOMContentLoaded",()=>{let i={fillColor:"#dadbdd",keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(i.keyvisualSilverArrow)&&setInitialGSAPstates(i)});const silverArrowOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"},arrowsOptions={type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"};setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow",silverArrowOptions),initializeVivus("keyvisual-horizontal-arrows",arrowsOptions);let i={fillColor:"#dadbdd",keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",delay:1.25,duration:1.25,ease:"power4.out"};initKevisualReveal(i)},0);
 </script>
   <script>
 /*
@@ -196,10 +138,10 @@ document.addEventListener("DOMContentLoaded",()=>{const options={navigation:docu
 </script>
   <script>
 /*
- * SA | burger menu v1
- * build 29.06.24 @10:55
+ * SAWM | burger menu v2
+ * build 23.07.24 @13:27
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={burger:document.querySelector(`[data-id="burger"]`),menu:document.querySelector(`[data-id="menu"]`),links:document.querySelectorAll(`[data-id="navbar-link"]`),svgElement:document.querySelector(".burger-rotate")};if(!options.burger){return}if(window.innerWidth<991){burger__navigation(options)}});function openMenu(options){gsap.to(options.menu,{x:"0%",duration:0.5})}function closeMenu(options){gsap.to(options.menu,{x:"100%",duration:0.5})}function burger__navigation(options){let isOpen=false;options.burger.addEventListener("click",()=>{options.svgElement.classList.toggle("active");isOpen?closeMenu(options):openMenu(options);isOpen=!isOpen});options.links.forEach((navLink)=>{navLink.addEventListener("click",()=>{closeMenu(options);options.burger.click()})})}
+function setInitialStates(e){e.overlay.style.display="none",e.overlay.style.opacity=0}function openOverlay(e){e.overlay.style.display="block",gsap.to(e.overlay,{opacity:1,duration:e.duration/4})}function closeOverlay(e){gsap.to(e.overlay,{opacity:0,duration:e.duration,onComplete(){e.overlay.style.display="none"}})}function openMenu(e){openOverlay(e),gsap.to(e.menu,{x:"0%",duration:2*e.duration,ease:"expo.out"}),e.burger.classList.contains("is-dark")&&gsap.to(e.burger,{color:e.colors.silver,duration:e.duration,ease:"expo.out"})}function closeMenu(e){closeOverlay(e),gsap.to(e.menu,{x:"110%",duration:e.duration,ease:"expo.out"}),e.burger.classList.contains("is-dark")&&gsap.to(e.burger,{color:e.colors.dark,duration:e.duration})}function burger__navigation(e){let o=!1;e.burger.addEventListener("click",()=>{e.svgElement.classList.toggle("active"),o?closeMenu(e):openMenu(e),o=!o}),e.links.forEach(o=>{o.addEventListener("click",()=>{closeMenu(e),e.burger.click()})})}document.addEventListener("DOMContentLoaded",()=>{let e={colors:{silver:"#eeeff1",dark:"#3b4247"},duration:.28,overlay:document.querySelector('[data-id="menu-overlay"]'),burger:document.querySelector('[data-id="burger"]'),menu:document.querySelector('[data-id="menu"]'),links:document.querySelectorAll('[data-id="navbar-link"]'),svgElement:document.querySelector(".burger-rotate")};e.burger&&(setInitialStates(e),burger__navigation(e))});
 </script>
   <script>
 /*

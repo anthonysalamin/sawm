@@ -210,9 +210,25 @@ collections:
             label: Text
             name: '-665be56a'
             widget: string
+          - hint: 'Original text: about, key: 585238d'
+            label: Text
+            name: 585238d
+            widget: string
           - hint: 'Original text: About, key: 3c2336d'
             label: Text
             name: 3c2336d
+            widget: string
+          - hint: 'Original text: Call us, key: -7c14e080'
+            label: Text
+            name: '-7c14e080'
+            widget: string
+          - hint: 'Original text: email us, key: 2d5d45a2'
+            label: Text
+            name: 2d5d45a2
+            widget: string
+          - hint: 'Original text: Find us, key: 305d2245'
+            label: Text
+            name: 305d2245
             widget: string
           - hint: 'Original text: — Your trusted, key: -2b79bd4a'
             label: Text
@@ -249,9 +265,13 @@ collections:
             label: Text
             name: 47bce475
             widget: text
-          - hint: 'Original text: 5+, key: 696'
+          - hint: 'Original text: 0, key: 30'
             label: Text
-            name: '696'
+            name: '30'
+            widget: string
+          - hint: 'Original text: +, key: 2b'
+            label: Text
+            name: 2b
             widget: string
           - hint: 'Original text: Years in Wealth Management Business, key: 226b8f1b'
             label: Text
@@ -264,10 +284,6 @@ collections:
           - hint: 'Original text: Total AUM, key: 54f1439d'
             label: Text
             name: 54f1439d
-            widget: string
-          - hint: 'Original text: 36+, key: c628'
-            label: Text
-            name: c628
             widget: string
           - hint: 'Original text: Combine years of experience, key: 29c44808'
             label: Text
@@ -335,6 +351,18 @@ collections:
             label: Text
             name: 75755fa3
             widget: string
+          - hint: 'Original text: — You ask,, key: -5cdd5920'
+            label: Text
+            name: '-5cdd5920'
+            widget: string
+          - hint: 'Original text:  we answer, key: -4699e6d0'
+            label: Text
+            name: '-4699e6d0'
+            widget: string
+          - hint: 'Original text: Talk to us, key: -7d8e69f1'
+            label: Text
+            name: '-7d8e69f1'
+            widget: string
           - hint: 'Original text: — We value, key: 3611dc4b'
             label: Text
             name: 3611dc4b
@@ -344,10 +372,6 @@ collections:
               clients, key: -730b80af
             label: Text
             name: '-730b80af'
-            widget: string
-          - hint: 'Original text: email us, key: 2d5d45a2'
-            label: Text
-            name: 2d5d45a2
             widget: string
           - hint: 'Original text: call Us, key: 20b283c0'
             label: Text
@@ -497,10 +521,6 @@ collections:
             label: Text
             name: 3ded4d83
             widget: text
-          - hint: 'Original text: skip history, key: -c26890d'
-            label: Text
-            name: '-c26890d'
-            widget: string
           - hint: 'Original text: 2024, key: 177500'
             label: Text
             name: '177500'
@@ -1131,21 +1151,28 @@ collections:
             label: Link
             name: 2f
             widget: string
-          - hint: 'Original link: #, key: 23'
-            label: Link
-            name: '23'
-            widget: string
-          - hint: 'Original link: #intro, key: 41b50429'
-            label: Link
-            name: 41b50429
-            widget: string
           - hint: 'Original link: #services, key: -686fc27f'
             label: Link
             name: '-686fc27f'
             widget: string
+          - hint: 'Original link: /about/, key: 61642f31'
+            label: Link
+            name: 61642f31
+            widget: string
+          - hint: 'Original link: tel:+41223191919, key: 6851ce42'
+            label: Link
+            name: 6851ce42
+            widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=Contact, key: 7adff995'
             label: Link
             name: 7adff995
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.google.com/maps/place/Bd+du+Th%C3%A9%C3%A2tre+2,+1204+Gen%C3%A8ve,+Switzerland/@46.2025498,6.1387794,17z/data=!3m1!4b1!4m6!3m5!1s0x478c652a029fa33d:0x6816afee8c47ed69!8m2!3d46.2025461!4d6.1413543!16s%2Fg%2F11c1x386tt?entry=ttu,
+              key: 70df12fd
+            label: Link
+            name: 70df12fd
             widget: string
           - hint: 'Original link: /services/asset-management/, key: -5b0dcf13'
             label: Link
@@ -1167,17 +1194,6 @@ collections:
             label: Link
             name: 17a761b5
             widget: string
-          - hint: 'Original link: tel:+41223191919, key: 6851ce42'
-            label: Link
-            name: 6851ce42
-            widget: string
-          - hint: >-
-              Original link:
-              https://www.google.com/maps/place/Bd+du+Th%C3%A9%C3%A2tre+2,+1204+Gen%C3%A8ve,+Switzerland/@46.2025498,6.1387794,17z/data=!3m1!4b1!4m6!3m5!1s0x478c652a029fa33d:0x6816afee8c47ed69!8m2!3d46.2025461!4d6.1413543!16s%2Fg%2F11c1x386tt?entry=ttu,
-              key: 70df12fd
-            label: Link
-            name: 70df12fd
-            widget: string
           - hint: >-
               Original link:
               /assets/documents/best-execution-policy-for-silver-arrow-sa.pdf,
@@ -1188,6 +1204,10 @@ collections:
           - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
             label: Link
             name: '-d4fd732'
+            widget: string
+          - hint: 'Original link: #, key: 23'
+            label: Link
+            name: '23'
             widget: string
           - hint: 'Original link: tel:+410223191919, key: -51f92d3c'
             label: Link
