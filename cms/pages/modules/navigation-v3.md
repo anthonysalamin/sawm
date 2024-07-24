@@ -1,5 +1,5 @@
 ---
-title: Navigation v3
+title: Navigation
 permalink: modules/{{ page.fileSlug }}/index.html
 layout: modules/navigation-v3.html
 slug: navigation-v3

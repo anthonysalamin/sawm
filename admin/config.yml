@@ -86,16 +86,6 @@ collections:
             name: additional_tags
             widget: text
             required: false
-  - name: pages-playground
-    label: Pages playground
-    identifier_field: title
-    extension: md
-    create: false
-    delete: false
-    slug: '{{slug}}'
-    editor: *ref_0
-    folder: cms/pages/playground
-    fields: *ref_1
   - name: pages-modules
     label: Pages modules
     identifier_field: title
@@ -305,16 +295,16 @@ collections:
             label: Text
             name: fcf0ad2
             widget: string
-          - hint: 'Original text: — Recognizing, key: 76ed2f9f'
+          - hint: 'Original text: — Acknowledging, key: c6992d'
             label: Text
-            name: 76ed2f9f
+            name: c6992d
             widget: string
           - hint: >-
-              Original text:  individual needs, we offer modern, tailored
-              solutions to our clients, key: -275bf47c
+              Original text:  the specific demands of our clientele, we offer
+              state-of-the-art solutions for wealthy individuals, key: -25ea30f5
             label: Text
-            name: '-275bf47c'
-            widget: string
+            name: '-25ea30f5'
+            widget: text
           - hint: 'Original text: Asset, key: 3c9fad0'
             label: Text
             name: 3c9fad0
@@ -449,80 +439,6 @@ collections:
             label: Text
             name: 393694dd
             widget: string
-          - hint: 'Original text: get in touch, key: -5bfbfdf2'
-            label: Text
-            name: '-5bfbfdf2'
-            widget: string
-          - hint: 'Original text: partner with us, key: 468208e0'
-            label: Text
-            name: '468208e0'
-            widget: string
-          - hint: 'Original text: — Your trusted partner in, key: 275f7b27'
-            label: Text
-            name: 275f7b27
-            widget: string
-          - hint: 'Original text: navigating the complexities, key: 46501e5d'
-            label: Text
-            name: 46501e5d
-            widget: string
-          - hint: 'Original text: of , key: 1ad29'
-            label: Text
-            name: 1ad29
-            widget: string
-          - hint: 'Original text: scroll, key: -361a1933'
-            label: Text
-            name: '-361a1933'
-            widget: string
-          - hint: 'Original text: Geneva, key: 7eeae4a0'
-            label: Text
-            name: 7eeae4a0
-            widget: string
-          - hint: 'Original text: Hong Kong, key: 2a79013d'
-            label: Text
-            name: 2a79013d
-            widget: string
-          - hint: 'Original text: Contact, key: -64104400'
-            label: Text
-            name: '-64104400'
-            widget: string
-          - hint: 'Original text: +41 (0) 22 319 19 19, key: 3b9d152'
-            label: Text
-            name: 3b9d152
-            widget: string
-          - hint: 'Original text: Monday — Friday | 8:30am — 5:30pm, key: 79731977'
-            label: Text
-            name: '79731977'
-            widget: string
-          - hint: 'Original text: info@sawm.ch, key: 290df35d'
-            label: Text
-            name: 290df35d
-            widget: string
-          - hint: 'Original text: Guaranteed reply within 48 hours , key: -2c41e54e'
-            label: Text
-            name: '-2c41e54e'
-            widget: string
-          - hint: 'Original text: jt@sawm.ch, key: -4297c007'
-            label: Text
-            name: '-4297c007'
-            widget: string
-          - hint: 'Original text: Guaranteed reply within 48 hours, key: 61ab4b2e'
-            label: Text
-            name: 61ab4b2e
-            widget: string
-          - hint: >-
-              Original text: — We value developing a close working relationship
-              with our clients and partners., key: -4896f760
-            label: Text
-            name: '-4896f760'
-            widget: string
-          - hint: >-
-              Original text: We uphold the highest standards of integrity,
-              supported by a robust ecosystem and partnerships granting access
-              to experts, enabling us to deliver extensive wealth management
-              services., key: 59c7c43f
-            label: Text
-            name: 59c7c43f
-            widget: text
           - hint: >-
               Original text: — The history of the growth and advancement of a
               prosperous financial consultancy in Switzerland, key: 3ded4d83
@@ -540,6 +456,10 @@ collections:
             label: Text
             name: '-5143929'
             widget: text
+          - hint: 'Original text: get in touch, key: -5bfbfdf2'
+            label: Text
+            name: '-5bfbfdf2'
+            widget: string
           - hint: 'Original text: Our Mission, key: 3dba0078'
             label: Text
             name: 3dba0078
@@ -650,29 +570,13 @@ collections:
             label: Text
             name: 3d095b06
             widget: string
-          - hint: 'Original text: About us, key: 645f0031'
+          - hint: 'Original text: scroll, key: -361a1933'
             label: Text
-            name: 645f0031
+            name: '-361a1933'
             widget: string
-          - hint: 'Original text: call us, key: 20b287a0'
+          - hint: 'Original text: — Recognizing, key: 76ed2f9f'
             label: Text
-            name: 20b287a0
-            widget: string
-          - hint: 'Original text: Best Execution Policy , key: 3788bcca'
-            label: Text
-            name: 3788bcca
-            widget: string
-          - hint: 'Original text: Trustability, key: -2115880e'
-            label: Text
-            name: '-2115880e'
-            widget: string
-          - hint: 'Original text: Transparency, key: -6bc56088'
-            label: Text
-            name: '-6bc56088'
-            widget: string
-          - hint: 'Original text: Flexibility, key: 55b4fcf9'
-            label: Text
-            name: 55b4fcf9
+            name: 76ed2f9f
             widget: string
           - hint: >-
               Original text:  individual needs, our team offers modern tailored
@@ -934,16 +838,14 @@ collections:
             label: Text
             name: '-408974de'
             widget: text
-          - hint: 'Original text: Wealth management, key: 22d23e76'
-            label: Text
-            name: 22d23e76
-            widget: string
           - hint: >-
-              Original text: — Your trusted partner in navigating the
-              complexities, key: -7eba2b1c
+              Original text: We uphold the highest standards of integrity,
+              supported by a robust ecosystem and partnerships granting access
+              to experts, enabling us to deliver extensive wealth management
+              services., key: 59c7c43f
             label: Text
-            name: '-7eba2b1c'
-            widget: string
+            name: 59c7c43f
+            widget: text
           - hint: 'Original text: — Maximize, key: -16da2288'
             label: Text
             name: '-16da2288'
@@ -1159,9 +1061,9 @@ collections:
             label: Link
             name: 2f
             widget: string
-          - hint: 'Original link: #, key: 23'
+          - hint: 'Original link: #services, key: -686fc27f'
             label: Link
-            name: '23'
+            name: '-686fc27f'
             widget: string
           - hint: 'Original link: /about/, key: 61642f31'
             label: Link
@@ -1182,9 +1084,9 @@ collections:
             label: Link
             name: 70df12fd
             widget: string
-          - hint: 'Original link: #services, key: -686fc27f'
+          - hint: 'Original link: #, key: 23'
             label: Link
-            name: '-686fc27f'
+            name: '23'
             widget: string
           - hint: 'Original link: /services/asset-management/, key: -5b0dcf13'
             label: Link
@@ -1216,32 +1118,6 @@ collections:
           - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
             label: Link
             name: '-d4fd732'
-            widget: string
-          - hint: 'Original link: tel:+410223191919, key: -51f92d3c'
-            label: Link
-            name: '-51f92d3c'
-            widget: string
-          - hint: >-
-              Original link:
-              mailto:info@sawm.ch?subject=Guaranteed%20reply%20within%2048%20hours,
-              key: 1c504693
-            label: Link
-            name: 1c504693
-            widget: string
-          - hint: 'Original link: mailto:jt@sawm.ch?subject=contact, key: 52795851'
-            label: Link
-            name: '52795851'
-            widget: string
-          - hint: 'Original link: mailto:info@sawm.ch?subject=info, key: -6034e8c7'
-            label: Link
-            name: '-6034e8c7'
-            widget: string
-          - hint: >-
-              Original link:
-              https://silver-arrow-wealth-management.ch/wp-content/uploads/2024/04/Best-Execution-Policy-for-Silver-Arrow-SA.pdf,
-              key: -3be66584
-            label: Link
-            name: '-3be66584'
             widget: string
           - hint: >-
               Original link:
@@ -1362,32 +1238,6 @@ collections:
                 required: false
           - label: Image
             name: '-7756c689'
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 3ffd3311
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-2990c24e'
             widget: object
             fields:
               - name: url

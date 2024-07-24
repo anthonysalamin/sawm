@@ -384,6 +384,13 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
+ * SAWM | hover darker shade v1
+ * build: 24.07.24 @12:05
+*/
+function darkenColor(e,o){let t=e.split(","),r=o<0?0:255,a=o<0?-1*o:o,n=parseInt(t[0].slice(4)),u=parseInt(t[1]),d=parseInt(t[2]);return"rgb("+(Math.round((r-n)*a)+n)+","+(Math.round((r-u)*a)+u)+","+(Math.round((r-d)*a)+d)+")"}function onMouseEnter(e,o,t){o.addEventListener("mouseenter",()=>{let r=o.querySelector(e.keyvisual);gsap.to(r,{fill:"#eeeff1",duration:e.duration,ease:e.ease}),gsap.to(o,{backgroundColor:t,duration:e.duration,ease:e.ease})})}function onMouseLeave(e,o,t){o.addEventListener("mouseleave",()=>{let r=o.querySelector(e.keyvisual);gsap.to(r,{fill:"transparent",duration:e.duration,ease:e.ease}),gsap.to(o,{backgroundColor:t,duration:e.duration,ease:e.ease})})}function initHoverShade(e){let o=document.querySelectorAll(e.targets);o.forEach(o=>{let t=getComputedStyle(o),r=t.backgroundColor,a=darkenColor(r,e.percentage);onMouseEnter(e,o,a),onMouseLeave(e,o,r)})}document.addEventListener("DOMContentLoaded",()=>{let e={percentage:-.25,targets:".footer__card",keyvisual:'[data-id="footer-cta-keyvisual"]',duration:1,ease:"power2.out"};document.querySelector(e.targets)&&initHoverShade(e)});
+</script>
+  <script>
+/*
  * SAWM | quote drawing v1
  * dependencies: gsap, drawsvg, ScrollTrigger
  * build 23.07.24 @21:00
@@ -413,19 +420,19 @@ document.addEventListener("DOMContentLoaded",function(){let e=document.querySele
 </script>
   <script>
 /*
- * SAWM | arrows vivus + rotate v3
+ * SAWM | arrows vivus + rotate v4
  * dependencies: gsap.js scrolltrigger.js
  * build: 21.06.24 @22:48
  */
-function setInitialGSAPstates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setRotateArrow(e){gsap.to(e.keyvisualSilverArrow,{rotation:90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-=100",scrub:!0,markers:!1}})}function initializeAnimations(e){let t=document.querySelector(e.keyvisualSilverArrow),i=gsap.timeline();i.to(t,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(t,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)",onComplete(){setRotateArrow(e)}}),setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow",{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"}),initializeVivus("keyvisual-horizontal-arrows",{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"})},0)}function initializeVivus(e,t){let i=new Vivus(e,t);return i.play(),i}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};e.triggerElement&&document.querySelector(e.keyvisualSilverArrow)&&(setInitialGSAPstates(e),initializeAnimations(e))});
+function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initializeAnimations(e){let r=document.querySelector(e.keyvisualSilverArrow);gsap.timeline().to(r,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(r,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)"}),setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow"),initializeVivus("keyvisual-horizontal-arrows")},0)}function initializeVivus(e){let r=new Vivus(e,{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"});r.play()}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-100",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};if(!e.triggerElement||!document.querySelector(e.keyvisualSilverArrow)){console.error("Required elements not found.");return}setInitialGSAPStates(e),initializeAnimations(e),setupScrollTrigger(e)});
 </script>
   <script>
 /*
- * SA | navigation display v2
+ * SAWM | navigation display v3
  * dependencies: gsap.js scrolltrigger.js
- * build: 29.06.24 @00:46
+ * build: 24.07.24 @13:18
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={navigation:document.querySelector(".nav"),duration:0.65,ease:"power4.out"};if(!options.navigation){return}nav__setInitialState(options);nav__revealOnLoad(options)});function nav__setInitialState(options){gsap.set(options.navigation,{opacity:0,y:"-150%"})}function showNav(options){gsap.to(options.navigation,{y:"0%",opacity:1,duration:options.duration})}function hideNav(options){gsap.to(options.navigation,{y:"-150%",opacity:0,duration:options.duration})}function nav__revealOnLoad(options){const timeline=gsap.timeline();timeline.to(options.navigation,{delay:.25,opacity:1,y:"0%",duration:1.25,ease:options.ease,onComplete:()=>{nav__displayOnScroll(options)}})}function nav__displayOnScroll(options){ScrollTrigger.create({trigger:options.navigation,start:"top top",end:"bottom top",scrub:false,onUpdate:(self)=>{const scrollDirection=self.direction;if(scrollDirection===1){hideNav(options)}else if(scrollDirection===-1){showNav(options)}}})}
+function nav__setInitialState(t){gsap.set(t.navigation,{y:"0%",opacity:1})}function showNav(t){gsap.to(t.navigation,{y:"0%",opacity:1,duration:t.duration,ease:t.ease})}function hideNav(t){gsap.to(t.navigation,{y:"-100%",opacity:0,duration:t.duration,ease:t.ease})}function initNavDisplay(t){ScrollTrigger.create({trigger:t.navigation,start:"top top",end:"bottom top",scrub:!1,onUpdate(e){let a=e.direction,o=window.pageYOffset||document.documentElement.scrollTop;1===a&&o>t.offset?hideNav(t):-1===a&&showNav(t)}}),window.addEventListener("scroll",()=>{let e=window.pageYOffset||document.documentElement.scrollTop;e<=t.offset&&showNav(t)})}document.addEventListener("DOMContentLoaded",()=>{let t=document.querySelector(".nav");if(!t)return;let e={navigation:t,duration:1,ease:"power3.out",offset:60};nav__setInitialState(e),initNavDisplay(e)});
 </script>
   <script>
 /*

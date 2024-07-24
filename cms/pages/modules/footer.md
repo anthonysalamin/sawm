@@ -1,8 +1,8 @@
 ---
-title: Footer v2
+title: Footer
 permalink: modules/{{ page.fileSlug }}/index.html
-layout: modules/footer-v2.html
-slug: footer-v2
+layout: modules/footer.html
+slug: footer
 tags: pages
 seo:
   noindex: false

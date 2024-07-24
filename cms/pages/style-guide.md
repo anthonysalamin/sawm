@@ -1,5 +1,5 @@
 ---
-title: STYLE GUIDE
+title: 🍋 STYLE GUIDE
 permalink: '{{ page.fileSlug }}/index.html'
 layout: style-guide.html
 slug: style-guide
