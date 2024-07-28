@@ -63,7 +63,7 @@ a {
 }
 @media (max-width: 768px) {
   .header__paragraph {
-    font-size: clamp(16, 2.8vw, 24px);
+    font-size: clamp(16, 2.6vw, 24px) !important;
   }
 }
 </style>
@@ -109,7 +109,7 @@ a {
               <a id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efab3-da7de966" href="{{ links.23 }}" class="nav__cta-wrap w-inline-block">
                 <div class="nav__cta-text">{{ texts.-665be56a }}<br></div>
               </a>
-              <a href="{{ links.61642f31 }}" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efab7-da7de966" class="nav__cta-wrap w-inline-block">
+              <a href="{{ links.23 }}" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efab7-da7de966" class="nav__cta-wrap w-inline-block">
                 <div class="nav__cta-text">{{ texts.585238d }}<br></div>
               </a>
             </div>
@@ -125,7 +125,7 @@ a {
               <a data-id="navbar-link" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efabe-da7de966" href="{{ links.23 }}" class="nav__cta-wrap w-inline-block">
                 <div class="nav__cta-text">{{ texts.-665be56a }}<br></div>
               </a>
-              <a data-id="navbar-link" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efac2-da7de966" href="{{ links.61642f31 }}" class="nav__cta-wrap w-inline-block">
+              <a data-id="navbar-link" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efac2-da7de966" href="{{ links.23 }}" class="nav__cta-wrap w-inline-block">
                 <div class="nav__cta-text is-hero">{{ texts.3c2336d }}<br></div>
               </a>
               <a href="{{ links.6851ce42 }}" data-id="navbar-link" id="w-node-_1391e14f-a164-2451-7fe8-35ae5f4efac6-da7de966" class="nav__cta-wrap w-inline-block">
@@ -279,6 +279,25 @@ document.addEventListener("DOMContentLoaded",()=>{const position="left";if(progr
 </script>
   <script>
 /*
+ * SAWM | footer active CTA v1
+ * build: 26.07.24 @12:01
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const target = `data-keyvisual="arrow"`;
+  initFooterActiveCTA(target);
+});
+function initFooterActiveCTA(target) {
+  const pathname = window.location.pathname;
+  const parts = pathname.split("/").filter((part) => part !== "");
+  const subdirectory = parts.length > 0 ? parts[parts.length - 1] : null;
+  if (!subdirectory) return;
+  const activeArrow = document.querySelector(`[data-arrow="${subdirectory}"]`);
+  const firstPath = activeArrow.querySelector("path");
+  firstPath.setAttribute("fill", "currentColor");
+}
+</script>
+  <script>
+/*
  * SAWM | stagger reveal elements v1 (footer)
  * build 22.07.24 @19:00
  */
@@ -292,6 +311,27 @@ document.addEventListener("DOMContentLoaded", () => {
   staggerRevealTargets(options);
 });
 function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);gsap.set(r,{y:"50%",opacity:0})}function staggerRevealTargets(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);ScrollTrigger.create({trigger:t,start:"top 80%",onEnter(){gsap.to(r,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:.15})}})}
+</script>
+  <script>
+/*
+ * SAWM | Telegram Whatsapp v2
+ * build 28.07.24 @00:48
+ */
+function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I would like to have more info about Silver Arrow SA")}`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245"};contactTelegram(t),contactWhatsapp(t)});
+</script>
+  <script>
+/*
+ * SAWM | contact popup v1
+ * build 28.07.24 @15:34
+ */
+function setOverlayInitialState(e){let t=document.querySelector(e.overlay);gsap.set(t,{opacity:0,display:"none"})}function initContactOverlay(e){let t=document.querySelectorAll(e.trigger),a=document.querySelectorAll(e.close),o=document.querySelector(e.overlay);Array.from(t).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{display:"flex",opacity:1,duration:e.duration,ease:e.ease})})}),Array.from(a).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{opacity:0,duration:e.duration,ease:e.ease,onComplete(){gsap.set(o,{display:"none"})}})})})}document.addEventListener("DOMContentLoaded",()=>{let e={trigger:'[data-popup="trigger"]',close:'[data-popup="close"]',overlay:'[data-popup="overlay"]',duration:.25,ease:"power3.inOut"};setOverlayInitialState(e),initContactOverlay(e)});
+</script>
+  <script>
+/*
+ * UTILITY current year
+ * build 24.10.23 @ 11:22
+ */
+document.addEventListener("DOMContentLoaded",()=>{const copyrightYear=document.querySelector(`[data-id="year"]`);if(!copyrightYear){return}copyrightYear.textContent=new Date().getFullYear()});
 </script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

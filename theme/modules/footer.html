@@ -63,7 +63,7 @@ a {
 }
 @media (max-width: 768px) {
   .header__paragraph {
-    font-size: clamp(16, 2.8vw, 24px);
+    font-size: clamp(16, 2.6vw, 24px) !important;
   }
 }
 </style>
@@ -109,11 +109,11 @@ a {
             <div class="footer__headline-cta-wrap">
               <div class="header__paragraph centered"><span class="serif-italic">{{ texts.-2b79bd4a }}</span>{{ texts.-331d8758 }}<br>{{ texts.2ae1305b }}<br>{{ texts.-6cadba87 }}</div>
               <div class="magnet">
-                <a href="{{ links.7adff995 }}" class="cta__btn w-inline-block">
-                  <div class="cta__text-round">{{ texts.-5f8cfd1a }}</div>
+                <a data-popup="trigger" href="{{ links.23 }}" class="cta__btn w-inline-block">
+                  <div class="cta__text-round">{{ texts.-64104400 }}</div>
                   <div class="cta__circle">
-                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.23 178.23">
-                        <path fill="currentColor" d="M175.71 97.45c.14-.22.27-.44.4-.66.12-.2.24-.39.35-.6.12-.23.22-.46.33-.69.1-.21.21-.42.3-.64.09-.23.17-.46.25-.68.08-.23.17-.46.25-.7.07-.23.12-.46.18-.69.06-.24.13-.48.18-.73.05-.27.09-.54.12-.81.03-.21.07-.42.09-.64.1-.98.1-1.98 0-2.96-.02-.22-.06-.44-.09-.65-.04-.27-.07-.53-.12-.8-.05-.25-.12-.5-.18-.75-.06-.22-.11-.45-.17-.67-.07-.25-.17-.48-.25-.72-.08-.22-.15-.44-.24-.66-.09-.23-.2-.44-.31-.66-.11-.22-.2-.45-.32-.67-.11-.21-.24-.42-.37-.62-.13-.21-.25-.43-.39-.64-.15-.23-.33-.45-.49-.67-.13-.17-.24-.34-.38-.51-.32-.38-.65-.75-1-1.1L99.72 4.39c-5.86-5.86-15.36-5.86-21.21 0-5.86 5.86-5.86 15.36 0 21.21l48.51 48.51H15c-8.28.01-15 6.72-15 15.01 0 8.28 6.72 15 15 15h112.02l-48.51 48.51c-5.86 5.86-5.86 15.36 0 21.21s15.36 5.86 21.21 0l74.12-74.12c.35-.35.68-.72.99-1.1.14-.17.27-.36.4-.54.16-.21.32-.42.47-.64Z"></path>
+                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+                        <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
                       </svg></div>
                   </div>
                 </a>
@@ -123,12 +123,12 @@ a {
           <div class="footer__logo-wrap">
             <div data-w-id="0bf3bec8-ceab-4d4d-9428-6496119365d6" class="footer__links">
               <a id="w-node-_0bf3bec8-ceab-4d4d-9428-6496119365d7-119365c8" href="{{ links.17a761b5 }}" class="nav__cta-wrap w-inline-block">
-                <div class="nav__cta-text">{{ texts.2a270ec1 }}<br></div>
+                <div class="nav__cta-text">{{ texts.27ee9 }}<span data-id="year" class="year">{{ texts.295600 }}</span>{{ texts.-374aa708 }}<br></div>
               </a>
               <a id="w-node-_0bf3bec8-ceab-4d4d-9428-6496119365db-119365c8" href="{{ links.-2ff9dedf }}" target="_blank" class="nav__cta-wrap w-inline-block">
-                <div class="nav__cta-text">{{ texts.-4887f9ea }}<br></div>
+                <div class="nav__cta-text is-hidden">{{ texts.-4887f9ea }}<br></div>
               </a>
-              <a href="{{ links.-d4fd732 }}" target="_blank" class="footer__link-wrap w-inline-block">
+              <a href="{{ links.-d4fd732 }}" target="_blank" class="footer__link-wrap is-hidden w-inline-block">
                 <div class="nav__cta-text no-padding">{{ texts.79ceadde }}</div>
                 <div class="heart w-embed">
                   <style>
@@ -143,9 +143,9 @@ a {
               </a>
             </div>
             <div class="footer__cards-wrapper">
-              <a id="w-node-_9a6935bf-45b8-e847-6920-f8287a8ffa03-119365c8" href="{{ links.-5b0dcf13 }}" class="footer__card w-inline-block">
+              <a data-service="asset-management" id="w-node-_9a6935bf-45b8-e847-6920-f8287a8ffa03-119365c8" href="{{ links.-5b0dcf13 }}" class="footer__card w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.75755f50 }}<span class="nowrap">{{ texts.6582381d }}<sup>{{ texts.9cdb }}</sup></span></div>
-                <div class="code-embed-4 w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="asset-management" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
                       <style>
         .nsvs {
@@ -153,12 +153,12 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" data-id="footer-cta-keyvisual" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
-              <a id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.71cdd7a5 }}" class="footer__card is-green w-inline-block">
+              <a data-service="institutional-services" id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.71cdd7a5 }}" class="footer__card is-green w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.5dd424bd }}<span class="nowrap">{{ texts.6bdf1b62 }}<sup>{{ texts.9c5f }}</sup></span></div>
-                <div class="code-embed-4 w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="institutional-services" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
                       <style>
         .nsvs {
@@ -166,12 +166,12 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" data-id="footer-cta-keyvisual" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
-              <a id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-43fcb0f8 }}" class="footer__card is-lila w-inline-block">
+              <a data-service="fund" id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-43fcb0f8 }}" class="footer__card is-lila w-inline-block">
                 <div class="footer__card-text hidden"><span class="nowrap">{{ texts.41145db }}<sup>{{ texts.9c40 }}</sup></span></div>
-                <div class="code-embed-4 w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="fund" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
                       <style>
         .nsvs {
@@ -179,12 +179,12 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" data-id="footer-cta-keyvisual" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
-              <a id="w-node-ed47f7b0-412f-50c0-1730-270fd1ebd8c0-119365c8" href="{{ links.-43bd562b }}" class="footer__card is-orange w-inline-block">
+              <a data-service="digital-assets" id="w-node-ed47f7b0-412f-50c0-1730-270fd1ebd8c0-119365c8" href="{{ links.-43bd562b }}" class="footer__card is-orange w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.-c6d8 }}<span class="nowrap">{{ texts.393694dd }}<sup>{{ texts.9c40 }}</sup></span></div>
-                <div class="code-embed-4 w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="digital-assets" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
                       <style>
         .nsvs {
@@ -192,7 +192,7 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" data-id="footer-cta-keyvisual" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
             </div>
@@ -330,6 +330,25 @@ document.addEventListener("DOMContentLoaded",()=>{const position="left";if(progr
 </script>
   <script>
 /*
+ * SAWM | footer active CTA v1
+ * build: 26.07.24 @12:01
+ */
+document.addEventListener("DOMContentLoaded", () => {
+  const target = `data-keyvisual="arrow"`;
+  initFooterActiveCTA(target);
+});
+function initFooterActiveCTA(target) {
+  const pathname = window.location.pathname;
+  const parts = pathname.split("/").filter((part) => part !== "");
+  const subdirectory = parts.length > 0 ? parts[parts.length - 1] : null;
+  if (!subdirectory) return;
+  const activeArrow = document.querySelector(`[data-arrow="${subdirectory}"]`);
+  const firstPath = activeArrow.querySelector("path");
+  firstPath.setAttribute("fill", "currentColor");
+}
+</script>
+  <script>
+/*
  * SAWM | stagger reveal elements v1 (footer)
  * build 22.07.24 @19:00
  */
@@ -343,6 +362,27 @@ document.addEventListener("DOMContentLoaded", () => {
   staggerRevealTargets(options);
 });
 function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);gsap.set(r,{y:"50%",opacity:0})}function staggerRevealTargets(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);ScrollTrigger.create({trigger:t,start:"top 80%",onEnter(){gsap.to(r,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:.15})}})}
+</script>
+  <script>
+/*
+ * SAWM | Telegram Whatsapp v2
+ * build 28.07.24 @00:48
+ */
+function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I would like to have more info about Silver Arrow SA")}`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245"};contactTelegram(t),contactWhatsapp(t)});
+</script>
+  <script>
+/*
+ * SAWM | contact popup v1
+ * build 28.07.24 @15:34
+ */
+function setOverlayInitialState(e){let t=document.querySelector(e.overlay);gsap.set(t,{opacity:0,display:"none"})}function initContactOverlay(e){let t=document.querySelectorAll(e.trigger),a=document.querySelectorAll(e.close),o=document.querySelector(e.overlay);Array.from(t).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{display:"flex",opacity:1,duration:e.duration,ease:e.ease})})}),Array.from(a).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{opacity:0,duration:e.duration,ease:e.ease,onComplete(){gsap.set(o,{display:"none"})}})})})}document.addEventListener("DOMContentLoaded",()=>{let e={trigger:'[data-popup="trigger"]',close:'[data-popup="close"]',overlay:'[data-popup="overlay"]',duration:.25,ease:"power3.inOut"};setOverlayInitialState(e),initContactOverlay(e)});
+</script>
+  <script>
+/*
+ * UTILITY current year
+ * build 24.10.23 @ 11:22
+ */
+document.addEventListener("DOMContentLoaded",()=>{const copyrightYear=document.querySelector(`[data-id="year"]`);if(!copyrightYear){return}copyrightYear.textContent=new Date().getFullYear()});
 </script>
 
 <script src="/assets/js/udesly-11ty.min.js" async="" defer=""></script>{{ settings.site.footer_additional_content }}</body></html>

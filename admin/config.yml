@@ -106,6 +106,16 @@ collections:
     editor: *ref_0
     folder: cms/pages/services
     fields: *ref_1
+  - name: pages-playground
+    label: Pages playground
+    identifier_field: title
+    extension: md
+    create: false
+    delete: false
+    slug: '{{slug}}'
+    editor: *ref_0
+    folder: cms/pages/playground
+    fields: *ref_1
   - label: Theme Settings
     name: settings
     identifier_field: title
@@ -196,285 +206,36 @@ collections:
             name: title
             widget: hidden
             default: Texts
-          - hint: 'Original text: Wealth Management, key: -665be56a'
+          - hint: "Original text: — \_Our mission, key: -278ecb7c"
             label: Text
-            name: '-665be56a'
+            name: '-278ecb7c'
             widget: string
-          - hint: 'Original text: about, key: 585238d'
+          - hint: >-
+              Original text:  is to empower our clients to achieve their
+              financial goals with confidence and peace of mind, key: -13e9a16f
             label: Text
-            name: 585238d
-            widget: string
-          - hint: 'Original text: About, key: 3c2336d'
+            name: '-13e9a16f'
+            widget: text
+          - hint: 'Original text: 2020, key: 1774fc'
             label: Text
-            name: 3c2336d
+            name: 1774fc
             widget: string
-          - hint: 'Original text: Call us, key: -7c14e080'
+          - hint: 'Original text: Company Founded, key: cd026be'
             label: Text
-            name: '-7c14e080'
+            name: cd026be
             widget: string
-          - hint: 'Original text: email us, key: 2d5d45a2'
+          - hint: >-
+              Original text: Established in 2020 in Geneva, SilverArrow Wealth
+              Management has emerged as a pioneering firm, committed to
+              delivering tailored solutions that prioritize client success and
+              financial well-being., key: -cba01a8
             label: Text
-            name: 2d5d45a2
-            widget: string
-          - hint: 'Original text: Find us, key: 305d2245'
-            label: Text
-            name: 305d2245
-            widget: string
-          - hint: 'Original text: — Your trusted, key: -2b79bd4a'
-            label: Text
-            name: '-2b79bd4a'
-            widget: string
-          - hint: 'Original text:  partner, key: -331d8758'
-            label: Text
-            name: '-331d8758'
-            widget: string
-          - hint: 'Original text: in , key: 1979b'
-            label: Text
-            name: 1979b
-            widget: string
-          - hint: 'Original text: wealth management _, key: 6c88b555'
-            label: Text
-            name: 6c88b555
-            widget: string
+            name: '-cba01a8'
+            widget: text
           - hint: 'Original text: Get an edge, key: -5f8cfd1a'
             label: Text
             name: '-5f8cfd1a'
             widget: string
-          - hint: >-
-              Original text: SilverArrow SA upholds the highest standards of
-              integrity, supported by a robust ecosystem and partnerships
-              granting access to experts, enabling us to deliver extensive
-              wealth management services., key: -482a1182
-            label: Text
-            name: '-482a1182'
-            widget: text
-          - hint: >-
-              Original text: SilverArrow facilitates seamless client
-              interactions with banks, brokerages, and financial entities., key:
-              47bce475
-            label: Text
-            name: 47bce475
-            widget: text
-          - hint: 'Original text: 0, key: 30'
-            label: Text
-            name: '30'
-            widget: string
-          - hint: 'Original text: +, key: 2b'
-            label: Text
-            name: 2b
-            widget: string
-          - hint: 'Original text: Years in Wealth Management Business, key: 226b8f1b'
-            label: Text
-            name: 226b8f1b
-            widget: string
-          - hint: 'Original text: $1B, key: 8d55'
-            label: Text
-            name: 8d55
-            widget: string
-          - hint: 'Original text: Total AUM, key: 54f1439d'
-            label: Text
-            name: 54f1439d
-            widget: string
-          - hint: 'Original text: Combine years of experience, key: 29c44808'
-            label: Text
-            name: 29c44808
-            widget: string
-          - hint: 'Original text: — Trusted, key: 441914cb'
-            label: Text
-            name: 441914cb
-            widget: string
-          - hint: 'Original text:  by many,, key: -75a4173c'
-            label: Text
-            name: '-75a4173c'
-            widget: string
-          - hint: 'Original text:  proven by numbers, key: -7c24e591'
-            label: Text
-            name: '-7c24e591'
-            widget: string
-          - hint: 'Original text: Our services, key: fcf0ad2'
-            label: Text
-            name: fcf0ad2
-            widget: string
-          - hint: 'Original text: — Acknowledging, key: c6992d'
-            label: Text
-            name: c6992d
-            widget: string
-          - hint: >-
-              Original text:  the specific demands of our clientele, we offer
-              state-of-the-art solutions for wealthy individuals, key: -25ea30f5
-            label: Text
-            name: '-25ea30f5'
-            widget: text
-          - hint: 'Original text: Asset, key: 3c9fad0'
-            label: Text
-            name: 3c9fad0
-            widget: string
-          - hint: 'Original text: Management, key: b885463'
-            label: Text
-            name: b885463
-            widget: string
-          - hint: 'Original text: 6 topics, key: 5289b84e'
-            label: Text
-            name: 5289b84e
-            widget: string
-          - hint: 'Original text: Institutional, key: -3f09ac3d'
-            label: Text
-            name: '-3f09ac3d'
-            widget: string
-          - hint: 'Original text: Services, key: 560f747e'
-            label: Text
-            name: 560f747e
-            widget: string
-          - hint: 'Original text: 2 topics, key: -4cfafb2e'
-            label: Text
-            name: '-4cfafb2e'
-            widget: string
-          - hint: 'Original text: Fund, key: 2196e5'
-            label: Text
-            name: '2196e5'
-            widget: string
-          - hint: 'Original text: 1 topic, key: 5d433880'
-            label: Text
-            name: 5d433880
-            widget: string
-          - hint: 'Original text: Digital, key: -39ce7a08'
-            label: Text
-            name: '-39ce7a08'
-            widget: string
-          - hint: 'Original text: Assets, key: 75755fa3'
-            label: Text
-            name: 75755fa3
-            widget: string
-          - hint: 'Original text: — You ask,, key: -5cdd5920'
-            label: Text
-            name: '-5cdd5920'
-            widget: string
-          - hint: 'Original text:  we answer, key: -4699e6d0'
-            label: Text
-            name: '-4699e6d0'
-            widget: string
-          - hint: 'Original text: Talk to us, key: -7d8e69f1'
-            label: Text
-            name: '-7d8e69f1'
-            widget: string
-          - hint: 'Original text: — We value, key: 3611dc4b'
-            label: Text
-            name: 3611dc4b
-            widget: string
-          - hint: >-
-              Original text:  developing a close working relationship with our
-              clients, key: -730b80af
-            label: Text
-            name: '-730b80af'
-            widget: string
-          - hint: 'Original text: call Us, key: 20b283c0'
-            label: Text
-            name: 20b283c0
-            widget: string
-          - hint: 'Original text: find us, key: -32db759b'
-            label: Text
-            name: '-32db759b'
-            widget: string
-          - hint: 'Original text: in wealth management, key: 2ae1305b'
-            label: Text
-            name: 2ae1305b
-            widget: string
-          - hint: 'Original text: and financial planing, key: -6cadba87'
-            label: Text
-            name: '-6cadba87'
-            widget: string
-          - hint: "Original text: © \_2024 Silver Arrow SA, key: 2a270ec1"
-            label: Text
-            name: 2a270ec1
-            widget: string
-          - hint: 'Original text: Best Execution Policy, key: -4887f9ea'
-            label: Text
-            name: '-4887f9ea'
-            widget: string
-          - hint: 'Original text: Design, key: 79ceadde'
-            label: Text
-            name: 79ceadde
-            widget: string
-          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
-            label: Text
-            name: '-67104443'
-            widget: string
-          - hint: 'Original text: Asset , key: 75755f50'
-            label: Text
-            name: 75755f50
-            widget: string
-          - hint: 'Original text: Management , key: 6582381d'
-            label: Text
-            name: 6582381d
-            widget: string
-          - hint: 'Original text: (6), key: 9cdb'
-            label: Text
-            name: 9cdb
-            widget: string
-          - hint: 'Original text: Institutional , key: 5dd424bd'
-            label: Text
-            name: 5dd424bd
-            widget: string
-          - hint: 'Original text: Services , key: 6bdf1b62'
-            label: Text
-            name: 6bdf1b62
-            widget: string
-          - hint: 'Original text: (2), key: 9c5f'
-            label: Text
-            name: 9c5f
-            widget: string
-          - hint: 'Original text: Fund , key: 41145db'
-            label: Text
-            name: 41145db
-            widget: string
-          - hint: 'Original text: (1), key: 9c40'
-            label: Text
-            name: 9c40
-            widget: string
-          - hint: 'Original text: Digital , key: -c6d8'
-            label: Text
-            name: '-c6d8'
-            widget: string
-          - hint: 'Original text: Assets , key: 393694dd'
-            label: Text
-            name: 393694dd
-            widget: string
-          - hint: >-
-              Original text: — The history of the growth and advancement of a
-              prosperous financial consultancy in Switzerland, key: 3ded4d83
-            label: Text
-            name: 3ded4d83
-            widget: text
-          - hint: 'Original text: 2024, key: 177500'
-            label: Text
-            name: '177500'
-            widget: string
-          - hint: >-
-              Original text: First Expansion Plan: In response to growing demand
-              and our commitment to providing exceptional services, we are
-              excited to announce our first major expansion plan., key: -5143929
-            label: Text
-            name: '-5143929'
-            widget: text
-          - hint: 'Original text: get in touch, key: -5bfbfdf2'
-            label: Text
-            name: '-5bfbfdf2'
-            widget: string
-          - hint: 'Original text: Our Mission, key: 3dba0078'
-            label: Text
-            name: 3dba0078
-            widget: string
-          - hint: >-
-              Original text: At Silver Arrow Wealth Management, our mission is
-              to empower our clients to achieve their financial goals with
-              confidence and peace of mind. By embodying our values of
-              trustability, transparency, flexibility, and bespoke solutions, we
-              strive to be your trusted partner in wealth management, guiding
-              you every step of the way on your journey to financial success.,
-              key: 228c1626
-            label: Text
-            name: 228c1626
-            widget: text
           - hint: >-
               Original text: "We believe in the power of transparency to build
               strong, lasting relationships with our clients. That’s why we are
@@ -487,88 +248,89 @@ collections:
             label: Text
             name: '-78e000aa'
             widget: string
-          - hint: 'Original text: 2023, key: 1774ff'
+          - hint: 'Original text: Our Mission, key: 3dba0078'
             label: Text
-            name: 1774ff
+            name: 3dba0078
             widget: string
           - hint: >-
-              Original text: Registered Financial Advisor in Canada (Alberta
-              Securities Commission). This accreditation underscores credibility
-              and trustworthiness of SAWM, ensuring our clients receive informed
-              guidance aligned with their financial goals and regulatory
-              expectations., key: -1bcacabb
+              Original text: By embodying our values of trustability,
+              transparency, flexibility, and bespoke solutions, we strive to be
+              your trusted partner in wealth management, guiding you every step
+              of the way on your journey to financial success., key: -55658e02
             label: Text
-            name: '-1bcacabb'
+            name: '-55658e02'
             widget: text
+          - hint: 'Original text: * , key: 536'
+            label: Text
+            name: '536'
+            widget: string
           - hint: 'Original text: Expertise, key: 7f8f21f1'
             label: Text
             name: 7f8f21f1
             widget: string
           - hint: >-
-              Original text: Wealth Management Models | Strategic Planning |
+              Original text:  — Wealth Management Models | Strategic Planning |
               Digital Assets Advisory | Strategic Prime Funds | Funds Management
               Advisory | Fund Creation Services, Treasurey Management | FX
               Hedging Advisory | Trade Finance & Funding | Bonds Issuance |
               Structured Products | Private Asset Funding | Single Stocks
-              Lending., key: -366388ad
+              Lending.., key: 71d9110f
             label: Text
-            name: '-366388ad'
+            name: 71d9110f
             widget: text
           - hint: 'Original text: 2022, key: 1774fe'
             label: Text
             name: 1774fe
             widget: string
           - hint: >-
-              Original text: Incorporation of Strategic Prime Trading Fund *.
-              This process ensures the fund's operational efficiency and
-              alignment with investment objectives, promoting robust performance
-              and investor confidence., key: -19f9e820
+              Original text: Incorporation of Strategic Prime Trading Fund, key:
+              -441ef72f
             label: Text
-            name: '-19f9e820'
-            widget: text
-          - hint: "Original text: * Incorporation of Strategic Prime Trading Fund \_starts with the careful formulation of the fund's objectives, investment strategies, and operational framework. Compliance with regulatory requirements is paramount, ensuring alignment with both local and international financial regulations., key: 151e72c4"
-            label: Text
-            name: 151e72c4
-            widget: text
-          - hint: 'Original text: 2020, key: 1774fc'
-            label: Text
-            name: 1774fc
-            widget: string
-          - hint: 'Original text: Company founded, key: -56687122'
-            label: Text
-            name: '-56687122'
-            widget: string
-          - hint: 'Original text: Founding, key: 254a1d40'
-            label: Text
-            name: 254a1d40
+            name: '-441ef72f'
             widget: string
           - hint: >-
-              Original text: Established in 2020 in Geneva, SAWM specializes in
-              comprehensive wealth management and financial planning services.
-              With a focus on innovation and excellence, SAWM sets industry
-              standards, ensuring clients receive exceptional guidance and
-              strategic insights to achieve their financial goals effectively.,
-              key: -c3034be
+              Original text: This process ensures the fund's operational
+              efficiency and alignment with investment objectives, promoting
+              robust performance and investor confidence., key: -33d7a7ed
             label: Text
-            name: '-c3034be'
+            name: '-33d7a7ed'
             widget: text
+          - hint: 'Original text: 2023, key: 1774ff'
+            label: Text
+            name: 1774ff
+            widget: string
           - hint: >-
-              Original text: SAWM has emerged as a pioneering firm, committed to
-              delivering tailored solutions that prioritize client success and
-              financial well-being., key: -ceb5298
+              Original text: Registered Financial Advisor in Canada (Alberta
+              Securities Commission), key: -10e37e19
             label: Text
-            name: '-ceb5298'
-            widget: text
+            name: '-10e37e19'
+            widget: string
           - hint: >-
-              Original text: — Our team creates unique solutions for each of our
-              clients, recognizing that individual needs require tailored
-              management strategies., key: 64c7080f
+              Original text: This accreditation underscores credibility and
+              trustworthiness of SAWM, ensuring our clients receive informed
+              guidance aligned with their financial goals and regulatory
+              expectations., key: -482767d4
             label: Text
-            name: 64c7080f
+            name: '-482767d4'
             widget: text
-          - hint: 'Original text: get an edge, key: 3d095b06'
+          - hint: 'Original text: 2024, key: 177500'
             label: Text
-            name: 3d095b06
+            name: '177500'
+            widget: string
+          - hint: 'Original text: First Expansion Plan, key: 399a01ba'
+            label: Text
+            name: 399a01ba
+            widget: string
+          - hint: >-
+              Original text: In response to growing demand and our commitment to
+              providing exceptional services, we are excited to announce our
+              first major expansion., key: 6616427c
+            label: Text
+            name: 6616427c
+            widget: text
+          - hint: 'Original text: Get in touch, key: -5230a9d2'
+            label: Text
+            name: '-5230a9d2'
             widget: string
           - hint: 'Original text: scroll, key: -361a1933'
             label: Text
@@ -653,10 +415,6 @@ collections:
             label: Text
             name: '-7194668f'
             widget: text
-          - hint: 'Original text: Get in touch, key: -5230a9d2'
-            label: Text
-            name: '-5230a9d2'
-            widget: string
           - hint: 'Original text: Strategic Planning, key: -27efd5a3'
             label: Text
             name: '-27efd5a3'
@@ -741,6 +499,10 @@ collections:
             label: Text
             name: '-30bf461'
             widget: text
+          - hint: 'Original text: Fund, key: 2196e5'
+            label: Text
+            name: '2196e5'
+            widget: string
           - hint: >-
               Original text: SAWM's Strategic Prime Funds offer stability and
               growth in finance and wealth management for sophisticated
@@ -838,23 +600,157 @@ collections:
             label: Text
             name: '-408974de'
             widget: text
-          - hint: >-
-              Original text: We uphold the highest standards of integrity,
-              supported by a robust ecosystem and partnerships granting access
-              to experts, enabling us to deliver extensive wealth management
-              services., key: 59c7c43f
+          - hint: 'Original text: — We value, key: 3611dc4b'
             label: Text
-            name: 59c7c43f
-            widget: text
+            name: 3611dc4b
+            widget: string
+          - hint: >-
+              Original text:  developing a close working relationship with our
+              clients, key: -730b80af
+            label: Text
+            name: '-730b80af'
+            widget: string
+          - hint: 'Original text: email us, key: 2d5d45a2'
+            label: Text
+            name: 2d5d45a2
+            widget: string
+          - hint: 'Original text: call Us, key: 20b283c0'
+            label: Text
+            name: 20b283c0
+            widget: string
+          - hint: 'Original text: find us, key: -32db759b'
+            label: Text
+            name: '-32db759b'
+            widget: string
+          - hint: 'Original text: — Your trusted, key: -2b79bd4a'
+            label: Text
+            name: '-2b79bd4a'
+            widget: string
+          - hint: 'Original text:  partner, key: -331d8758'
+            label: Text
+            name: '-331d8758'
+            widget: string
+          - hint: 'Original text: in wealth management, key: 2ae1305b'
+            label: Text
+            name: 2ae1305b
+            widget: string
+          - hint: 'Original text: and financial planing, key: -6cadba87'
+            label: Text
+            name: '-6cadba87'
+            widget: string
+          - hint: 'Original text: Contact, key: -64104400'
+            label: Text
+            name: '-64104400'
+            widget: string
+          - hint: "Original text: © \_, key: 27ee9"
+            label: Text
+            name: 27ee9
+            widget: string
+          - hint: 'Original text: XXXX, key: 295600'
+            label: Text
+            name: '295600'
+            widget: string
+          - hint: "Original text:  \_Silver Arrow SA, key: -374aa708"
+            label: Text
+            name: '-374aa708'
+            widget: string
+          - hint: 'Original text: Best Execution Policy, key: -4887f9ea'
+            label: Text
+            name: '-4887f9ea'
+            widget: string
+          - hint: 'Original text: Design, key: 79ceadde'
+            label: Text
+            name: 79ceadde
+            widget: string
+          - hint: 'Original text: anthonysalamin.ch, key: -67104443'
+            label: Text
+            name: '-67104443'
+            widget: string
+          - hint: 'Original text: Asset , key: 75755f50'
+            label: Text
+            name: 75755f50
+            widget: string
+          - hint: 'Original text: Management , key: 6582381d'
+            label: Text
+            name: 6582381d
+            widget: string
+          - hint: 'Original text: (6), key: 9cdb'
+            label: Text
+            name: 9cdb
+            widget: string
+          - hint: 'Original text: Institutional , key: 5dd424bd'
+            label: Text
+            name: 5dd424bd
+            widget: string
+          - hint: 'Original text: Services , key: 6bdf1b62'
+            label: Text
+            name: 6bdf1b62
+            widget: string
+          - hint: 'Original text: (2), key: 9c5f'
+            label: Text
+            name: 9c5f
+            widget: string
+          - hint: 'Original text: Fund , key: 41145db'
+            label: Text
+            name: 41145db
+            widget: string
+          - hint: 'Original text: (1), key: 9c40'
+            label: Text
+            name: 9c40
+            widget: string
+          - hint: 'Original text: Digital , key: -c6d8'
+            label: Text
+            name: '-c6d8'
+            widget: string
+          - hint: 'Original text: Assets , key: 393694dd'
+            label: Text
+            name: 393694dd
+            widget: string
+          - hint: 'Original text: Wealth Management, key: -665be56a'
+            label: Text
+            name: '-665be56a'
+            widget: string
+          - hint: 'Original text: about, key: 585238d'
+            label: Text
+            name: 585238d
+            widget: string
+          - hint: 'Original text: Asset Management , key: -4730d933'
+            label: Text
+            name: '-4730d933'
+            widget: string
+          - hint: 'Original text: Institutional Services , key: aabfb45'
+            label: Text
+            name: aabfb45
+            widget: string
+          - hint: 'Original text: Digital Assets , key: 6a843eb5'
+            label: Text
+            name: 6a843eb5
+            widget: string
+          - hint: 'Original text: About, key: 3c2336d'
+            label: Text
+            name: 3c2336d
+            widget: string
+          - hint: 'Original text: Partnering, key: -7f0bfdc6'
+            label: Text
+            name: '-7f0bfdc6'
+            widget: string
+          - hint: 'Original text: Publication, key: 23254a0c'
+            label: Text
+            name: 23254a0c
+            widget: string
+          - hint: 'Original text: soon, key: 35f53b'
+            label: Text
+            name: 35f53b
+            widget: string
           - hint: 'Original text: — Maximize, key: -16da2288'
             label: Text
             name: '-16da2288'
             widget: string
           - hint: >-
-              Original text:  wealth with strategic planning and management
-              models, key: -30c31fde
+              Original text:  wealth with strategic planning & management
+              models, key: 385d91b1
             label: Text
-            name: '-30c31fde'
+            name: 385d91b1
             widget: string
           - hint: >-
               Original text: We tailor solutions by understanding each client's
@@ -862,6 +758,13 @@ collections:
               offering the best terms, services, and support., key: 3e62cb17
             label: Text
             name: 3e62cb17
+            widget: text
+          - hint: >-
+              Original text: SilverArrow facilitates seamless client
+              interactions with banks, brokerages, and financial entities., key:
+              47bce475
+            label: Text
+            name: 47bce475
             widget: text
           - hint: >-
               Original text: We offer Execution Only, Advisory, and
@@ -922,15 +825,21 @@ collections:
             label: Text
             name: '-7f660ed'
             widget: string
-          - hint: 'Original text: — Refine, key: 71a76819'
+          - hint: >-
+              Original text:  wealth with strategic planning and management
+              models, key: -30c31fde
             label: Text
-            name: 71a76819
+            name: '-30c31fde'
+            widget: string
+          - hint: 'Original text: — Improve , key: -48bae9ac'
+            label: Text
+            name: '-48bae9ac'
             widget: string
           - hint: >-
-              Original text:  your business processes with expert treasury
-              management and trade finance support, key: 7b46edd2
+              Original text: efficiency with treasury management and trade
+              finance support, key: -2a508fdf
             label: Text
-            name: 7b46edd2
+            name: '-2a508fdf'
             widget: string
           - hint: >-
               Original text: We enhance treasury operations with advanced
@@ -1009,10 +918,10 @@ collections:
             name: '-521d5730'
             widget: string
           - hint: >-
-              Original text:  potential with our extensive Digital Assets
-              advisory expertise, key: 5f8154c2
+              Original text:  potential with our Digital Assets advisory, key:
+              -70e15ade
             label: Text
-            name: 5f8154c2
+            name: '-70e15ade'
             widget: string
           - hint: >-
               Original text: We enable clients to invest in cryptocurrencies,
@@ -1049,6 +958,216 @@ collections:
             label: Text
             name: '-3b7737fe'
             widget: string
+          - hint: 'Original text: Asset, key: 3c9fad0'
+            label: Text
+            name: 3c9fad0
+            widget: string
+          - hint: 'Original text: Management, key: b885463'
+            label: Text
+            name: b885463
+            widget: string
+          - hint: 'Original text: 6 topics, key: 5289b84e'
+            label: Text
+            name: 5289b84e
+            widget: string
+          - hint: 'Original text: Call us, key: -7c14e080'
+            label: Text
+            name: '-7c14e080'
+            widget: string
+          - hint: 'Original text: Find us, key: 305d2245'
+            label: Text
+            name: 305d2245
+            widget: string
+          - hint: 'Original text: 0, key: 30'
+            label: Text
+            name: '30'
+            widget: string
+          - hint: 'Original text: +, key: 2b'
+            label: Text
+            name: 2b
+            widget: string
+          - hint: 'Original text: Years in Wealth Management Business, key: 226b8f1b'
+            label: Text
+            name: 226b8f1b
+            widget: string
+          - hint: 'Original text: $1B, key: 8d55'
+            label: Text
+            name: 8d55
+            widget: string
+          - hint: 'Original text: Total AUM, key: 54f1439d'
+            label: Text
+            name: 54f1439d
+            widget: string
+          - hint: 'Original text: Combine years of experience, key: 29c44808'
+            label: Text
+            name: 29c44808
+            widget: string
+          - hint: 'Original text: %, key: 25'
+            label: Text
+            name: '25'
+            widget: string
+          - hint: 'Original text: Company growth since inception, key: -418072ff'
+            label: Text
+            name: '-418072ff'
+            widget: string
+          - hint: 'Original text: $, key: 24'
+            label: Text
+            name: '24'
+            widget: string
+          - hint: 'Original text: M, key: 4d'
+            label: Text
+            name: 4d
+            widget: string
+          - hint: 'Original text: Average Account Size, key: -166be069'
+            label: Text
+            name: '-166be069'
+            widget: string
+          - hint: 'Original text: — Trusted, key: 441914cb'
+            label: Text
+            name: 441914cb
+            widget: string
+          - hint: 'Original text:  by many,, key: -75a4173c'
+            label: Text
+            name: '-75a4173c'
+            widget: string
+          - hint: 'Original text:  proven by numbers, key: -7c24e591'
+            label: Text
+            name: '-7c24e591'
+            widget: string
+          - hint: 'Original text: Our services, key: fcf0ad2'
+            label: Text
+            name: fcf0ad2
+            widget: string
+          - hint: 'Original text: in , key: 1979b'
+            label: Text
+            name: 1979b
+            widget: string
+          - hint: 'Original text: wealth management _, key: 6c88b555'
+            label: Text
+            name: 6c88b555
+            widget: string
+          - hint: 'Original text: — We believe, key: -2222aed2'
+            label: Text
+            name: '-2222aed2'
+            widget: string
+          - hint: >-
+              Original text:  in the power of transparency to build lasting
+              client relationships, key: -294fa0d3
+            label: Text
+            name: '-294fa0d3'
+            widget: string
+          - hint: 'Original text: Our mission, key: -257e9768'
+            label: Text
+            name: '-257e9768'
+            widget: string
+          - hint: >-
+              Original text: We embody trust, transparency, flexibility, and
+              bespoke solutions to be your trusted wealth management partner,
+              guiding you to financial success every step of the way., key:
+              3a42146
+            label: Text
+            name: 3a42146
+            widget: text
+          - hint: 'Original text: — Join us, key: 2d4fa128'
+            label: Text
+            name: 2d4fa128
+            widget: string
+          - hint: >-
+              Original text:  in shaping the global future of wealth management,
+              key: 65f8f859
+            label: Text
+            name: 65f8f859
+            widget: string
+          - hint: 'Original text: Join us, key: df13934'
+            label: Text
+            name: df13934
+            widget: string
+          - hint: >-
+              Original text: Silver Arrow Wealth Management is a Swiss licensed
+              independent asset management company, serving an international
+              clientele of ultra-high-net-worth individuals, families,
+              corporations and financial institutions. We have adopted the
+              ambassador model across different countries to foster synergies
+              between our ambassadors’ networks and our suite of services., key:
+              684a89d1
+            label: Text
+            name: 684a89d1
+            widget: text
+          - hint: >-
+              Original text: We seek high-caliber individuals and organizations
+              as new ambassadors. If this interests you, please get in touch via
+              bizdev@sawm.ch, key: -725642ba
+            label: Text
+            name: '-725642ba'
+            widget: text
+          - hint: 'Original text: Button Text, key: -8fb26a5'
+            label: Text
+            name: '-8fb26a5'
+            widget: string
+          - hint: >-
+              Original text: SilverArrow SA upholds the highest standards of
+              integrity, supported by a robust ecosystem and partnerships
+              granting access to experts, enabling us to deliver extensive
+              wealth management services., key: -482a1182
+            label: Text
+            name: '-482a1182'
+            widget: text
+          - hint: >-
+              Original text: We facilitate seamless client interactions with
+              banks, brokerages, and financial entities., key: 5121de1a
+            label: Text
+            name: 5121de1a
+            widget: string
+          - hint: 'Original text: — Acknowledging, key: c6992d'
+            label: Text
+            name: c6992d
+            widget: string
+          - hint: >-
+              Original text:  the specific demands of our clientele, we offer
+              state-of-the-art solutions for wealthy individuals, key: -25ea30f5
+            label: Text
+            name: '-25ea30f5'
+            widget: text
+          - hint: 'Original text: Institutional, key: -3f09ac3d'
+            label: Text
+            name: '-3f09ac3d'
+            widget: string
+          - hint: 'Original text: Services, key: 560f747e'
+            label: Text
+            name: 560f747e
+            widget: string
+          - hint: 'Original text: 2 topics, key: -4cfafb2e'
+            label: Text
+            name: '-4cfafb2e'
+            widget: string
+          - hint: 'Original text: 1 topic, key: 5d433880'
+            label: Text
+            name: 5d433880
+            widget: string
+          - hint: 'Original text: Digital, key: -39ce7a08'
+            label: Text
+            name: '-39ce7a08'
+            widget: string
+          - hint: 'Original text: Assets, key: 75755fa3'
+            label: Text
+            name: 75755fa3
+            widget: string
+          - hint: 'Original text: — You ask,, key: -5cdd5920'
+            label: Text
+            name: '-5cdd5920'
+            widget: string
+          - hint: 'Original text:  we answer, key: -4699e6d0'
+            label: Text
+            name: '-4699e6d0'
+            widget: string
+          - hint: 'Original text: Talk to us, key: -7d8e69f1'
+            label: Text
+            name: '-7d8e69f1'
+            widget: string
+          - hint: 'Original text:  —, key: 23f4'
+            label: Text
+            name: 23f4
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1057,67 +1176,9 @@ collections:
             name: title
             widget: hidden
             default: Links
-          - hint: 'Original link: /, key: 2f'
-            label: Link
-            name: 2f
-            widget: string
-          - hint: 'Original link: #services, key: -686fc27f'
-            label: Link
-            name: '-686fc27f'
-            widget: string
-          - hint: 'Original link: /about/, key: 61642f31'
-            label: Link
-            name: 61642f31
-            widget: string
-          - hint: 'Original link: tel:+41223191919, key: 6851ce42'
-            label: Link
-            name: 6851ce42
-            widget: string
-          - hint: 'Original link: mailto:info@sawm.ch?subject=Contact, key: 7adff995'
-            label: Link
-            name: 7adff995
-            widget: string
-          - hint: >-
-              Original link:
-              https://www.google.com/maps/place/Bd+du+Th%C3%A9%C3%A2tre+2,+1204+Gen%C3%A8ve,+Switzerland/@46.2025498,6.1387794,17z/data=!3m1!4b1!4m6!3m5!1s0x478c652a029fa33d:0x6816afee8c47ed69!8m2!3d46.2025461!4d6.1413543!16s%2Fg%2F11c1x386tt?entry=ttu,
-              key: 70df12fd
-            label: Link
-            name: 70df12fd
-            widget: string
           - hint: 'Original link: #, key: 23'
             label: Link
             name: '23'
-            widget: string
-          - hint: 'Original link: /services/asset-management/, key: -5b0dcf13'
-            label: Link
-            name: '-5b0dcf13'
-            widget: string
-          - hint: 'Original link: /services/institutional-services/, key: 71cdd7a5'
-            label: Link
-            name: 71cdd7a5
-            widget: string
-          - hint: 'Original link: /services/fund/, key: -43fcb0f8'
-            label: Link
-            name: '-43fcb0f8'
-            widget: string
-          - hint: 'Original link: /services/digital-assets/, key: -43bd562b'
-            label: Link
-            name: '-43bd562b'
-            widget: string
-          - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
-            label: Link
-            name: 17a761b5
-            widget: string
-          - hint: >-
-              Original link:
-              /assets/documents/best-execution-policy-for-silver-arrow-sa.pdf,
-              key: -2ff9dedf
-            label: Link
-            name: '-2ff9dedf'
-            widget: string
-          - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
-            label: Link
-            name: '-d4fd732'
             widget: string
           - hint: >-
               Original link:
@@ -1159,9 +1220,79 @@ collections:
             label: Link
             name: 28afe8ec
             widget: string
+          - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
+            label: Link
+            name: 17a761b5
+            widget: string
+          - hint: 'Original link: tel:+41223191919, key: 6851ce42'
+            label: Link
+            name: 6851ce42
+            widget: string
+          - hint: >-
+              Original link:
+              https://www.google.com/maps/place/Bd+du+Th%C3%A9%C3%A2tre+2,+1204+Gen%C3%A8ve,+Switzerland/@46.2025498,6.1387794,17z/data=!3m1!4b1!4m6!3m5!1s0x478c652a029fa33d:0x6816afee8c47ed69!8m2!3d46.2025461!4d6.1413543!16s%2Fg%2F11c1x386tt?entry=ttu,
+              key: 70df12fd
+            label: Link
+            name: 70df12fd
+            widget: string
+          - hint: >-
+              Original link:
+              /assets/documents/best-execution-policy-for-silver-arrow-sa.pdf,
+              key: -2ff9dedf
+            label: Link
+            name: '-2ff9dedf'
+            widget: string
+          - hint: 'Original link: https://anthonysalamin.ch, key: -d4fd732'
+            label: Link
+            name: '-d4fd732'
+            widget: string
+          - hint: 'Original link: /services/asset-management/, key: -5b0dcf13'
+            label: Link
+            name: '-5b0dcf13'
+            widget: string
+          - hint: 'Original link: /services/institutional-services/, key: 71cdd7a5'
+            label: Link
+            name: 71cdd7a5
+            widget: string
+          - hint: 'Original link: /services/fund/, key: -43fcb0f8'
+            label: Link
+            name: '-43fcb0f8'
+            widget: string
+          - hint: 'Original link: /services/digital-assets/, key: -43bd562b'
+            label: Link
+            name: '-43bd562b'
+            widget: string
+          - hint: 'Original link: /, key: 2f'
+            label: Link
+            name: 2f
+            widget: string
           - hint: 'Original link: /#services, key: 710c0232'
             label: Link
             name: 710c0232
+            widget: string
+          - hint: 'Original link: /about/, key: 61642f31'
+            label: Link
+            name: 61642f31
+            widget: string
+          - hint: 'Original link: /partnering/, key: -5c40063a'
+            label: Link
+            name: '-5c40063a'
+            widget: string
+          - hint: 'Original link: #services, key: -686fc27f'
+            label: Link
+            name: '-686fc27f'
+            widget: string
+          - hint: 'Original link: mailto:info@sawm.ch?subject=Contact, key: 7adff995'
+            label: Link
+            name: 7adff995
+            widget: string
+          - hint: 'Original link: #history, key: 6b090711'
+            label: Link
+            name: 6b090711
+            widget: string
+          - hint: 'Original link: #intro, key: 41b50429'
+            label: Link
+            name: 41b50429
             widget: string
       - label: Images
         name: images
@@ -1173,6 +1304,45 @@ collections:
             default: Images
           - label: Image
             name: 37f9da07
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 2a4dba0e
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i2aeb8b72
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: 10c7634d
             widget: object
             fields:
               - name: url
@@ -1212,32 +1382,6 @@ collections:
                 required: false
           - label: Image
             name: i6f78889b
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: 10c7634d
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: '-7756c689'
             widget: object
             fields:
               - name: url
