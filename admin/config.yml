@@ -678,6 +678,18 @@ collections:
             label: Text
             name: 9cdb
             widget: string
+          - hint: 'Original text: Digital , key: -c6d8'
+            label: Text
+            name: '-c6d8'
+            widget: string
+          - hint: 'Original text: Assets , key: 393694dd'
+            label: Text
+            name: 393694dd
+            widget: string
+          - hint: 'Original text: (1), key: 9c40'
+            label: Text
+            name: 9c40
+            widget: string
           - hint: 'Original text: Institutional , key: 5dd424bd'
             label: Text
             name: 5dd424bd
@@ -694,17 +706,29 @@ collections:
             label: Text
             name: 41145db
             widget: string
-          - hint: 'Original text: (1), key: 9c40'
+          - hint: 'Original text: Threema, key: 13795b92'
             label: Text
-            name: 9c40
+            name: 13795b92
             widget: string
-          - hint: 'Original text: Digital , key: -c6d8'
+          - hint: 'Original text: Telegram, key: -4d3cb2df'
             label: Text
-            name: '-c6d8'
+            name: '-4d3cb2df'
             widget: string
-          - hint: 'Original text: Assets , key: 393694dd'
+          - hint: 'Original text: Whatsapp, key: 772ccdb2'
             label: Text
-            name: 393694dd
+            name: 772ccdb2
+            widget: string
+          - hint: 'Original text: Phone, key: 4984d4e'
+            label: Text
+            name: 4984d4e
+            widget: string
+          - hint: 'Original text: Mail, key: 2479d7'
+            label: Text
+            name: 2479d7
+            widget: string
+          - hint: 'Original text: Maps, key: 247ab7'
+            label: Text
+            name: 247ab7
             widget: string
           - hint: 'Original text: Wealth Management, key: -665be56a'
             label: Text
@@ -1128,30 +1152,6 @@ collections:
             label: Text
             name: '-25ea30f5'
             widget: text
-          - hint: 'Original text: Institutional, key: -3f09ac3d'
-            label: Text
-            name: '-3f09ac3d'
-            widget: string
-          - hint: 'Original text: Services, key: 560f747e'
-            label: Text
-            name: 560f747e
-            widget: string
-          - hint: 'Original text: 2 topics, key: -4cfafb2e'
-            label: Text
-            name: '-4cfafb2e'
-            widget: string
-          - hint: 'Original text: 1 topic, key: 5d433880'
-            label: Text
-            name: 5d433880
-            widget: string
-          - hint: 'Original text: Digital, key: -39ce7a08'
-            label: Text
-            name: '-39ce7a08'
-            widget: string
-          - hint: 'Original text: Assets, key: 75755fa3'
-            label: Text
-            name: 75755fa3
-            widget: string
           - hint: 'Original text: — You ask,, key: -5cdd5920'
             label: Text
             name: '-5cdd5920'
@@ -1250,6 +1250,10 @@ collections:
             label: Link
             name: '-5b0dcf13'
             widget: string
+          - hint: 'Original link: /services/digital-assets/, key: -43bd562b'
+            label: Link
+            name: '-43bd562b'
+            widget: string
           - hint: 'Original link: /services/institutional-services/, key: 71cdd7a5'
             label: Link
             name: 71cdd7a5
@@ -1257,10 +1261,6 @@ collections:
           - hint: 'Original link: /services/fund/, key: -43fcb0f8'
             label: Link
             name: '-43fcb0f8'
-            widget: string
-          - hint: 'Original link: /services/digital-assets/, key: -43bd562b'
-            label: Link
-            name: '-43bd562b'
             widget: string
           - hint: 'Original link: /, key: 2f'
             label: Link
@@ -1343,45 +1343,6 @@ collections:
                 required: false
           - label: Image
             name: 10c7634d
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: i50e7a06b
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: i50d330ae
-            widget: object
-            fields:
-              - name: url
-                label: Image Url
-                widget: image
-                allow_multiple: false
-                required: false
-              - name: alt
-                label: Image Alt
-                widget: string
-                required: false
-          - label: Image
-            name: i6f78889b
             widget: object
             fields:
               - name: url

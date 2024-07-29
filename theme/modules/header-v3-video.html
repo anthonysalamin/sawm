@@ -15,8 +15,8 @@
   <link href="{{ settings.site.favicon | default: "/assets/images/favicon.png" }}" rel="shortcut icon" type="image/x-icon">
   <link href="{{ settings.site.apple_touch_icon | default: "/assets/images/webclip.png" }}" rel="apple-touch-icon"><!--  fathom  -->
   <script src="https://cdn.usefathom.com/script.js" data-site="DKIAXTJN" defer=""></script>
-  <!--  mobile theme  -->
-  <meta name="theme-color" content="#3ea3ff">
+  <!--  theme  -->
+  <meta name="theme-color" content="#EEEFF1">
   <style>
 /* lenis overrides */
 html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto !important}.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}.lenis.lenis-stopped{overflow:hidden}.lenis.lenis-smooth iframe{pointer-events:none}
@@ -40,6 +40,11 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
 }
 #keyvisual-silver-arrow {
   opacity: 0;
+}
+/*  initial states keyvisual quote module */
+#quote-logotype path {
+  stroke-dasharray: 10000;
+  stroke-dashoffset: 10000;
 }
 </style>
   <style>
@@ -69,85 +74,130 @@ a {
       <style>
 /* colors */
 [data-color="asset-management"] {
- background-color: var(--asset-management) !important;
- color: var(--silver) !important;
+ background-color: var(--asset-management);
+ color: var(--silver);
 }
 [data-color="institutional-services"] {
- background-color: var(--institutional-services) !important;
- color: var(--silver) !important;
+ background-color: var(--institutional-services);
+ color: var(--silver);
 }
 [data-color="fund"] {
- background-color: var(--fund) !important;
- color: var(--silver) !important;
+ background-color: var(--fund);
+ color: var(--silver);
 }
 [data-color="digital-assets"] {
- background-color: var(--digital-assets) !important;
- color: var(--silver) !important;
+ background-color: var(--digital-assets);
+ color: var(--silver);
 }
 [data-color="silver"] {
- background-color: var(--silver) !important;
- color: var(--dark) !important;
+ background-color: var(--silver);
+ color: var(--dark);
+}
+[data-color="dark"] {
+ background-color: var(--dark);
+ color: var(--silver);
 }
 </style>
     </div>
     <div data-id="menu-overlay" class="nav__overlay"></div>
     <div data-popup="overlay" class="contact__overlay">
       <div class="contact__wrap">
-        <a data-contact="telegram" href="{{ links.23 }}" class="contact__link w-inline-block">
-          <div class="contact__embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 80 80">
-              <defs>
-                <linearGradient id="a" x1="40" y1="2" x2="40" y2="82" gradientTransform="matrix(1 0 0 -1 0 82)" gradientUnits="userSpaceOnUse">
-                  <stop offset="0" stop-color="#1d93d2"></stop>
-                  <stop offset="1" stop-color="#38b0e3"></stop>
-                </linearGradient>
-              </defs>
-              <g data-name="Layer_1">
-                <path d="M40 80c22.09 0 40-17.91 40-40S62.09 0 40 0 0 17.91 0 40s17.91 40 40 40Z" style="fill:url(#a)"></path>
-                <path d="m27.08 42.93 4.75 13.14s.59 1.23 1.23 1.23 10.09-9.83 10.09-9.83l10.51-20.3-26.4 12.37-.17 3.39Z" style="fill:#c8daea"></path>
-                <path d="m33.37 46.3-.91 9.68s-.38 2.97 2.58 0c2.97-2.97 5.81-5.25 5.81-5.25" style="fill:#a9c6d8"></path>
-                <path d="m27.16 43.4-9.76-3.18s-1.17-.47-.79-1.55c.08-.22.23-.41.7-.73 2.16-1.51 40.04-15.12 40.04-15.12s1.07-.36 1.7-.12c.16.05.3.14.41.26.11.12.19.27.22.43.07.28.1.57.08.86 0 .25-.03.48-.06.85-.23 3.72-7.13 31.5-7.13 31.5s-.41 1.63-1.89 1.68a2.719 2.719 0 0 1-1.98-.76c-2.9-2.5-12.94-9.24-15.16-10.73a.374.374 0 0 1-.12-.13.492.492 0 0 1-.06-.17c-.03-.16.14-.35.14-.35s17.48-15.53 17.94-17.16c.04-.13-.1-.19-.28-.13-1.16.43-21.28 13.13-23.5 14.54-.16.05-.33.06-.49.03Z" style="fill:#fff"></path>
-              </g>
+        <div class="contact__link-wrap">
+          <a data-contact="threema" href="{{ links.23 }}" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.089 0c8 0 12 0 16.355 1.333a16.818 16.818 0 0 1 10.134 10.134C80 15.91 80 19.91 80 27.91V52.09c0 8 0 12-1.333 16.355a16.818 16.818 0 0 1-10.134 10.134C64.178 80 60.178 80 52.09 80H27.91c-8 0-12 0-16.355-1.333-4.712-1.778-8.445-5.423-10.134-10.223C0 64.178 0 60.178 0 52.09V27.91c0-8 0-12 1.333-16.355C3.111 6.844 6.844 3.11 11.556 1.422 15.91 0 19.91 0 27.91 0H52.09Z" fill="url(#icon-threema)"></path>
+                <path d="M29.202 52.127 17.208 55.09l2.518-10.217a19.255 19.255 0 0 1-3.998-11.698C15.727 21.477 26.536 12 39.862 12 53.19 12 64 21.477 64 33.174c0 11.698-10.81 21.174-24.136 21.174-3.702 0-7.403-.74-10.513-2.073l-.148-.148Zm3.702-20.878h-.296c-.593 0-1.037.445-.889 1.037v9.624c0 .593.444 1.037 1.037 1.037H46.97c.592 0 1.036-.444 1.036-1.037v-9.624c0-.593-.444-1.037-1.036-1.037h-.297v-2.665c0-3.702-3.11-6.811-6.81-6.811-3.703 0-6.812 3.11-6.812 6.811v2.665h-.148Zm10.957 0h-8.144v-2.665c0-2.221 1.777-4.146 4.146-4.146 2.221 0 4.146 1.777 4.146 4.146v2.665h-.148Z" fill="#fff"></path>
+                <path d="M24.995 67.972a4.146 4.146 0 1 0 0-8.292 4.146 4.146 0 0 0 0 8.292ZM39.802 67.98a4.146 4.146 0 1 0 0-8.292 4.146 4.146 0 0 0 0 8.291ZM54.61 67.98a4.146 4.146 0 1 0 0-8.292 4.146 4.146 0 0 0 0 8.291Z" fill="#3FE669"></path>
+                <defs>
+                  <linearGradient id="icon-threema" x1="40" y1="0" x2="40" y2="80" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#505050"></stop>
+                    <stop offset="1" stop-color="#373636"></stop>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.13795b92 }}</div>
+        </div>
+        <div class="contact__link-wrap">
+          <a data-contact="telegram" href="{{ links.23 }}" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M61.333 0H18.667C8.357 0 0 8.357 0 18.667v42.666C0 71.643 8.357 80 18.667 80h42.666C71.643 80 80 71.643 80 61.333V18.667C80 8.357 71.643 0 61.333 0Z" fill="#fff"></path>
+                <path d="M40 73c17.673 0 32-14.327 32-32C72 23.327 57.673 9 40 9 22.327 9 8 23.327 8 41c0 17.673 14.327 32 32 32Z" fill="url(#icon-telegram)"></path>
+                <path d="M19.918 42.571c3.74-2.06 7.916-3.78 11.818-5.509 6.712-2.831 13.45-5.613 20.258-8.203 1.324-.442 3.704-.873 3.937 1.09-.128 2.778-.653 5.54-1.014 8.301-.915 6.074-1.973 12.127-3.004 18.18-.355 2.017-2.881 3.06-4.497 1.77-3.885-2.624-7.799-5.222-11.633-7.906-1.256-1.277-.092-3.11 1.03-4.021 3.2-3.153 6.592-5.832 9.624-9.147.818-1.975-1.599-.31-2.396.2-4.38 3.017-8.652 6.22-13.27 8.872-2.358 1.299-5.107.19-7.465-.536-2.114-.874-5.211-1.756-3.389-3.09v-.001Z" fill="#fff"></path>
+                <defs>
+                  <linearGradient id="icon-telegram" x1="50.669" y1="19.669" x2="34.669" y2="57" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#37AEE2"></stop>
+                    <stop offset="1" stop-color="#1E96C8"></stop>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.-4d3cb2df }}</div>
+        </div>
+        <div class="contact__link-wrap">
+          <a data-contact="whatsapp" href="{{ links.23 }}" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M20.336 0h-2.15c-1.792.09-4.121.18-5.107.448-1.612.358-3.135.806-4.39 1.433a15.315 15.315 0 0 0-3.941 2.867C3.583 5.913 2.688 7.167 1.881 8.69a16.188 16.188 0 0 0-1.433 4.3C.268 14.065.09 16.394 0 18.186v43.628c.09 1.792.18 4.121.448 5.107.358 1.612.806 3.135 1.433 4.39a15.316 15.316 0 0 0 2.867 3.941c1.165 1.165 2.419 2.06 3.942 2.867a16.19 16.19 0 0 0 4.3 1.433c1.075.18 3.404.358 5.196.448h43.628c1.792-.09 4.121-.18 5.107-.448 1.612-.358 3.135-.806 4.39-1.433a15.317 15.317 0 0 0 3.941-2.867c1.165-1.165 2.06-2.419 2.867-3.942a16.19 16.19 0 0 0 1.433-4.3c.18-1.075.358-3.404.448-5.196V18.186c-.09-1.792-.18-4.121-.448-5.107-.358-1.612-.806-3.135-1.433-4.39a15.316 15.316 0 0 0-2.867-3.941c-1.165-1.165-2.419-2.06-3.942-2.867a16.188 16.188 0 0 0-4.3-1.433C65.935.268 63.606.09 61.814 0H20.336Z" fill="url(#icon-whatsapp)"></path>
+                <path d="M54.557 44.25c-.716-.358-4.3-2.06-4.927-2.328-.627-.27-1.165-.359-1.612.358-.448.717-1.882 2.33-2.24 2.777-.448.448-.806.538-1.523.18-.717-.359-3.046-1.076-5.823-3.495-2.15-1.88-3.584-4.21-4.031-4.927-.448-.716 0-1.075.358-1.433.358-.358.717-.806 1.075-1.254.358-.448.448-.717.717-1.165.268-.448.09-.896-.09-1.254s-1.612-3.852-2.24-5.286c-.627-1.343-1.164-1.164-1.612-1.254h-1.344c-.448 0-1.254.18-1.881.896-.627.717-2.509 2.419-2.509 5.913 0 3.493 2.598 6.808 2.957 7.346.358.448 5.106 7.614 12.273 10.66 1.702.717 3.046 1.165 4.12 1.523 1.703.538 3.316.448 4.57.27 1.343-.18 4.3-1.703 4.837-3.316.628-1.612.628-3.045.448-3.314-.358-.359-.806-.538-1.523-.896ZM40.851 62.707c-4.3 0-8.421-1.165-12.094-3.315l-.896-.538-8.959 2.33 2.42-8.69-.538-.896A23.733 23.733 0 0 1 17.2 39.055c0-12.99 10.66-23.561 23.74-23.561a23.532 23.532 0 0 1 16.663 6.898c4.48 4.48 6.898 10.392 6.898 16.663 0 12.99-10.66 23.65-23.65 23.65Zm20.157-43.718c-5.376-5.375-12.543-8.332-20.157-8.332-15.678 0-28.488 12.721-28.488 28.399 0 5.017 1.343 9.854 3.762 14.154l-4.031 14.692 15.05-3.941c4.121 2.24 8.87 3.494 13.617 3.494 15.678 0 28.488-12.722 28.488-28.4.09-7.524-2.866-14.691-8.241-20.066Z" fill="#fff"></path>
+                <defs>
+                  <linearGradient id="icon-whatsapp" x1="40.027" y1=".018" x2="40.027" y2="79.946" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#62FA7F"></stop>
+                    <stop offset=".686" stop-color="#22CC40"></stop>
+                    <stop offset="1" stop-color="#05B723"></stop>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.772ccdb2 }}</div>
+        </div>
+        <div class="contact__link-wrap">
+          <a href="{{ links.6851ce42 }}" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M52.089 0c8 0 12 0 16.355 1.333a16.818 16.818 0 0 1 10.134 10.134C80 15.91 80 19.91 80 27.91V52.09c0 8 0 12-1.333 16.355a16.818 16.818 0 0 1-10.134 10.134C64.178 80 60.178 80 52.09 80H27.91c-8 0-12 0-16.355-1.333-4.712-1.778-8.445-5.423-10.134-10.223C0 64.178 0 60.178 0 52.09V27.91c0-8 0-12 1.333-16.355C3.111 6.844 6.844 3.11 11.556 1.422 15.91 0 19.91 0 27.91 0H52.09Z" fill="url(#icon-ios-phone)"></path>
+                <path d="M18.4 34.934c-2.934-5.334-4.09-9.69-4.09-12.623s.712-3.733 1.423-4.444c.71-.711 4-2.667 4.622-3.111.533-.356 2.667-1.156 4 .8 1.333 1.955 3.822 5.778 5.6 8.355 2.756 3.645.533 5.245-.178 6.223-1.333 1.777-2.044 2.222-2.044 4.355 0 2.133 6.044 8.356 7.466 9.867 1.423 1.51 7.467 6.755 9.334 7.11 1.866.267 4.444-1.688 4.977-2.221 2.756-2.134 4.267-.534 5.512.177 1.244.712 6.933 4.267 8.71 5.423 1.69 1.155 1.512 3.022 1.512 3.022s-1.156 3.467-3.822 6.044c-.623.623-1.778 1.422-4.534 1.422-2.755 0-5.777-.533-12.889-4.444-5.777-3.2-11.288-8.178-14.222-11.111-2.933-2.844-8-8.711-11.378-14.844Z" fill="#fff"></path>
+                <defs>
+                  <linearGradient id="icon-ios-phone" x1="40.036" y1=".036" x2="40.036" y2="79.982" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#67FF81"></stop>
+                    <stop offset="1" stop-color="#01B41F"></stop>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.4984d4e }}</div>
+        </div>
+        <div class="contact__link-wrap">
+          <a href="{{ links.17a761b5 }}" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M61.333 0H18.667C8.357 0 0 8.357 0 18.667v42.666C0 71.643 8.357 80 18.667 80h42.666C71.643 80 80 71.643 80 61.333V18.667C80 8.357 71.643 0 61.333 0Z" fill="url(#icon-ios-mail)"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd" d="m16.743 56.375 14.13-14.633 3.42 3.443a8.369 8.369 0 0 0 11.894 0l3.093-3.114 13.83 14.322c-.22.046-.45.07-.684.07h-44.92c-.262 0-.518-.03-.763-.088Zm48.928-30.81c.058.247.089.504.089.768V53.13c0 .86-.326 1.644-.86 2.235L50.689 40.651 65.67 25.565Zm-51.43 28.23V27c0-.578.147-1.123.406-1.598l14.817 14.922-14.476 14.99a3.32 3.32 0 0 1-.748-1.518Zm50.31-30.03L44.794 43.523a6.666 6.666 0 0 1-9.428 0L15.507 23.666a3.32 3.32 0 0 1 2-.666h44.919a3.32 3.32 0 0 1 2.125.765Z" fill="#fff"></path>
+                <defs>
+                  <linearGradient id="icon-ios-mail" x1="4000" y1="0" x2="4000" y2="8000" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#008EE7"></stop>
+                    <stop offset="1" stop-color="#00D6FA"></stop>
+                  </linearGradient>
+                </defs>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.2479d7 }}</div>
+        </div>
+        <div class="contact__link-wrap">
+          <a href="{{ links.70df12fd }}" target="_blank" class="contact__link w-inline-block">
+            <div class="contact__embed w-embed"><svg width="100%" height="100%" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M61.333 0H18.667C8.357 0 0 8.357 0 18.667v42.666C0 71.643 8.357 80 18.667 80h42.666C71.643 80 80 71.643 80 61.333V18.667C80 8.357 71.643 0 61.333 0Z" fill="#fff"></path>
+                <path d="M30.116 55.253c1.948 2.437 3.932 5.5 4.97 7.35 1.265 2.407 1.79 4.03 2.73 6.94.55 1.594 1.075 2.077 2.174 2.077 1.203 0 1.753-.812 2.175-2.077.879-2.73 1.557-4.806 2.632-6.785 4.143-7.813 10.897-13.364 14.7-20.972 0 0 2.504-4.647 2.504-11.154 0-6.066-2.468-10.28-2.468-10.28L30.132 55.305l-.016-.052Z" fill="#34A853"></path>
+                <path d="M20.143 40.964c2.37 5.397 6.888 10.126 9.972 14.29l16.346-19.379s-2.308 3.022-6.477 3.022c-4.646 0-8.43-3.7-8.43-8.378 0-3.218 1.918-5.449 1.918-5.449-12.028 1.79-11.36 4.704-13.365 15.883l.036.01Z" fill="#FBBC04"></path>
+                <path d="M46.667 9.492c5.448 1.753 10.075 5.449 12.85 10.846L46.461 35.913s1.918-2.241 1.918-5.449c0-4.775-4.03-8.378-8.379-8.378-4.127 0-6.477 2.986-6.477 2.986 1.003-2.282 11.36-14.804 13.16-15.575l-.016-.005Z" fill="#4285F4"></path>
+                <path d="M23.125 16.341c3.249-3.865 8.944-7.864 16.808-7.864 3.799 0 6.683 1.007 6.683 1.007L33.508 25.059c-.884-.48-9.51-7.197-10.383-8.739v.021Z" fill="#1A73E8"></path>
+                <path d="M20.143 40.96S18 36.706 18 30.578c0-5.808 2.272-10.897 5.14-14.186l10.383 8.738L20.16 40.96h-.015Z" fill="#EA4335"></path>
+              </svg></div>
+          </a>
+          <div class="legend">{{ texts.247ab7 }}</div>
+        </div>
+        <div class="contact__close-wrap">
+          <div data-popup="close" class="contact__close-embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.26 16.26">
+              <path style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-width:4px" d="M14.26 2 2 14.26M2 2l12.26 12.26"></path>
             </svg></div>
-        </a>
-        <a data-contact="whatsapp" href="{{ links.23 }}" class="contact__link w-inline-block">
-          <div class="contact__embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-              <defs>
-                <style>.cls-1{fill:#fff}</style>
-              </defs>
-              <g id="Layer_1-2" data-name="Layer_1">
-                <circle cx="40" cy="40" r="40" style="fill:#1bd741"></circle>
-                <path class="cls-1" d="m15.91 64.09 3.39-12.04a24.1 24.1 0 0 1-3.33-12.25c0-13.33 10.85-24.18 24.18-24.18S64.33 26.47 64.33 39.8 53.48 63.98 40.15 63.98c-4.15 0-8.22-1.06-11.82-3.08l-12.42 3.2Zm13.06-7.6.74.45c3.14 1.92 6.75 2.93 10.45 2.93 11.07 0 20.08-9.01 20.08-20.08s-9.01-20.08-20.08-20.08-20.08 9.01-20.08 20.08c0 3.86 1.1 7.6 3.17 10.83l.5.78-1.95 6.94 7.18-1.85Z"></path>
-                <path class="cls-1" d="m33.36 28.55-1.57-.09c-.49-.03-.98.14-1.35.46-.76.66-1.98 1.94-2.35 3.6-.56 2.48.3 5.52 2.53 8.56 2.23 3.04 6.38 7.9 13.72 9.98 2.37.67 4.23.22 5.66-.7 1.14-.73 1.92-1.9 2.2-3.22l.25-1.17a.82.82 0 0 0-.45-.91l-5.3-2.44a.806.806 0 0 0-.98.24l-2.08 2.7c-.16.2-.43.28-.67.2-1.43-.5-6.2-2.5-8.82-7.55a.592.592 0 0 1 .08-.67l1.99-2.3c.2-.23.25-.57.13-.85l-2.29-5.35a.799.799 0 0 0-.7-.49Z"></path>
-              </g>
-            </svg></div>
-        </a>
-        <a href="{{ links.6851ce42 }}" class="contact__link w-inline-block">
-          <div class="contact__embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-              <g data-name="Layer_1">
-                <circle cx="40" cy="40" r="40" style="fill:#3b4247"></circle>
-                <path d="m47.79 45.56-1.01 1.06s-2.4 2.52-8.94-4.36c-6.54-6.89-4.14-9.41-4.14-9.41l.63-.67c1.56-1.65 1.71-4.29.35-6.22l-2.79-3.95c-1.69-2.39-4.95-2.7-6.89-.67L21.53 25c-.96 1.01-1.6 2.32-1.53 3.77.2 3.72 1.79 11.72 10.65 21.05 9.4 9.9 18.22 10.29 21.83 9.93 1.14-.11 2.13-.73 2.93-1.57l3.14-3.31c2.12-2.23 1.52-6.07-1.19-7.63l-4.23-2.43c-1.78-1.03-3.96-.72-5.35.74Z" style="fill:#eeeff1"></path>
-              </g>
-            </svg></div>
-        </a>
-        <a href="{{ links.17a761b5 }}" class="contact__link w-inline-block">
-          <div class="contact__embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-              <g data-name="Layer_1">
-                <circle cx="40" cy="40" r="40" style="fill:#3b4247"></circle>
-                <path d="M48.77 39c0 4.66-3.88 8.44-8.67 8.44s-8.67-3.78-8.67-8.44 3.88-8.44 8.67-8.44 8.67 3.78 8.67 8.44Zm0 0v3.17c0 2.91 2.43 5.28 5.42 5.28s5.42-2.36 5.42-5.28V39c0-10.49-8.73-19-19.5-19s-19.5 8.51-19.5 19 8.73 19 19.5 19h8.67" style="fill:none;stroke:#eeeff1;stroke-linecap:round;stroke-linejoin:round;stroke-width:3px"></path>
-              </g>
-            </svg></div>
-        </a>
-        <a href="{{ links.70df12fd }}" target="_blank" class="contact__link w-inline-block">
-          <div class="contact__embed w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 80 80">
-              <g data-name="Layer_1">
-                <circle cx="40" cy="40" r="40" style="fill:#3b4247"></circle>
-                <path d="M40.39 21C32.99 21 27 27 27 34.39c0 3 .99 5.78 2.66 8.01l8.59 14.88c.05.1.1.19.16.28l.02.03c.44.6 1.14 1 1.96 1 .74 0 1.38-.34 1.83-.85h.02l.08-.13c.13-.17.24-.35.32-.55l8.42-14.58c1.71-2.25 2.72-5.05 2.72-8.09 0-7.4-5.99-13.39-13.39-13.39Zm-.13 20.18c-3.65 0-6.6-2.95-6.6-6.6s2.95-6.6 6.6-6.6 6.6 2.95 6.6 6.6-2.95 6.6-6.6 6.6Z" style="fill:#eeeff1"></path>
-              </g>
-            </svg></div>
-        </a>
-        <div data-popup="close" class="contact__close w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16.26 16.26">
-            <path style="fill:none;stroke:currentColor;stroke-linecap:round;stroke-width:4px" d="M14.26 2 2 14.26M2 2l12.26 12.26"></path>
-          </svg></div>
+        </div>
       </div>
     </div>
     <nav data-id="target" class="nav">
@@ -388,7 +438,7 @@ a {
       <div class="top_trigger"></div>
     </div>
     <main class="main">
-      <section data-id="intro" class="section is-intro">
+      <section data-id="intro" data-color="dark" class="section">
         <div class="container">
           <p data-id="reveal" data-reveal="true" class="intro__text">{{ texts.-482a1182 }}</p>
           <div class="div-block">
@@ -443,61 +493,57 @@ a {
         <div class="container">
           <div id="services" data-reveal="true" class="header__paragraph tight centered"><span class="serif-italic">{{ texts.c6992d }}</span>{{ texts.-25ea30f5 }}</div>
           <div data-w-id="d40171a6-e3de-0919-f158-e28326cd7e47" class="services__cards-wrap">
-            <a data-w-id="795bd9ed-a8b5-a53c-3952-382d4b790436" href="{{ links.-5b0dcf13 }}" class="service__card w-inline-block">
-              <div class="service__title">{{ texts.3c9fad0 }}<br>{{ texts.b885463 }}</div>
-              <div class="magnet">
-                <div class="cta__btn isblue">
-                  <div class="cta__text-round is-silver">{{ texts.5289b84e }}</div>
-                  <div class="cta__circle is-silver">
-                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-                        <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
-                      </svg></div>
-                  </div>
-                </div>
-              </div>
-              <div class="service__card-overlay"></div>
+            <a data-svg="trigger" data-color="asset-management" data-hover="darken" data-w-id="795bd9ed-a8b5-a53c-3952-382d4b790436" href="{{ links.-5b0dcf13 }}" class="service__card w-inline-block">
+              <div class="service__title">{{ texts.75755f50 }}<span class="nowrap">{{ texts.6582381d }}<sup>{{ texts.9cdb }}</sup></span></div>
+              <div class="service__arrow w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                  <defs>
+                    <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                  </defs>
+                  <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                </svg></div>
             </a>
-            <a data-w-id="7ce46a57-0505-8309-30d6-2ef693c85215" href="{{ links.71cdd7a5 }}" class="service__card is-green w-inline-block">
-              <div class="service__title">{{ texts.-3f09ac3d }}<br>{{ texts.560f747e }}</div>
-              <div class="magnet">
-                <div class="cta__btn isgreen">
-                  <div class="cta__text-round is-silver">{{ texts.-4cfafb2e }}</div>
-                  <div class="cta__circle is-silver">
-                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-                        <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
-                      </svg></div>
-                  </div>
-                </div>
-              </div>
-              <div class="service__card-overlay is-green"></div>
+            <a data-svg="trigger" data-color="digital-assets" data-hover="darken" id="w-node-_8f1e3688-7048-60ec-bbba-87daa2c7b120-2fde19e6" data-w-id="8f1e3688-7048-60ec-bbba-87daa2c7b120" href="{{ links.-43bd562b }}" class="service__card w-inline-block">
+              <div class="service__title">{{ texts.-c6d8 }}<span class="nowrap">{{ texts.393694dd }}<sup>{{ texts.9c40 }}</sup></span></div>
+              <div class="service__arrow w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                  <defs>
+                    <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                  </defs>
+                  <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                </svg></div>
             </a>
-            <a id="w-node-b010ffa2-324c-c265-0750-8c6670222f76-2fde19e6" data-w-id="b010ffa2-324c-c265-0750-8c6670222f76" href="{{ links.-43fcb0f8 }}" class="service__card is-lila w-inline-block">
-              <div class="service__title">{{ texts.2196e5 }}</div>
-              <div class="magnet">
-                <div class="cta__btn is-lila">
-                  <div class="cta__text-round is-silver">{{ texts.5d433880 }}</div>
-                  <div class="cta__circle is-silver">
-                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-                        <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
-                      </svg></div>
-                  </div>
-                </div>
-              </div>
-              <div class="service__card-overlay is-lila"></div>
+            <a data-svg="trigger" data-color="institutional-services" data-hover="darken" data-w-id="7ce46a57-0505-8309-30d6-2ef693c85215" href="{{ links.71cdd7a5 }}" class="service__card w-inline-block">
+              <div class="service__title">{{ texts.5dd424bd }}<span class="nowrap">{{ texts.6bdf1b62 }}<sup>{{ texts.9c5f }}</sup></span></div>
+              <div class="service__arrow w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                  <defs>
+                    <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                  </defs>
+                  <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                </svg></div>
             </a>
-            <a id="w-node-_8f1e3688-7048-60ec-bbba-87daa2c7b120-2fde19e6" data-w-id="8f1e3688-7048-60ec-bbba-87daa2c7b120" href="{{ links.-43bd562b }}" class="service__card is-orange w-inline-block">
-              <div class="service__title">{{ texts.-39ce7a08 }}<br>{{ texts.75755fa3 }}</div>
-              <div class="magnet">
-                <div class="cta__btn is-orange">
-                  <div class="cta__text-round is-silver">{{ texts.5d433880 }}</div>
-                  <div class="cta__circle is-silver">
-                    <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
-                        <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
-                      </svg></div>
-                  </div>
-                </div>
-              </div>
-              <div class="service__card-overlay is-orange"></div>
+            <a data-svg="trigger" data-color="fund" data-hover="darken" id="w-node-b010ffa2-324c-c265-0750-8c6670222f76-2fde19e6" data-w-id="b010ffa2-324c-c265-0750-8c6670222f76" href="{{ links.-43fcb0f8 }}" class="service__card w-inline-block">
+              <div class="service__title"><span class="nowrap">{{ texts.41145db }}<sup>{{ texts.9c40 }}</sup></span></div>
+              <div class="service__arrow w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                  <defs>
+                    <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                  </defs>
+                  <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                </svg></div>
             </a>
           </div>
           <div class="headline-cta-wrap">
@@ -530,7 +576,7 @@ a {
         }
       </style>
                 </defs>
-                <path id="quote-1" class="nsvs" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:2;" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                <path id="quote-1" class="nsvs" style="fill:none;stroke:currentColor;stroke-miterlimit:10;stroke-width:4;" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
               </svg>
               <!--  logotype quote end  -->
             </div>
@@ -590,7 +636,7 @@ a {
               </a>
             </div>
             <div class="footer__cards-wrapper">
-              <a data-service="asset-management" id="w-node-_9a6935bf-45b8-e847-6920-f8287a8ffa03-119365c8" href="{{ links.-5b0dcf13 }}" class="footer__card w-inline-block">
+              <a data-color="asset-management" data-svg="trigger" data-hover="darken" id="w-node-_9a6935bf-45b8-e847-6920-f8287a8ffa03-119365c8" href="{{ links.-5b0dcf13 }}" class="footer__card w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.75755f50 }}<span class="nowrap">{{ texts.6582381d }}<sup>{{ texts.9cdb }}</sup></span></div>
                 <div class="footer__embed-arrow w-embed"><svg data-arrow="asset-management" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
@@ -600,36 +646,10 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
-              <a data-service="institutional-services" id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.71cdd7a5 }}" class="footer__card is-green w-inline-block">
-                <div class="footer__card-text hidden">{{ texts.5dd424bd }}<span class="nowrap">{{ texts.6bdf1b62 }}<sup>{{ texts.9c5f }}</sup></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="institutional-services" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
-                    <defs>
-                      <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
-                    </defs>
-                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
-                  </svg></div>
-              </a>
-              <a data-service="fund" id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-43fcb0f8 }}" class="footer__card is-lila w-inline-block">
-                <div class="footer__card-text hidden"><span class="nowrap">{{ texts.41145db }}<sup>{{ texts.9c40 }}</sup></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="fund" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
-                    <defs>
-                      <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
-                    </defs>
-                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
-                  </svg></div>
-              </a>
-              <a data-service="digital-assets" id="w-node-ed47f7b0-412f-50c0-1730-270fd1ebd8c0-119365c8" href="{{ links.-43bd562b }}" class="footer__card is-orange w-inline-block">
+              <a data-color="digital-assets" data-svg="trigger" data-hover="darken" id="w-node-ed47f7b0-412f-50c0-1730-270fd1ebd8c0-119365c8" href="{{ links.-43bd562b }}" class="footer__card w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.-c6d8 }}<span class="nowrap">{{ texts.393694dd }}<sup>{{ texts.9c40 }}</sup></span></div>
                 <div class="footer__embed-arrow w-embed"><svg data-arrow="digital-assets" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                     <defs>
@@ -639,7 +659,33 @@ a {
         }
       </style>
                     </defs>
-                    <path class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                  </svg></div>
+              </a>
+              <a data-color="institutional-services" data-svg="trigger" data-hover="darken" id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.71cdd7a5 }}" class="footer__card w-inline-block">
+                <div class="footer__card-text hidden">{{ texts.5dd424bd }}<span class="nowrap">{{ texts.6bdf1b62 }}<sup>{{ texts.9c5f }}</sup></span></div>
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="institutional-services" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                    <defs>
+                      <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                    </defs>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                  </svg></div>
+              </a>
+              <a data-color="fund" data-svg="trigger" data-hover="darken" id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-43fcb0f8 }}" class="footer__card w-inline-block">
+                <div class="footer__card-text hidden"><span class="nowrap">{{ texts.41145db }}<sup>{{ texts.9c40 }}</sup></span></div>
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="fund" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                    <defs>
+                      <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                    </defs>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                   </svg></div>
               </a>
             </div>
@@ -687,18 +733,11 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
- * SAWM | hover darker shade v1
- * build: 24.07.24 @12:05
-*/
-function darkenColor(e,o){let t=e.split(","),r=o<0?0:255,a=o<0?-1*o:o,n=parseInt(t[0].slice(4)),u=parseInt(t[1]),d=parseInt(t[2]);return"rgb("+(Math.round((r-n)*a)+n)+","+(Math.round((r-u)*a)+u)+","+(Math.round((r-d)*a)+d)+")"}function onMouseEnter(e,o,t){o.addEventListener("mouseenter",()=>{let r=o.querySelector(e.keyvisual);gsap.to(r,{fill:"#eeeff1",duration:e.duration,ease:e.ease}),gsap.to(o,{backgroundColor:t,duration:e.duration,ease:e.ease})})}function onMouseLeave(e,o,t){o.addEventListener("mouseleave",()=>{let r=o.querySelector(e.keyvisual);gsap.to(r,{fill:"transparent",duration:e.duration,ease:e.ease}),gsap.to(o,{backgroundColor:t,duration:e.duration,ease:e.ease})})}function initHoverShade(e){let o=document.querySelectorAll(e.targets);o.forEach(o=>{let t=getComputedStyle(o),r=t.backgroundColor,a=darkenColor(r,e.percentage);onMouseEnter(e,o,a),onMouseLeave(e,o,r)})}document.addEventListener("DOMContentLoaded",()=>{let e={percentage:-.25,targets:".footer__card",keyvisual:'[data-id="footer-cta-keyvisual"]',duration:1,ease:"power2.out"};document.querySelector(e.targets)&&initHoverShade(e)});
-</script>
-  <script>
-/*
  * SAWM | quote drawing v1
  * dependencies: gsap, drawsvg, ScrollTrigger
  * build 23.07.24 @21:00
  */
-function quote__getPaths(e){let t=document.querySelector(e);if(!t)return console.error("No SVG found"),[];let r=Array.from(t.querySelectorAll("path[id]"));return r.reverse(),r.map(e=>`#${e.id}`)}function quote__setInitialState(e){gsap.set(e,{fillOpacity:0}),gsap.set(e,{y:"25%",opacity:0})}function quote__drawing(e){let t=gsap.timeline(),r=quote__getPaths(e.SVG_TARGET);gsap.to(r,{delay:0,duration:e.DURATION,y:"0%",opacity:1,ease:"expo.inOut",stagger:e.STAGGER}),r.forEach((r,o)=>{t.fromTo(r,{drawSVG:"0%"},{drawSVG:"100%",delay:0,duration:e.DURATION,ease:e.EASE},o*e.STAGGER).to(r,{fillOpacity:1,duration:e.DURATION/4,ease:"none"})})}document.addEventListener("DOMContentLoaded",()=>{let e={SVG_TARGET:"#quote-logotype",START:"top center",DURATION:2,EASE:"power4.inOut",STAGGER:.125},t=quote__getPaths(e.SVG_TARGET);quote__setInitialState(t),ScrollTrigger.create({trigger:'[data-id="quote"]',start:e.START,markers:!1,onEnter(){ScrollTrigger.isTriggered||(quote__drawing(e),ScrollTrigger.isTriggered=!0)}}),ScrollTrigger.isTriggered=!1});
+function quote__getPaths(e){let t=document.querySelector(e);if(!t)return console.error("No SVG found"),[];let r=Array.from(t.querySelectorAll("path[id]"));return r.reverse(),r.map(e=>`#${e.id}`)}function quote__setInitialState(e){gsap.set(e,{fillOpacity:0})}function quote__drawing(e){let t=gsap.timeline(),r=quote__getPaths(e.SVG_TARGET);gsap.to(r,{delay:0,duration:e.DURATION,opacity:1,ease:"expo.inOut",stagger:e.STAGGER}),r.forEach((r,o)=>{t.fromTo(r,{drawSVG:"0%"},{drawSVG:"100%",delay:0,duration:e.DURATION,ease:e.EASE},o*e.STAGGER).to(r,{fillOpacity:1,duration:e.DURATION/4,ease:"none"})})}document.addEventListener("DOMContentLoaded",()=>{let e={SVG_TARGET:"#quote-logotype",START:"top center",DURATION:2.5,EASE:"power2.inOut",STAGGER:.125},t=quote__getPaths(e.SVG_TARGET);quote__setInitialState(t),ScrollTrigger.create({trigger:'[data-id="quote"]',start:e.START,markers:!1,onEnter(){ScrollTrigger.isTriggered||(quote__drawing(e),ScrollTrigger.isTriggered=!0)}}),ScrollTrigger.isTriggered=!1});
 </script>
   <script>
 /*
@@ -713,13 +752,6 @@ document.addEventListener("DOMContentLoaded",()=>{let t={targets:document.queryS
  * build 22.07.24 @19:00
  */
 document.addEventListener("DOMContentLoaded",()=>{const options={trigger:`.faq__cta-container`,targets:`.faq__cta`};if(!document.querySelector(`${options.trigger }`)){return}setInitialState(options);staggerRevealTargets(options)});function setInitialState(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);gsap.set(items,{y:"50%",opacity:0})}function staggerRevealTargets(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);ScrollTrigger.create({trigger:container,start:"top 80%",onEnter:()=>{gsap.to(items,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:0.15})}})}
-</script>
-  <script>
-/*
- * SAWM | card small hover v2
- * build 22.07.24 @17:25
- */
-document.addEventListener("DOMContentLoaded",function(){let e=document.querySelectorAll(".faq__cta");0!==e.length&&Array.from(e).forEach(e=>{let t=e.querySelector(".footer__card-overlay"),r=getComputedStyle(t).backgroundImage,n=function e(t){let r=t.match(/rgb(?:a)?\(\d{1,3}, \d{1,3}, \d{1,3}(?:, [\d.]+)?\)/g);return r||[]}(r),a=function e(t){let r=t.match(/rgba?\((\d+), (\d+), (\d+),? [\d.]*\)/);if(!r)return null;{let n=parseInt(r[1],10),a=parseInt(r[2],10),o=parseInt(r[3],10);return{r:n,g:a,b:o}}}(n[1]);t.addEventListener("mouseenter",()=>{gsap.to(t,{duration:.35,ease:"expo.out",onUpdate:function(){let e=this.progress();t.style.backgroundImage=`linear-gradient(90deg, ${n[0]}, rgba(${a.r}, ${a.g}, ${a.b}, ${e}))`}})}),t.addEventListener("mouseleave",()=>{gsap.to(t,{duration:.5,ease:"expo.out",onUpdate:function(){let e=this.progress();t.style.backgroundImage=`linear-gradient(90deg, ${n[0]}, rgba(${a.r}, ${a.g}, ${a.b}, ${1-e}))`}})})})});
 </script>
   <script>
 /*
@@ -812,10 +844,10 @@ function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.que
 </script>
   <script>
 /*
- * SAWM | Telegram Whatsapp v2
- * build 28.07.24 @00:48
+ * SAWM | Telegram Whatsapp Threema v3
+ * build 29.07.24 @00:48
  */
-function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent("Hello, I would like to have more info about Silver Arrow SA")}`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245"};contactTelegram(t),contactWhatsapp(t)});
+function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent(t.MESSAGE)}`;window.open(e,"_blank")})}function contactThreema(t){let e=document.querySelector('[data-contact="threema"]');e&&e.addEventListener("click",()=>{let e=`threema://compose?text="${encodeURIComponent(t.MESSAGE)}&id="${t.THREEMA_ID}"`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245",THREEMA_ID:"xxx",MESSAGE:"I have a question reguarding Silver Arrow SA"};contactTelegram(t),contactWhatsapp(t),contactThreema(t)});
 </script>
   <script>
 /*
@@ -823,6 +855,28 @@ function contactTelegram(t){let e=document.querySelector('[data-contact="telegra
  * build 28.07.24 @15:34
  */
 function setOverlayInitialState(e){let t=document.querySelector(e.overlay);gsap.set(t,{opacity:0,display:"none"})}function initContactOverlay(e){let t=document.querySelectorAll(e.trigger),a=document.querySelectorAll(e.close),o=document.querySelector(e.overlay);Array.from(t).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{display:"flex",opacity:1,duration:e.duration,ease:e.ease})})}),Array.from(a).forEach(t=>{t.addEventListener("click",()=>{gsap.to(o,{opacity:0,duration:e.duration,ease:e.ease,onComplete(){gsap.set(o,{display:"none"})}})})})}document.addEventListener("DOMContentLoaded",()=>{let e={trigger:'[data-popup="trigger"]',close:'[data-popup="close"]',overlay:'[data-popup="overlay"]',duration:.25,ease:"power3.inOut"};setOverlayInitialState(e),initContactOverlay(e)});
+</script>
+  <script>
+/*
+ * SAWM | hover effect: darkening v2
+ * build: 29.07.24 @12:05
+ */
+function darkenColor(e,n){let r=e.split(","),o=n<0?0:255,t=n<0?-1*n:n,a=parseInt(r[0].slice(4)),u=parseInt(r[1]),d=parseInt(r[2]);return"rgb("+(Math.round((o-a)*t)+a)+","+(Math.round((o-u)*t)+u)+","+(Math.round((o-d)*t)+d)+")"}function onMouseEnter__DarkenOnHover(e,n,r){n.addEventListener("mouseenter",()=>{gsap.to(n,{backgroundColor:r,duration:e.duration,ease:e.ease})})}function onMouseLeave__DarkenOnHover(e,n,r){n.addEventListener("mouseleave",()=>{gsap.to(n,{backgroundColor:r,duration:e.duration,ease:e.ease})})}function initDarkenOnHover(e){let n=document.querySelectorAll(e.targets);n.forEach(n=>{let r=getComputedStyle(n),o=r.backgroundColor,t=darkenColor(o,e.percentage);onMouseEnter__DarkenOnHover(e,n,t),onMouseLeave__DarkenOnHover(e,n,o)})}document.addEventListener("DOMContentLoaded",()=>{let e={percentage:-.3,targets:'[data-hover="darken"]',duration:1,ease:"power2.out"};document.querySelector(e.targets)&&initDarkenOnHover(e)}); 
+</script>
+  <script>
+/*
+ * SAWM | fill SVG on parent hover v1
+ * build: 24.07.24 @12:05
+ */
+function onMouseEnter__SVGfillOnHover(e,t){t.addEventListener("mouseenter",()=>{let n=t.querySelector(e.keyvisual);gsap.to(n,{fill:"#eeeff1",duration:e.duration,ease:e.ease})})}function onMouseLeave__SVGfillOnHover(e,t){t.addEventListener("mouseleave",()=>{let n=t.querySelector(e.keyvisual);gsap.to(n,{fill:"transparent",duration:e.duration,ease:e.ease})})}function initSVGfillOnHover(e){let t=document.querySelectorAll(e.targets);t.forEach(t=>{onMouseEnter__SVGfillOnHover(e,t),onMouseLeave__SVGfillOnHover(e,t)})}document.addEventListener("DOMContentLoaded",()=>{let e={percentage:-.25,targets:'[data-svg="trigger"]',keyvisual:'[data-svg="target"]',duration:1,ease:"power2.out"};document.querySelector(e.targets)&&initSVGfillOnHover(e)});
+</script>
+  <script>
+/*
+ * SAWM | quote arrows rotate
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 30.07.24 @00:07
+ */
+function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=100",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
 </script>
   <script>
 /*
