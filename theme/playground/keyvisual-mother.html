@@ -42,7 +42,7 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
 #keyvisual-silver-arrow {
   opacity: 0;
 }
-/*  initial states keyvisual quote module */
+/* initial states keyvisual quote module */
 #quote-logotype path {
   stroke-dasharray: 10000;
   stroke-dashoffset: 10000;
@@ -501,10 +501,10 @@ document.addEventListener("DOMContentLoaded",()=>{let t={targets:document.queryS
 </script>
   <script>
 /*
- * SAWM | stagger reveal elements v1
+ * SAWM | stagger reveal elements v2
  * build 22.07.24 @19:00
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={trigger:`.faq__cta-container`,targets:`.faq__cta`};if(!document.querySelector(`${options.trigger }`)){return}setInitialState(options);staggerRevealTargets(options)});function setInitialState(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);gsap.set(items,{y:"50%",opacity:0})}function staggerRevealTargets(options){const container=document.querySelector(`${options.trigger }`);const items=container.querySelectorAll(`${options.targets }`);ScrollTrigger.create({trigger:container,start:"top 80%",onEnter:()=>{gsap.to(items,{y:"0%",opacity:1,duration:1,ease:"expo.out",stagger:0.15})}})}
+function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);gsap.set(r,{y:"35%",opacity:0})}function staggerRevealTargets(e){let t=document.querySelector(`${e.trigger}`),r=t.querySelectorAll(`${e.targets}`);ScrollTrigger.create({trigger:t,start:e.start,onEnter(){r.forEach((t,a)=>{let g=a===r.length-1?e.baseDuration*e.offset:e.baseDuration;gsap.to(t,{y:"0%",opacity:1,duration:g,ease:e.ease,delay:a*e.stagger})})}})}document.addEventListener("DOMContentLoaded",()=>{let e={trigger:'[data-reveal="trigger"]',targets:'[data-reveal="target"]',baseDuration:1,offset:4,ease:"expo.out",stagger:.15,start:"top 80%"};document.querySelector(`${e.trigger}`)&&(setInitialState(e),staggerRevealTargets(e))});
 </script>
   <script>
 /*
@@ -535,7 +535,7 @@ function setInitialStates(e){e.overlay.style.display="none",e.overlay.style.opac
  * dependency: gsap/3.12.5/gsap.min.js
  * build 18.06.24 @22:05
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={onLoad:{open:true,order:"last"},categories:".faq__category",questions:".faq__question",answers:".faq__answer",icons:".icon__mini"};if(!document.querySelector(options.questions)){return}faq__setStates(options);faq__listenOnClicks(options);faq__openAnswerOnLoad(options)});function faq__isMobileDevice(){if(window.innerWidth<768){return true}}function faq__setStates(options){gsap.set(options.answers,{height:0})}function selectFirstOrLastAnswer(array,options){return options.onLoad.order=="last"?array[array.length-1]:array[0]}function faq__openAnswerOnLoad(options){if(!options.onLoad.open){return}if(faq__isMobileDevice()){return}const categories=document.querySelectorAll(options.categories);categories.forEach((category)=>{const questions=category.querySelectorAll(options.questions);if(questions.length>0){selectFirstOrLastAnswer(questions,options).click()}})}function faq__listenOnClicks(options){const questions=document.querySelectorAll(options.questions);questions.forEach((question)=>{let isOpen=false;question.addEventListener("click",()=>{const icon=question.querySelector(options.icons);const answer=question.nextElementSibling;isOpen?faq__closeAnswer(answer,icon):faq__openAnswer(answer,icon);isOpen=!isOpen})})}function faq__openAnswer(answer,icon){const config={duration:0.75,ease:"power4.inOut"};gsap.set(answer,{height:"auto"});gsap.fromTo(answer,{height:0},{...config,height:answer.clientHeight,onComplete:ScrollTrigger.refresh});gsap.to(icon,{...config,rotationZ:45})}function faq__closeAnswer(answer,icon){const config={duration:0.3};gsap.to(answer,{...config,height:0,ease:"ease-out",onComplete:ScrollTrigger.refresh});gsap.to(icon,{...config,rotationZ:0,ease:"ease-in"})}
+function faq__isMobileDevice(){if(window.innerWidth<768)return!0}function faq__setStates(e){gsap.set(e.answers,{height:0})}function selectFirstOrLastAnswer(e,t){return"last"==t.onLoad.order?e[e.length-1]:e[0]}function faq__openAnswerOnLoad(e){if(!e.onLoad.open||faq__isMobileDevice())return;let t=document.querySelectorAll(e.categories);t.forEach(t=>{let n=t.querySelectorAll(e.questions);n.length>0&&selectFirstOrLastAnswer(n,e).click()})}function faq__listenOnClicks(e){let t=document.querySelectorAll(e.questions);t.forEach(t=>{let n=!1;t.addEventListener("click",()=>{let o=t.querySelector(e.icons),s=t.nextElementSibling;n?faq__closeAnswer(s,o):faq__openAnswer(s,o),n=!n})})}function faq__openAnswer(e,t){let n={duration:.75,ease:"power4.inOut"};gsap.set(e,{height:"auto"}),gsap.fromTo(e,{height:0},{...n,height:e.clientHeight,onComplete:ScrollTrigger.refresh}),gsap.to(t,{...n,rotationZ:45})}function faq__closeAnswer(e,t){let n={duration:.3};gsap.to(e,{...n,height:0,ease:"ease-out",onComplete:ScrollTrigger.refresh}),gsap.to(t,{...n,rotationZ:0,ease:"ease-in"})}document.addEventListener("DOMContentLoaded",()=>{let e={onLoad:{open:!1,order:"last"},categories:".faq__category",questions:".faq__question",answers:".faq__answer",icons:".icon__mini"};document.querySelector(e.questions)&&(faq__setStates(e),faq__listenOnClicks(e),faq__openAnswerOnLoad(e))});
 </script>
   <script>
 /*
@@ -597,10 +597,10 @@ function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.que
 </script>
   <script>
 /*
- * SAWM | Telegram Whatsapp Threema v3
- * build 29.07.24 @00:48
+ * SAWM | Telegram Whatsapp Threema Signal WeChat v4
+ * build 30.07.24 @00:48
  */
-function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent(t.MESSAGE)}`;window.open(e,"_blank")})}function contactThreema(t){let e=document.querySelector('[data-contact="threema"]');e&&e.addEventListener("click",()=>{let e=`threema://compose?text="${encodeURIComponent(t.MESSAGE)}&id="${t.THREEMA_ID}"`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245",THREEMA_ID:"xxx",MESSAGE:"I have a question reguarding Silver Arrow SA"};contactTelegram(t),contactWhatsapp(t),contactThreema(t)});
+function contactSignal(t){let e=document.querySelector('[data-contact="signal"]'),a=encodeURIComponent(t.SIGNAL_NUMBER);e.addEventListener("click",()=>{window.open(`sgnl://send?phone=${a}`,"_blank")})}function contactWeChat(t){let e=document.querySelector('[data-contact="wechat"]'),a=encodeURIComponent(t.WECHAT_ID);e.addEventListener("click",()=>{window.open(`weixin://dl/chat?${a}`,"_blank")})}function contactTelegram(t){let e=document.querySelector('[data-contact="telegram"]');e&&e.addEventListener("click",()=>{window.open(`https://t.me/${t.TELEGRAM_CHANEL}`,"_blank")})}function contactWhatsapp(t){let e=document.querySelector('[data-contact="whatsapp"]');e&&e.addEventListener("click",()=>{let e=`https://wa.me/${t.WHATSAPP_NUMBER}?text=${encodeURIComponent(t.MESSAGE)}`;window.open(e,"_blank")})}function contactThreema(t){let e=document.querySelector('[data-contact="threema"]');e&&e.addEventListener("click",()=>{let e=`threema://compose?text="${encodeURIComponent(t.MESSAGE)}&id="${t.THREEMA_ID}"`;window.open(e,"_blank")})}document.addEventListener("DOMContentLoaded",()=>{let t={TELEGRAM_CHANEL:"leelookorben",WHATSAPP_NUMBER:"491751138245",THREEMA_ID:"xxx",SIGNAL_NUMBER:"491751138245",WECHAT_ID:"xxx",MESSAGE:"I have a question reguarding Silver Arrow SA"};contactTelegram(t),contactWhatsapp(t),contactThreema(t),contactSignal(t),contactWeChat(t)});
 </script>
   <script>
 /*
@@ -630,6 +630,14 @@ function onMouseEnter__SVGfillOnHover(e,t){t.addEventListener("mouseenter",()=>{
  * build: 30.07.24 @00:07
  */
 function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=100",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
+</script>
+  <script>
+/*
+ * SAWM | pointing arrow vivus v1
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 30.07.24 @16:11
+ */
+function pointingArrow_initVivus(n){let t=new Vivus(n.SVG_TO_ANIMATE,{type:"delayed",duration:n.DURATION,animTimingFunction:Vivus.EASE,start:"manual"});t.play()}function init_pointingArrow(n){let t=document.querySelector(`#${n.SVG_TO_ANIMATE}`);gsap.to(t,{scrollTrigger:{trigger:t,start:n.START,onEnter:()=>pointingArrow_initVivus(n)}})}document.addEventListener("DOMContentLoaded",()=>{let n={SVG_TO_ANIMATE:"pointing-arrow-svg",TRIGGER_ELEMENT:document.querySelector("#pointing-arrow-svg"),DURATION:150,START:"top center+=120"};document.querySelector(`#${n.SVG_TO_ANIMATE}`)&&init_pointingArrow(n)});
 </script>
   <script>
 /*
