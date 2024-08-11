@@ -1,12 +1,12 @@
 ---
-title: Home
-permalink: index.html
-layout: index.html
-slug: ''
+title: Header v5
+permalink: modules/{{ page.fileSlug }}/index.html
+layout: modules/header-v5.html
+slug: header-v5
 tags: pages
 seo:
   noindex: false
-  title: Header v6
+  title: Header v5
   description: >-
     Licensed by FINMA, Switzerland’s financial regulatory authority, Silver
     Arrow Wealth Management — SAWM, upholds the highest standards of

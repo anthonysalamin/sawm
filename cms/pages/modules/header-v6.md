@@ -1,8 +1,8 @@
 ---
-title: Home
-permalink: index.html
-layout: index.html
-slug: ''
+title: Header v6
+permalink: modules/{{ page.fileSlug }}/index.html
+layout: modules/header-v6.html
+slug: header-v6
 tags: pages
 seo:
   noindex: false

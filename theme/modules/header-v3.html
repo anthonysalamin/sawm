@@ -41,6 +41,15 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
 #keyvisual-silver-arrow {
   opacity: 0;
 }
+/* initial states keyvisual (mobile) */
+#vivus-keyvisual-silver-arrow-mobile path,
+#keyvisual-horizontal-arrows-mobile path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+}
+#keyvisual-silver-arrow-mobile {
+  opacity: 0;
+}
 /* initial states keyvisual quote module */
 #quote-logotype path {
   stroke-dasharray: 10000;
@@ -804,11 +813,19 @@ function setInitialState(e){let t=document.querySelector(`${e.trigger}`),r=t.que
 </script>
   <script>
 /*
- * SAWM | arrows vivus + rotate v4
+ * SAWM | arrows vivus + rotate v5
  * dependencies: gsap.js scrolltrigger.js
  * build: 21.06.24 @22:48
  */
-function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initializeAnimations(e){let r=document.querySelector(e.keyvisualSilverArrow);gsap.timeline().to(r,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(r,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)"}),setTimeout(()=>{initializeVivus("vivus-keyvisual-silver-arrow"),initializeVivus("keyvisual-horizontal-arrows")},0)}function initializeVivus(e){let r=new Vivus(e,{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"});r.play()}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-100",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};if(!e.triggerElement||!document.querySelector(e.keyvisualSilverArrow)){console.error("Required elements not found.");return}setInitialGSAPStates(e),initializeAnimations(e),setupScrollTrigger(e)});
+function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initializeAnimations(e){let r=document.querySelector(e.keyvisualSilverArrow);gsap.timeline().to(r,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(r,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)"}),initializeVivus("vivus-keyvisual-silver-arrow"),initializeVivus("keyvisual-horizontal-arrows")}function initializeVivus(e){let r=new Vivus(e,{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"});r.play()}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-50",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};if(!e.triggerElement||!document.querySelector(e.keyvisualSilverArrow)){console.error("Required elements not found.");return}setInitialGSAPStates(e),initializeAnimations(e),setupScrollTrigger(e)});
+</script>
+  <script>
+/*
+ * SAWM | arrows vivus + rotate v5 (mobile)
+ * dependencies: gsap.js scrolltrigger.js
+ * build: 21.06.24 @22:48
+ */
+function setInitialGSAPStates__mobile(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function initializeAnimations__mobile(e){let i=document.querySelector(e.keyvisualSilverArrow);gsap.timeline().to(i,{opacity:1,fill:e.fillColor,delay:e.delay,duration:e.duration,ease:e.ease}).to(i,{rotation:0,delay:-e.duration,transformOrigin:"center center",duration:e.duration,ease:"elastic.out(1, 0.45)"}),initializeVivus("vivus-keyvisual-silver-arrow-mobile"),initializeVivus("keyvisual-horizontal-arrows-mobile")}function initializeVivus(e){let i=new Vivus(e,{type:"delayed",duration:150,animTimingFunction:Vivus.EASE,start:"manual"});i.play()}function setupScrollTrigger__mobile(e){let i=document.querySelector(e.keyvisualHorizontalArrow);if(!i){console.error("SVG element not found");return}let r=i.querySelectorAll("path");r.forEach(i=>{gsap.to(i,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom",end:"top center-50",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualSilverArrow:"#keyvisual-silver-arrow-mobile",keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-mobile",triggerElement:document.querySelector('[data-id="intro"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};if(!e.triggerElement||!document.querySelector(e.keyvisualSilverArrow)){console.error("Required elements not found.");return}setInitialGSAPStates__mobile(e),initializeAnimations__mobile(e),setupScrollTrigger__mobile(e)});
 </script>
   <script>
 /*
@@ -871,8 +888,12 @@ function initFooterActiveCTA(target) {
   const subdirectory = parts.length > 0 ? parts[parts.length - 1] : null;
   if (!subdirectory) return;
   const activeArrow = document.querySelector(`[data-arrow="${subdirectory}"]`);
-  const firstPath = activeArrow.querySelector("path");
+  if(activeArrow) {
+      const firstPath = activeArrow.querySelector("path");
   firstPath.setAttribute("fill", "currentColor");
+  } else {
+    // console.log("no active subpage yet");
+  }
 }
 </script>
   <script>
