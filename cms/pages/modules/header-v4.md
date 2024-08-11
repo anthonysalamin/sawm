@@ -1,8 +1,8 @@
 ---
-title: Home Copy
-permalink: '{{ page.fileSlug }}/index.html'
-layout: home-copy.html
-slug: home-copy
+title: Header v4
+permalink: modules/{{ page.fileSlug }}/index.html
+layout: modules/header-v4.html
+slug: header-v4
 tags: pages
 seo:
   noindex: false

@@ -338,7 +338,7 @@ a {
               </a>
             </div>
             <div class="footer__links-menu">
-              <a id="w-node-_020e5cf1-6e9e-7c52-2349-a05dd435f527-3cd85bd3" href="{{ links.2f }}" class="nav__cta-wrap w-inline-block">
+              <a id="w-node-_020e5cf1-6e9e-7c52-2349-a05dd435f527-3cd85bd3" href="{{ links.23 }}" class="nav__cta-wrap w-inline-block">
                 <div class="nav__cta-text is-menu">{{ texts.27ee9 }}<span data-id="year" class="year">{{ texts.295600 }}</span>{{ texts.-374aa708 }}<br></div>
               </a>
               <a href="{{ links.-d4fd732 }}" target="_blank" class="footer__link-wrap w-inline-block">
@@ -599,7 +599,7 @@ a {
               <div class="headline-cta-wrap">
                 <div class="header__paragraph"><span class="serif-italic">{{ texts.441914cb }}</span>{{ texts.-75a4173c }}<br>{{ texts.-7c24e591 }}</div>
                 <div class="magnet">
-                  <a data-color="dark" href="{{ links.23 }}" class="cta__btn w-inline-block">
+                  <a data-color="dark" href="{{ links.-686fc27f }}" class="cta__btn w-inline-block">
                     <div>{{ texts.fcf0ad2 }}</div>
                     <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
                         <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
@@ -672,7 +672,7 @@ a {
       </section>
       <section data-id="quote" class="section is-overview">
         <div class="quote-img">
-          <div data-id="quote" id="w-node-e021be57-1112-60d7-fa3b-ee255a0fcd94-5a0fcd91" class="quote-img__quote">
+          <div data-id="quote" class="quote-img__quote">
             <p data-reveal="true" class="heading light"><span class="serif-italic normal">{{ texts.3611dc4b }}</span>{{ texts.-730b80af }}<br></p>
           </div>
           <div id="w-node-e021be57-1112-60d7-fa3b-ee255a0fcda8-5a0fcd91" class="quote-img__img"><img src="{{ images.2a4dba0e.url }}" loading="lazy" alt="{{ images.2a4dba0e.alt | escape }}" sizes="(max-width: 767px) 100vw, 50vw" class="quote-img__midjourney">
@@ -962,7 +962,7 @@ function onMouseEnter__SVGfillOnHover(e,t){t.addEventListener("mouseenter",()=>{
  * dependencies: gsap.js scrolltrigger.js
  * build: 30.07.24 @00:07
  */
-function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=100",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
+function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=0",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
 </script>
   <script>
 /*

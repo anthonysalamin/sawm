@@ -1124,21 +1124,29 @@ collections:
             label: Text
             name: '-25ea30f5'
             widget: text
+          - hint: 'Original text: — You ask,, key: -5cdd5920'
+            label: Text
+            name: '-5cdd5920'
+            widget: string
+          - hint: 'Original text:  we answer, key: -4699e6d0'
+            label: Text
+            name: '-4699e6d0'
+            widget: string
+          - hint: 'Original text: Talk to us, key: -7d8e69f1'
+            label: Text
+            name: '-7d8e69f1'
+            widget: string
           - hint: 'Original text:  —, key: 23f4'
             label: Text
             name: 23f4
             widget: string
           - hint: >-
-              Original text: Our team is more than happy to provide additional
-              information and support to ensure all your queries are answered.,
-              key: -3e37b128
+              Original text: Our team is happy to provide additional information
+              and support to ensure all your queries are answered., key:
+              6838e784
             label: Text
-            name: '-3e37b128'
+            name: '6838e784'
             widget: text
-          - hint: 'Original text: Talk to us, key: -7d8e69f1'
-            label: Text
-            name: '-7d8e69f1'
-            widget: string
           - hint: 'Original text: FAQ, key: 10ef6'
             label: Text
             name: 10ef6
@@ -1215,14 +1223,6 @@ collections:
             label: Text
             name: 14c36caf
             widget: text
-          - hint: 'Original text: — You ask,, key: -5cdd5920'
-            label: Text
-            name: '-5cdd5920'
-            widget: string
-          - hint: 'Original text:  we answer, key: -4699e6d0'
-            label: Text
-            name: '-4699e6d0'
-            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1393,6 +1393,19 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: '7e087946'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: 10c7634d
             widget: object
             fields:
@@ -1432,7 +1445,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-5a33bdb7'
+            name: '-bd765f9'
             widget: object
             fields:
               - name: url

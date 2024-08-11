@@ -106,7 +106,7 @@ a {
       </section>
       <section data-id="quote" class="section is-overview">
         <div class="quote-img">
-          <div data-id="quote" id="w-node-e021be57-1112-60d7-fa3b-ee255a0fcd94-5a0fcd91" class="quote-img__quote">
+          <div data-id="quote" class="quote-img__quote">
             <p data-reveal="true" class="heading light"><span class="serif-italic normal">{{ texts.3611dc4b }}</span>{{ texts.-730b80af }}<br></p>
           </div>
           <div id="w-node-e021be57-1112-60d7-fa3b-ee255a0fcda8-5a0fcd91" class="quote-img__img"><img src="{{ images.10c7634d.url }}" loading="lazy" alt="{{ images.10c7634d.alt | escape }}" sizes="(max-width: 767px) 100vw, 50vw" class="quote-img__midjourney">
@@ -312,7 +312,7 @@ function onMouseEnter__SVGfillOnHover(e,t){t.addEventListener("mouseenter",()=>{
  * dependencies: gsap.js scrolltrigger.js
  * build: 30.07.24 @00:07
  */
-function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=100",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
+function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=0",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
 </script>
   <script>
 /*
