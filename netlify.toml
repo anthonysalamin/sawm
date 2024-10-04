@@ -1,16 +1,10 @@
 [build]
-  publish = "public"
-  command = "npm run build"
-  functions = "functions"
+publish = "public"
+command = "npm run build"
+functions = "functions"
 
 [[redirects]]
   from = "/api/*"
   to = "/.netlify/functions/:splat"
   status = 200
-  force = true
-
-[[redirects]]
-  from = "/*"
-  to = "https://sawm.webflow.io/"
-  status = 301
   force = true

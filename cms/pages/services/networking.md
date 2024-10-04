@@ -1,12 +1,12 @@
 ---
-title: Silver Arrow | Fund
+title: Silver Arrow | Networking
 permalink: services/{{ page.fileSlug }}/index.html
-layout: services/fund.html
-slug: fund
+layout: services/networking.html
+slug: networking
 tags: pages
 seo:
   noindex: false
-  title: Fund
+  title: Networking
   description: >-
     Licensed by FINMA, Switzerland’s financial regulatory authority, Silver
     Arrow Wealth Management — SAWM, upholds the highest standards of

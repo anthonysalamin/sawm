@@ -1,12 +1,12 @@
 ---
-title: Silver Arrow | Institutional Services
+title: Silver Arrow | Funds
 permalink: services/{{ page.fileSlug }}/index.html
-layout: services/institutional-services.html
-slug: institutional-services
+layout: services/funds.html
+slug: funds
 tags: pages
 seo:
   noindex: false
-  title: Institutional Services
+  title: Funds
   description: >-
     Licensed by FINMA, Switzerland’s financial regulatory authority, Silver
     Arrow Wealth Management — SAWM, upholds the highest standards of

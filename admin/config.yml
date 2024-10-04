@@ -28,7 +28,8 @@ collections:
         widget: hidden
         name: layout
         default: '{{slug}}.html'
-      - label: Seo
+      - &ref_2
+        label: Seo
         name: seo
         widget: object
         collapsed: true
@@ -106,16 +107,67 @@ collections:
     editor: *ref_0
     folder: cms/pages/services
     fields: *ref_1
-  - name: pages-playground
-    label: Pages playground
-    identifier_field: title
+  - name: publications
+    label: Publications
+    folder: cms/publications
+    create: true
+    identifier_field: name
     extension: md
-    create: false
-    delete: false
     slug: '{{slug}}'
-    editor: *ref_0
-    folder: cms/pages/playground
-    fields: *ref_1
+    fields:
+      - hint: ''
+        name: title
+        label: Name
+        widget: string
+        required: true
+      - hint: ''
+        name: created-on
+        label: Created On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: updated-on
+        label: Updated On
+        widget: datetime
+        required: false
+      - hint: ''
+        name: published-on
+        label: Published On
+        widget: datetime
+        required: false
+      - hint: Order at which the PDF will be listed
+        name: f_order
+        label: Order
+        widget: number
+        required: false
+      - hint: Please, password protect the PDF directly within proton.
+        name: f_url-of-proton-hosted-pdf
+        label: URL of Proton hosted PDF
+        widget: string
+        required: false
+      - hint: About 1 or two sentences
+        name: f_short-descritpion-of-the-pdf
+        label: Short descritpion of the PDF
+        widget: text
+        required: false
+      - hint: if yes activate the switch
+        name: f_is-proton-password-protected
+        label: Is Proton password protected ?
+        widget: boolean
+        required: false
+        default: false
+      - label: Tags
+        widget: hidden
+        name: tags
+        default: publications
+      - label: Layout
+        widget: hidden
+        name: layout
+        default: '[publications].html'
+      - label: Publish Date
+        name: date
+        widget: datetime
+      - *ref_2
   - label: Theme Settings
     name: settings
     identifier_field: title
@@ -596,15 +648,25 @@ collections:
             label: Text
             name: '-408974de'
             widget: text
-          - hint: 'Original text: — We value, key: 3611dc4b'
+          - hint: 'Original text: — The next generation, key: 1ccb8c8a'
             label: Text
-            name: 3611dc4b
+            name: 1ccb8c8a
             widget: string
-          - hint: >-
-              Original text:  developing a close working relationship with our
-              clients, key: -730b80af
+          - hint: "Original text:  \_of wealth creation has arrived, key: -3d57e290"
             label: Text
-            name: '-730b80af'
+            name: '-3d57e290'
+            widget: string
+          - hint: 'Original text: Let’s connect, key: 28850a7f'
+            label: Text
+            name: 28850a7f
+            widget: string
+          - hint: 'Original text: Funds, key: 411462e'
+            label: Text
+            name: 411462e
+            widget: string
+          - hint: 'Original text: Networking, key: 5a50c314'
+            label: Text
+            name: 5a50c314
             widget: string
           - hint: 'Original text: Threema, key: 13795b92'
             label: Text
@@ -646,6 +708,10 @@ collections:
             label: Text
             name: 585238d
             widget: string
+          - hint: 'Original text: Home, key: 2268ff'
+            label: Text
+            name: 2268ff
+            widget: string
           - hint: 'Original text: Digital Assets , key: 6a843eb5'
             label: Text
             name: 6a843eb5
@@ -662,13 +728,9 @@ collections:
             label: Text
             name: '-64104400'
             widget: string
-          - hint: 'Original text: Publication , key: 4183f794'
+          - hint: 'Original text: Publication, key: 23254a0c'
             label: Text
-            name: 4183f794
-            widget: string
-          - hint: 'Original text: SOON, key: 26ed3b'
-            label: Text
-            name: 26ed3b
+            name: 23254a0c
             widget: string
           - hint: 'Original text: Best Execution Policy, key: -4887f9ea'
             label: Text
@@ -694,26 +756,24 @@ collections:
             label: Text
             name: '-67104443'
             widget: string
-          - hint: 'Original text: — Maximize, key: -16da2288'
+          - hint: 'Original text: — Create, key: 58c556a8'
             label: Text
-            name: '-16da2288'
+            name: 58c556a8
+            widget: string
+          - hint: 'Original text:  your claim to future wealth, key: -5a1e226a'
+            label: Text
+            name: '-5a1e226a'
+            widget: string
+          - hint: 'Original text: More, key: 24af75'
+            label: Text
+            name: 24af75
             widget: string
           - hint: >-
-              Original text:  wealth with strategic planning & management
-              models, key: 385d91b1
+              Original text: We provide full fledged access to global markets
+              through top tier investment banks, helping you structure complex
+              investments with familiar counterparties., key: 35a1d2f0
             label: Text
-            name: 385d91b1
-            widget: string
-          - hint: 'Original text: Get an edge, key: -5f8cfd1a'
-            label: Text
-            name: '-5f8cfd1a'
-            widget: string
-          - hint: >-
-              Original text: We tailor solutions by understanding each client's
-              financial situation and goals, connecting them with institutions
-              offering the best terms, services, and support., key: 3e62cb17
-            label: Text
-            name: 3e62cb17
+            name: 35a1d2f0
             widget: text
           - hint: >-
               Original text: SilverArrow facilitates seamless client
@@ -722,193 +782,241 @@ collections:
             label: Text
             name: 47bce475
             widget: text
-          - hint: >-
-              Original text: We offer Execution Only, Advisory, and
-              Discretionary services. We tailor strategies for wealth transfer,
-              succession planning, and efficient tax management., key: -7bcaaf1f
+          - hint: "Original text: We provide a safe heaven for securing long term investments within the tranquility of a fully regulated Swiss asset manager.\_, key: 289138"
             label: Text
-            name: '-7bcaaf1f'
+            name: '289138'
             widget: text
-          - hint: >-
-              Original text: SAWM's Advisory service is tailored for investors
-              who want to maintain control over their investments while
-              benefiting from expert guidance. We work closely with our clients,
-              offering comprehensive research and expertise to support informed
-              and sophisticated decision-making and portfolio management., key:
-              -67c88049
+          - hint: "Original text: Client Services\_, key: 6a6a75ed"
             label: Text
-            name: '-67c88049'
+            name: 6a6a75ed
+            widget: string
+          - hint: 'Original text: Various Control Levels, key: 781bf8c7'
+            label: Text
+            name: 781bf8c7
+            widget: string
+          - hint: "Original text: Wether you wish to maintain full operational control using our Execution-Only model, rely on our Advisory to make investment decisions, or trust our Discretionary strategies, we easily adapt to unique requirements.\_, key: -35675259"
+            label: Text
+            name: '-35675259'
             widget: text
-          - hint: >-
-              Original text: SAWM's Discretionary asset management service
-              allows clients to delegate portfolio management to our experts. We
-              monitor markets daily and make investment decisions aligned with
-              each client's risk tolerance and return goals. This approach frees
-              clients from daily decision-making and constant communication,
-              while still providing detailed information on trades and
-              executions for full transparency., key: 30f67ab9
+          - hint: 'Original text: Customised Approach, key: -7b3fdd32'
             label: Text
-            name: 30f67ab9
-            widget: text
+            name: '-7b3fdd32'
+            widget: string
           - hint: >-
-              Original text: Planning the transfer of significant wealth can be
-              daunting, we tackle it with a boutique approach and family values.
-              Count on our expertise and resources to navigate this complex
-              terrain, ensuring a fair and seamless distribution when the time
-              comes., key: 4f035a07
+              Original text: Ranging from real estate investments, asset
+              acquisitions, or changes in residency, we empower clients with our
+              networks and experience to make informed decisions., key:
+              -1cc2ed82
             label: Text
-            name: 4f035a07
-            widget: text
-          - hint: >-
-              Original text: Succession planning is a delicate blend of emotion
-              and rationality. Bankers often bond with clients over this crucial
-              topic, offering personal insights alongside specialist advice. We
-              support you through every step of this significant transition,
-              ensuring comprehensive guidance throughout., key: 7640a7b2
-            label: Text
-            name: 7640a7b2
-            widget: text
-          - hint: >-
-              Original text: We collaborate with tax experts for Swiss and
-              international matters, ensuring efficient tax planning supports
-              your wealth strategy. Their insights cover investments, asset
-              acquisitions, and residency changes, empowering informed
-              decisions., key: 7507e96c
-            label: Text
-            name: 7507e96c
+            name: '-1cc2ed82'
             widget: text
           - hint: 'Original text: Additional tailored services, key: -7f660ed'
             label: Text
             name: '-7f660ed'
             widget: string
           - hint: >-
-              Original text:  wealth with strategic planning and management
-              models, key: -30c31fde
+              Original text: “The best time to plant a tree was 20 years ago.
+              The second-best time is now.”, key: -6805f081
             label: Text
-            name: '-30c31fde'
+            name: '-6805f081'
             widget: string
-          - hint: 'Original text: — Improve , key: -48bae9ac'
+          - hint: 'Original text: — Chinese proverb, key: 7ce24ed'
             label: Text
-            name: '-48bae9ac'
+            name: 7ce24ed
             widget: string
-          - hint: >-
-              Original text: efficiency with treasury management and trade
-              finance support, key: -2a508fdf
+          - hint: 'Original text: — Time, key: -40e07c87'
             label: Text
-            name: '-2a508fdf'
+            name: '-40e07c87'
             widget: string
           - hint: >-
-              Original text: We enhance treasury operations with advanced
-              technology, maximizing efficiency and cash returns. Our Trade
-              Finance & Funding solutions optimize trade and secure growth
-              capital., key: -1f5753eb
+              Original text:  is our greatest resource - let’s spend it wisely,
+              key: -68d104f
             label: Text
-            name: '-1f5753eb'
+            name: '-68d104f'
+            widget: string
+          - hint: >-
+              Original text: We create enduring partnerships with ambitious
+              businesses that want to make history, and collaborate with them in
+              the pursuit of that goal., key: -6f6317a
+            label: Text
+            name: '-6f6317a'
             widget: text
           - hint: >-
-              Original text: We optimize client treasury operations with
-              advanced technology, managing FX Hedging and Trade Finance to
-              maximize efficiency and growth., key: -af30fd2
+              Original text: Engage in purposeful conversations with a community
+              of experienced investors and family offices., key: 25b177d1
             label: Text
-            name: '-af30fd2'
+            name: 25b177d1
+            widget: text
+          - hint: 'Original text: Client Services, key: 34fb2d13'
+            label: Text
+            name: 34fb2d13
+            widget: string
+          - hint: 'Original text: UHNWI, key: 4cfb82d'
+            label: Text
+            name: 4cfb82d
+            widget: string
+          - hint: >-
+              Original text: For those who have chosen Switzerland as their hub,
+              Silver Arrow offers a wide range of supporting services, local
+              contacts and off market opportunities., key: -3ac2d6dd
+            label: Text
+            name: '-3ac2d6dd'
+            widget: text
+          - hint: 'Original text: Family Offices, key: -5ee1af85'
+            label: Text
+            name: '-5ee1af85'
+            widget: string
+          - hint: >-
+              Original text: Our network of counterparties possess priceless
+              knowledge and countless business opportunities focused around
+              Swiss private banking and cutting edge fintech products., key:
+              -297ffe02
+            label: Text
+            name: '-297ffe02'
+            widget: text
+          - hint: 'Original text: Digital Asset Providers, key: -57c5faf6'
+            label: Text
+            name: '-57c5faf6'
+            widget: string
+          - hint: >-
+              Original text: We are always open to new partnerships with
+              compliant financial institutions worldwide and continuously
+              develop relationships in the growing digital economy., key:
+              -746f5a77
+            label: Text
+            name: '-746f5a77'
             widget: text
           - hint: >-
-              Original text: At Silver Arrow Wealth Management, our Treasury
-              Management services offer comprehensive solutions to optimize
-              clients' cash flow, liquidity, and risk management. Our team
-              develops tailored strategies for cash forecasting, liquidity
-              management, working capital optimization, and financial risk
-              mitigation. Utilizing advanced technology and best practices, we
-              streamline treasury operations, enhance efficiency, and maximize
-              returns on cash holdings., key: 62694e2
+              Original text: “The secret of business is to know something that
+              nobody else knows.”, key: -1244017c
             label: Text
-            name: '62694e2'
+            name: '-1244017c'
+            widget: string
+          - hint: 'Original text: — Aristotle Onassis, key: -510f9729'
+            label: Text
+            name: '-510f9729'
+            widget: string
+          - hint: 'Original text: — Invest, key: 62d1d5a1'
+            label: Text
+            name: 62d1d5a1
+            widget: string
+          - hint: 'Original text:  in modern fundamentals, key: -6b59c62c'
+            label: Text
+            name: '-6b59c62c'
+            widget: string
+          - hint: >-
+              Original text: With their intrinsic value focus, fundamental
+              analysis and rigorous selection process, our funds serve as
+              stepping stones in growing wealth in an increasingly complex and
+              uncertain future., key: 1ba297b4
+            label: Text
+            name: 1ba297b4
             widget: text
           - hint: >-
-              Original text: We provide a full suite of trade finance solutions,
-              such as letters of credit, trade finance facilities, and supply
-              chain finance, customized for importers, exporters, and
-              distributors. Our team collaborates closely with clients to design
-              financing that enhances cash flow, lowers transaction costs, and
-              manages trade risks, enabling them to pursue growth and global
-              expansion opportunities effectively., key: -4c0419f9
+              Original text: Preserve your future purchasing power by combining
+              inflation resistant exposure to well established trends in
+              precious metals mining and the digital economy., key: 78fc96b6
             label: Text
-            name: '-4c0419f9'
+            name: 78fc96b6
             widget: text
-          - hint: 'Original text: — Refine , key: -3cba64d9'
+          - hint: 'Original text: Long US Equities, key: 3aecfa01'
             label: Text
-            name: '-3cba64d9'
+            name: 3aecfa01
             widget: string
           - hint: >-
-              Original text: your business processes with expert treasury
-              management and trade finance support, key: -5ae6560e
+              Original text: Focusing on capturing the fundamental value of well
+              established trends within mining of physical metals and Bitcoin
+              ETF products, our flagship fund has generated returns of over 200%
+              year to date in 2024., key: -53901c0f
             label: Text
-            name: '-5ae6560e'
-            widget: string
-          - hint: 'Original text: — Identify, key: -37ce9648'
-            label: Text
-            name: '-37ce9648'
-            widget: string
-          - hint: >-
-              Original text:  opportunities across multiple asset classes with
-              Strategic Prime Funds, key: 20266f3b
-            label: Text
-            name: 20266f3b
-            widget: string
-          - hint: 'Original text: — Identify , key: 3dfbcd68'
-            label: Text
-            name: 3dfbcd68
-            widget: string
-          - hint: >-
-              Original text: opportunities across multiple asset classes with
-              Strategic Prime Funds, key: -454ff8e5
-            label: Text
-            name: '-454ff8e5'
-            widget: string
-          - hint: 'Original text: — unlock, key: -521d5730'
-            label: Text
-            name: '-521d5730'
-            widget: string
-          - hint: >-
-              Original text:  potential with our Digital Assets advisory, key:
-              -70e15ade
-            label: Text
-            name: '-70e15ade'
-            widget: string
-          - hint: >-
-              Original text: We enable clients to invest in cryptocurrencies,
-              use term deposits, and access yield-enhancing opportunities like
-              structured products, crypto funds, and crypto asset lending
-              through our partners., key: -673ee1d5
-            label: Text
-            name: '-673ee1d5'
+            name: '-53901c0f'
             widget: text
-          - hint: >-
-              Original text: We offer clients cryptocurrencies, term deposits,
-              and yield-enhancing opportunities through our partners., key:
-              4a97549c
+          - hint: 'Original text: Scarcity Fund, key: 3c0e42f9'
             label: Text
-            name: 4a97549c
+            name: 3c0e42f9
+            widget: string
+          - hint: "Original text: Building on the theme of inflation resistant exposure to physical assets, our upcoming Scarcity fund aims to accumulate a wide range of finite and limited products destined to always appreciate in value: land, physical gold, Bitcoin and fine wine to name a few.\_, key: 63e25234"
+            label: Text
+            name: '63e25234'
+            widget: text
+          - hint: 'Original text: Direct Redemptions, key: -262e8e0f'
+            label: Text
+            name: '-262e8e0f'
+            widget: string
+          - hint: "Original text: Direct Redemptions: Convert your paper exposure to real assets - claim physical gold, move Bitcoin to cold storage, purchase cash CHF - we encourage direct asset ownership in all forms. \_, key: -2a4127c3"
+            label: Text
+            name: '-2a4127c3'
+            widget: text
+          - hint: "Original text: “An\_email saying you have gold\_is not the same as\_having gold”, key: c3dee31"
+            label: Text
+            name: c3dee31
+            widget: string
+          - hint: 'Original text: — Elon Musk, key: 3845900e'
+            label: Text
+            name: 3845900e
+            widget: string
+          - hint: 'Original text: — Future proof, key: 28a59153'
+            label: Text
+            name: 28a59153
+            widget: string
+          - hint: "Original text:  \_your investments, key: -1c4d2bed"
+            label: Text
+            name: '-1c4d2bed'
+            widget: string
+          - hint: >-
+              Original text: Engage with our team of experts and early adopters
+              to discover the practical applications of blockchain technology,
+              from ETFs to proprietary on-chain infrastructure., key: -14962966
+            label: Text
+            name: '-14962966'
+            widget: text
+          - hint: "Original text: Our advisory is comprised of committed blockchain entrepreneurs with a decade of first hand experience in digital assets, adding value at any level of complexity.\_, key: -6d43f2d5"
+            label: Text
+            name: '-6d43f2d5'
             widget: text
           - hint: >-
-              Original text: Our clients benefit from our services to invest in
-              and hold cryptocurrencies, as well as access term deposits. There
-              is also strong investor interest in our partner's yield-enhancing
-              offerings, including trading structured products like Dual
-              Currency Deposits and SharkFin structures, investing in
-              cryptocurrency funds, and lending crypto assets., key: 2f60becb
+              Original text: Wether you discovered Bitcoin in 2013 or 2023, you
+              will find our advisory to be a competent source of experience for
+              making crucial decisions while investing, building, or trading
+              digital assets., key: 6c1d3423
             label: Text
-            name: 2f60becb
+            name: 6c1d3423
             widget: text
-          - hint: 'Original text: — Unlock , key: 71ab0930'
+          - hint: 'Original text: Investments, key: 4fb5cfe0'
             label: Text
-            name: 71ab0930
+            name: 4fb5cfe0
             widget: string
           - hint: >-
-              Original text: potential with our extensive Digital Assets
-              advisory expertised, key: -3b7737fe
+              Original text: We understand and respect the fundamental
+              narratives behind blockchain technology and seek to provide the
+              most genuine products to our clients. We also develop bespoke
+              investment products focused on self custody and unitary value
+              accumulation., key: 63d04cff
             label: Text
-            name: '-3b7737fe'
+            name: 63d04cff
+            widget: text
+          - hint: 'Original text: Private Banking, key: -10d509b7'
+            label: Text
+            name: '-10d509b7'
+            widget: string
+          - hint: >-
+              Original text: From on/off ramp services, OTC, LTV lines of credit
+              to simple redemptions, we facilitate your banking relationships
+              and ensure your long term goals are accomplished via a variety of
+              asset preserving products aimed at securing your holdings for the
+              next generation., key: -49d031d7
+            label: Text
+            name: '-49d031d7'
+            widget: text
+          - hint: >-
+              Original text: “Our favourite hodling period is forever.”, key:
+              -343f3595
+            label: Text
+            name: '-343f3595'
+            widget: string
+          - hint: 'Original text: — Warren Buffet, key: -cae8abd'
+            label: Text
+            name: '-cae8abd'
             widget: string
           - hint: 'Original text: Asset , key: 75755f50'
             label: Text
@@ -958,6 +1066,10 @@ collections:
             label: Text
             name: 5289b84e
             widget: string
+          - hint: 'Original text: Get an edge, key: -5f8cfd1a'
+            label: Text
+            name: '-5f8cfd1a'
+            widget: string
           - hint: 'Original text: Call us, key: -7c14e080'
             label: Text
             name: '-7c14e080'
@@ -974,13 +1086,17 @@ collections:
             label: Text
             name: '30'
             widget: string
+          - hint: 'Original text: %, key: 25'
+            label: Text
+            name: '25'
+            widget: string
           - hint: 'Original text: +, key: 2b'
             label: Text
             name: 2b
             widget: string
-          - hint: 'Original text: Years in Wealth Management Business, key: 226b8f1b'
+          - hint: 'Original text: Annual Fund Performance, key: -2be474aa'
             label: Text
-            name: 226b8f1b
+            name: '-2be474aa'
             widget: string
           - hint: 'Original text: $1B, key: 8d55'
             label: Text
@@ -990,17 +1106,15 @@ collections:
             label: Text
             name: 54f1439d
             widget: string
-          - hint: 'Original text: Combine years of experience, key: 29c44808'
+          - hint: >-
+              Original text: Years of Experience with Digital Assets, key:
+              -3d534b2
             label: Text
-            name: 29c44808
+            name: '-3d534b2'
             widget: string
-          - hint: 'Original text: %, key: 25'
+          - hint: 'Original text: Obtained FINMA License, key: 257574c4'
             label: Text
-            name: '25'
-            widget: string
-          - hint: 'Original text: Company growth since inception, key: -418072ff'
-            label: Text
-            name: '-418072ff'
+            name: 257574c4
             widget: string
           - hint: 'Original text: $, key: 24'
             label: Text
@@ -1026,9 +1140,9 @@ collections:
             label: Text
             name: '-7c24e591'
             widget: string
-          - hint: 'Original text: Our services, key: fcf0ad2'
+          - hint: 'Original text: About us, key: 645f0031'
             label: Text
-            name: fcf0ad2
+            name: 645f0031
             widget: string
           - hint: 'Original text: — Your trusted, key: -2b79bd4a'
             label: Text
@@ -1055,6 +1169,10 @@ collections:
               client relationships, key: -294fa0d3
             label: Text
             name: '-294fa0d3'
+            widget: string
+          - hint: 'Original text: Discover, key: 1422dc09'
+            label: Text
+            name: 1422dc09
             widget: string
           - hint: >-
               Original text: We embody trust, transparency, flexibility, and
@@ -1113,6 +1231,12 @@ collections:
               banks, brokerages, and financial entities., key: 5121de1a
             label: Text
             name: 5121de1a
+            widget: string
+          - hint: >-
+              Original text: We offer diverse avenues of capital growth and
+              wealth preservation, key: -13ad6133
+            label: Text
+            name: '-13ad6133'
             widget: string
           - hint: 'Original text: — Acknowledging, key: c6992d'
             label: Text
@@ -1223,6 +1347,221 @@ collections:
             label: Text
             name: 14c36caf
             widget: text
+          - hint: 'Original text: — We value, key: 3611dc4b'
+            label: Text
+            name: 3611dc4b
+            widget: string
+          - hint: >-
+              Original text:  developing a close working relationship with our
+              clients, key: -730b80af
+            label: Text
+            name: '-730b80af'
+            widget: string
+          - hint: 'Original text: — Next Generation, key: -57d907a7'
+            label: Text
+            name: '-57d907a7'
+            widget: string
+          - hint: 'Original text:  Family Office, key: -3af33d28'
+            label: Text
+            name: '-3af33d28'
+            widget: string
+          - hint: 'Original text: for , key: 300c77'
+            label: Text
+            name: 300c77
+            widget: string
+          - hint: 'Original text: Digital Asset _, key: 6a8434e7'
+            label: Text
+            name: 6a8434e7
+            widget: string
+          - hint: >-
+              Original text: Technological progress meets Swiss precision -
+              Secure, Digital, and Future Proof., key: 3dc0e326
+            label: Text
+            name: 3dc0e326
+            widget: string
+          - hint: >-
+              Original text: We are experts in digital assets and traditional
+              finance, providing new alternatives and unique opportunities in
+              regulated frontier markets., key: 77e020e6
+            label: Text
+            name: 77e020e6
+            widget: text
+          - hint: 'Original text: Investment Philosophy, key: 2324fede'
+            label: Text
+            name: 2324fede
+            widget: string
+          - hint: >-
+              Original text: We believe technology to be the primary driver of
+              change in the world, and position our business at the forefront of
+              digital innovation. We regard simplicity and elegance in financial
+              markets as desirable traits, and deliver a clear understanding of
+              new and complex investments., key: -313800ff
+            label: Text
+            name: '-313800ff'
+            widget: text
+          - hint: "Original text: We understand modern economic realities and measure capital preservation in purchasing power.\_, key: -41dfe6c5"
+            label: Text
+            name: '-41dfe6c5'
+            widget: text
+          - hint: >-
+              Original text: We believe in risk, and either invest with
+              conviction or safeguard capital for future opportunities., key:
+              -21d51c3d
+            label: Text
+            name: '-21d51c3d'
+            widget: text
+          - hint: 'Original text: Technology Focused, key: -1646cb9d'
+            label: Text
+            name: '-1646cb9d'
+            widget: string
+          - hint: >-
+              Original text: Our competitive advantage is our unique knowledge
+              of the digital economy, drawing on the decades of experience of
+              our team members and partners., key: -610bf648
+            label: Text
+            name: '-610bf648'
+            widget: text
+          - hint: "Original text: We conduct deep research into fintech and blockchain applications, resulting in the development of unique financial products and services.\_, key: -2b86eb22"
+            label: Text
+            name: '-2b86eb22'
+            widget: text
+          - hint: 'Original text: Experienced Team, key: 22a7aac3'
+            label: Text
+            name: 22a7aac3
+            widget: string
+          - hint: >-
+              Original text: Our team is comprised of genuine innovators and
+              entrepreneurs with lifelong commitments to their fields - ranging
+              from private banking to the blockchain industry., key: 22b0b4bf
+            label: Text
+            name: 22b0b4bf
+            widget: text
+          - hint: >-
+              Original text: Operating in real time, we we act with the same
+              sense of urgency as our partners, using modern communication and
+              often operating outside regular business hours., key: -61c33fd8
+            label: Text
+            name: '-61c33fd8'
+            widget: text
+          - hint: >-
+              Original text: We apply our skills with enthusiasm and have a
+              business culture focused on intelligence, empathy, meritocracy,
+              and international collaboration., key: 1c544dde
+            label: Text
+            name: 1c544dde
+            widget: text
+          - hint: 'Original text: Licences?, key: -38b49fe3'
+            label: Text
+            name: '-38b49fe3'
+            widget: string
+          - hint: >-
+              Original text: We are a Geneva based FINMA licensed Swiss asset
+              manager., key: -410c0b68
+            label: Text
+            name: '-410c0b68'
+            widget: string
+          - hint: 'Original text: Access our weekly publications, key: -39b8646a'
+            label: Text
+            name: '-39b8646a'
+            widget: string
+          - hint: "Original text: Our Publication section compiles reliable information by aggregating professional reports from curated sources\_, key: -19efd6e"
+            label: Text
+            name: '-19efd6e'
+            widget: text
+          - hint: 'Original text: Access now, key: 32a8763a'
+            label: Text
+            name: 32a8763a
+            widget: string
+          - hint: 'Original text: feat, key: 2fe532'
+            label: Text
+            name: 2fe532
+            widget: string
+          - hint: >-
+              Original text: This is some text inside of a div block., key:
+              7635fb4f
+            label: Text
+            name: 7635fb4f
+            widget: string
+          - hint: 'Original text: LOCKED, key: -79d6d8f6'
+            label: Text
+            name: '-79d6d8f6'
+            widget: string
+          - hint: 'Original text: Download PDF, key: 4bce595a'
+            label: Text
+            name: 4bce595a
+            widget: string
+          - hint: 'Original text: No items found., key: 3d503d2b'
+            label: Text
+            name: 3d503d2b
+            widget: string
+          - hint: >-
+              Original text: “Innovation distinguishes between a leader and a
+              follower.”, key: 600b95e9
+            label: Text
+            name: 600b95e9
+            widget: string
+          - hint: 'Original text: — Steve Jobs, key: -25d527b1'
+            label: Text
+            name: '-25d527b1'
+            widget: string
+          - hint: 'Original text: — Stay updated, key: -48852160'
+            label: Text
+            name: '-48852160'
+            widget: string
+          - hint: 'Original text:  or stay behind, key: 7c479244'
+            label: Text
+            name: 7c479244
+            widget: string
+          - hint: 'Original text: Stay updated, key: -776d91ec'
+            label: Text
+            name: '-776d91ec'
+            widget: string
+          - hint: >-
+              Original text: In the fast-paced world of finance, staying
+              informed is the key to turning today's insights into tomorrow's
+              gains., key: -4c2af897
+            label: Text
+            name: '-4c2af897'
+            widget: text
+          - hint: >-
+              Original text: In the ever-changing world of finance, staying
+              ahead means turning knowledge into opportunity before the market
+              moves., key: 7a3482a7
+            label: Text
+            name: 7a3482a7
+            widget: text
+          - hint: 'Original text: Publications, key: 4183f7e7'
+            label: Text
+            name: 4183f7e7
+            widget: string
+          - hint: 'Original text: locked, key: -4169ccf6'
+            label: Text
+            name: '-4169ccf6'
+            widget: string
+          - hint: 'Original text: Open the PDF, key: 45d10ced'
+            label: Text
+            name: 45d10ced
+            widget: string
+          - hint: >-
+              Original text: “In finance, the only constant is change—adapt, or
+              get left behind.”, key: -17270c63
+            label: Text
+            name: '-17270c63'
+            widget: string
+          - hint: 'Original text: — A wise man, key: -3fb25397'
+            label: Text
+            name: '-3fb25397'
+            widget: string
+          - hint: 'Original text: — Success, key: 134c3fd7'
+            label: Text
+            name: 134c3fd7
+            widget: string
+          - hint: >-
+              Original text:  in finance belongs to those who adapt quickly,
+              key: -538b0751
+            label: Text
+            name: '-538b0751'
+            widget: string
       - label: Links
         name: links
         file: cms/_data/links.json
@@ -1283,13 +1622,13 @@ collections:
             label: Link
             name: '-43bd562b'
             widget: string
-          - hint: 'Original link: /services/institutional-services/, key: 71cdd7a5'
+          - hint: 'Original link: /services/funds/, key: -3b99659d'
             label: Link
-            name: 71cdd7a5
+            name: '-3b99659d'
             widget: string
-          - hint: 'Original link: /services/fund/, key: -43fcb0f8'
+          - hint: 'Original link: /services/networking/, key: -4ab625c7'
             label: Link
-            name: '-43fcb0f8'
+            name: '-4ab625c7'
             widget: string
           - hint: 'Original link: mailto:info@sawm.ch?subject=contact, key: 17a761b5'
             label: Link
@@ -1321,6 +1660,10 @@ collections:
           - hint: 'Original link: /partnering/, key: -5c40063a'
             label: Link
             name: '-5c40063a'
+            widget: string
+          - hint: 'Original link: /publications/, key: 3713d979'
+            label: Link
+            name: 3713d979
             widget: string
           - hint: >-
               Original link:
@@ -1380,6 +1723,19 @@ collections:
                 widget: string
                 required: false
           - label: Image
+            name: e87cbd3
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
             name: i2aeb8b72
             widget: object
             fields:
@@ -1394,6 +1750,19 @@ collections:
                 required: false
           - label: Image
             name: '7e087946'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: i6f78889b
             widget: object
             fields:
               - name: url
@@ -1432,7 +1801,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-43eab464'
+            name: '-bd765f9'
             widget: object
             fields:
               - name: url
@@ -1445,7 +1814,7 @@ collections:
                 widget: string
                 required: false
           - label: Image
-            name: '-bd765f9'
+            name: '-43eab464'
             widget: object
             fields:
               - name: url
@@ -1511,6 +1880,19 @@ collections:
                 required: false
           - label: Image
             name: '-50d330ae'
+            widget: object
+            fields:
+              - name: url
+                label: Image Url
+                widget: image
+                allow_multiple: false
+                required: false
+              - name: alt
+                label: Image Alt
+                widget: string
+                required: false
+          - label: Image
+            name: '-33baf72d'
             widget: object
             fields:
               - name: url
